@@ -321,7 +321,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.6k
+                        1.5k
                     </div>
                     
 
@@ -376,36 +376,38 @@ input.onChange = function () {
 }</code></pre><p>就是发送一个消息告诉系统一步步如何去做</p>
 <p><strong>声明式</strong></p>
 <p>比如 React/Vue 或者是 Android 中的布局 xml 文件都是声明式的，它主要是告诉系统做什么，但是具体如何做是系统的事情，拿 Jquery 和 React/Vue 对比就非常清楚了，Jquery 通过命令式来操作 DOM 但是 React/Vue 把操作 DOM 屏蔽了，只要通过声明来实想要的效果，使用 vue 实现上述效果</p>
-<pre><code>&lt;div id=&quot;app&quot;&gt;
-  &lt;input type=&quot;text&quot; v-model=&quot;message&quot;&gt;
-&lt;/div&gt;
-&lt;script&gt;
-    var app = new Vue({
-      el: &#39;#app&#39;,
-      data: {
-        message: &#39;&#39;
-      },
-      mounted(){
-          alert(this.message)
-      }
-    })
-&lt;/script&gt;</code></pre><p><strong>flutter 属于声明式</strong></p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">:</span> <span class="token string">''</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p><strong>flutter 属于声明式</strong></p>
 <p>我们在写组件或界面的时候基本上都是给类似于 key:value 这种形式来指明我想的东西，至于东西杂样出来底层帮你做了「你不用关心」</p>
 <h4 id="2、手写-helloworld"><a href="#2、手写-helloworld" class="headerlink" title="2、手写 helloworld"></a>2、手写 helloworld</h4><p>看到上面的 main.dart 文件我们晕晕的，那就直接把它内容删掉，只保留第一行「import 语句」，一个最简单的 flutter 应用只有一个 runApp 方法和一个组件，官网上说的很清楚，如下</p>
 <img src="/2019/06/29/flutterhelloworld/minimal_fultter.jpg" title="最小的 flutter app]">
 
 <p>void main 就是程序的主入口，相当于 java 的 main 方法没什么好说的，通过 runApp 来加载组件并且将其添加到屏幕上，这是比较简单的 flutter 应用，但还不够简单，更简单应该就是 runApp 直接来个 组件如：</p>
-<pre><code>import &#39;package:flutter/material.dart&#39;;
+<pre class=" language-dart"><code class="language-dart"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
 
-void main() {
-  runApp(
-     new Text(
-       &#39;Hello&#39;,
-       // 文字方向，从左向右
-       textDirection: TextDirection.ltr
-     )
-  );
-}</code></pre><p>没啥说的看看效果吧，直接 flutter run 看效果</p>
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span>
+     <span class="token keyword">new</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>
+       <span class="token string">'Hello'</span><span class="token punctuation">,</span>
+       <span class="token comment" spellcheck="true">// 文字方向，从左向右</span>
+       textDirection<span class="token punctuation">:</span> TextDirection<span class="token punctuation">.</span>ltr
+     <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>没啥说的看看效果吧，直接 flutter run 看效果</p>
 <img src="/2019/06/29/flutterhelloworld/flutter_hello.jpg" title="文本左对齐">
 
 <p>看到了吧一个最简单的 flutter 应用就出来了，显示了一个 hello 但是位置被挡住了「没关系我们调整即可」</p>
