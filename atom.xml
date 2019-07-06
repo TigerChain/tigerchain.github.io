@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tigerchain</title>
+  
+  <subtitle>TigerChain</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tigerchain.coding.me/"/>
+  <updated>2019-07-06T14:10:23.098Z</updated>
+  <id>http://tigerchain.coding.me/</id>
+  
+  <author>
+    <name>TigerChain</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>06、观察者模式</title>
+    <link href="http://tigerchain.coding.me/2019/07/06/observer/"/>
+    <id>http://tigerchain.coding.me/2019/07/06/observer/</id>
+    <published>2019-07-06T13:47:24.000Z</published>
+    <updated>2019-07-06T14:10:23.098Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/07/06/observer/observer.png&quot; title=&quot;本节大纲&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;版权声明：本文为博主原创文章，未经博主允许不得转载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="人人都会设计模式" scheme="http://tigerchain.coding.me/categories/%E4%BA%BA%E4%BA%BA%E9%83%BD%E4%BC%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://tigerchain.coding.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Android" scheme="http://tigerchain.coding.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>05、代理模式</title>
+    <link href="http://tigerchain.coding.me/2019/07/05/proxy/"/>
+    <id>http://tigerchain.coding.me/2019/07/05/proxy/</id>
+    <published>2019-07-05T11:54:18.000Z</published>
+    <updated>2019-07-05T12:13:57.185Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/07/05/proxy/proxy_logo.png&quot; title=&quot;本节大纲&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;版权声明：本文为博主原创文章，未经博主允许不得转载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="人人都会设计模式" scheme="http://tigerchain.coding.me/categories/%E4%BA%BA%E4%BA%BA%E9%83%BD%E4%BC%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://tigerchain.coding.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Android" scheme="http://tigerchain.coding.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>04、适配器模式</title>
+    <link href="http://tigerchain.coding.me/2019/07/04/adapter/"/>
+    <id>http://tigerchain.coding.me/2019/07/04/adapter/</id>
+    <published>2019-07-04T12:37:00.000Z</published>
+    <updated>2019-07-04T13:06:24.576Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/07/04/adapter/adapter_logo.png&quot; title=&quot;本节大纲&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;版权声明：本文为博主原创文章，未经博主允许不得转载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="人人都会设计模式" scheme="http://tigerchain.coding.me/categories/%E4%BA%BA%E4%BA%BA%E9%83%BD%E4%BC%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://tigerchain.coding.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Android" scheme="http://tigerchain.coding.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>03、策略模式</title>
+    <link href="http://tigerchain.coding.me/2019/07/03/strategy/"/>
+    <id>http://tigerchain.coding.me/2019/07/03/strategy/</id>
+    <published>2019-07-03T12:21:21.000Z</published>
+    <updated>2019-07-04T13:11:52.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/07/03/strategy/strategy.png&quot; title=&quot;本节大纲&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;版权声明：本文为博主原创文章，未经博主允许不得转载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="人人都会设计模式" scheme="http://tigerchain.coding.me/categories/%E4%BA%BA%E4%BA%BA%E9%83%BD%E4%BC%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://tigerchain.coding.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Android" scheme="http://tigerchain.coding.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>02、单例模式</title>
+    <link href="http://tigerchain.coding.me/2019/07/02/singleton/"/>
+    <id>http://tigerchain.coding.me/2019/07/02/singleton/</id>
+    <published>2019-07-02T13:11:46.000Z</published>
+    <updated>2019-07-02T13:36:46.432Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/07/02/singleton/singleton_logo.png&quot; title=&quot;本节大纲&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;版权声明：本文为博主原创文章，未经博主允许不得转载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="人人都会设计模式" scheme="http://tigerchain.coding.me/categories/%E4%BA%BA%E4%BA%BA%E9%83%BD%E4%BC%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://tigerchain.coding.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Android" scheme="http://tigerchain.coding.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>01、简单工厂模式</title>
+    <link href="http://tigerchain.coding.me/2019/07/02/simplefactory/"/>
+    <id>http://tigerchain.coding.me/2019/07/02/simplefactory/</id>
+    <published>2019-07-02T12:37:41.000Z</published>
+    <updated>2019-07-02T13:45:21.782Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/07/02/simplefactory/simplefactory_logo.png&quot; title=&quot;本节大纲&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;版权声明：本文为博主原创文章，未经博主允许不得转载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="人人都会设计模式" scheme="http://tigerchain.coding.me/categories/%E4%BA%BA%E4%BA%BA%E9%83%BD%E4%BC%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://tigerchain.coding.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="Android" scheme="http://tigerchain.coding.me/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>02、永不过时的 HelloWorld</title>
+    <link href="http://tigerchain.coding.me/2019/06/29/flutterhelloworld/"/>
+    <id>http://tigerchain.coding.me/2019/06/29/flutterhelloworld/</id>
+    <published>2019-06-29T03:14:25.000Z</published>
+    <updated>2019-07-02T13:52:02.554Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/06/29/flutterhelloworld/flutter_hello_page_logo.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="从头整 Flutter" scheme="http://tigerchain.coding.me/categories/%E4%BB%8E%E5%A4%B4%E6%95%B4-Flutter/"/>
+    
+    
+      <category term="移动端" scheme="http://tigerchain.coding.me/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+      <category term="前端" scheme="http://tigerchain.coding.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Flutter" scheme="http://tigerchain.coding.me/tags/Flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>01、环境搭建</title>
+    <link href="http://tigerchain.coding.me/2019/06/15/flutterevninit/"/>
+    <id>http://tigerchain.coding.me/2019/06/15/flutterevninit/</id>
+    <published>2019-06-15T13:05:22.000Z</published>
+    <updated>2019-07-02T12:13:29.672Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/flutter_env_page_logo.png&quot; alt=&quot;flutter
+        
+      
+    
+    </summary>
+    
+      <category term="从头整 Flutter" scheme="http://tigerchain.coding.me/categories/%E4%BB%8E%E5%A4%B4%E6%95%B4-Flutter/"/>
+    
+    
+      <category term="移动端" scheme="http://tigerchain.coding.me/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+      <category term="前端" scheme="http://tigerchain.coding.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Flutter" scheme="http://tigerchain.coding.me/tags/Flutter/"/>
+    
+  </entry>
+  
+</feed>
