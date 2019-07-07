@@ -1,0 +1,1338 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="07、建造者模式, tigerchain">
+    <meta name="description" content="
+
+
+版权声明：本文为博主原创文章，未经博主允许不得转载
+
+ PS：转载请注明出处作者: TigerChain本文出自 TigerChain  人人都会设计模式
+
+教程简介
+
+
+1、阅读对象本篇教程适合新手阅读，老手直接略过
+2、教程难度初">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>07、建造者模式 | tigerchain</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">tigerchain</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">tigerchain</div>
+        <div class="logo-desc">
+            
+            你所浪费的今天，是昨天死去的人奢望的明天，你所厌恶的现在，是未来的你回不去的曾经。时间残忍，干就完了。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/TigerChain" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/TigerChain" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/design_patterns_common_logo.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        07、建造者模式
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/设计模式/" target="_blank">
+                                <span class="chip bg-color">设计模式</span>
+                            </a>
+                        
+                            <a href="/tags/Android/" target="_blank">
+                                <span class="chip bg-color">Android</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/人人都会设计模式/" class="post-category" target="_blank">
+                                人人都会设计模式
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-07-07
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        4.8k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        18 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <img src="/2019/07/07/builder/builder_logo.png" title="本节大纲">
+
+<blockquote>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载</p>
+</blockquote>
+<p> <strong>PS</strong>：转载请注明出处<br>作者: <a href="http://tigerchain.github.io" target="_blank" rel="noopener">TigerChain</a><br>本文出自 <a href="http://tigerchain.github.io/categories/人人都会设计模式/" target="_blank" rel="noopener">TigerChain  人人都会设计模式</a></p>
+<blockquote>
+<p>教程简介</p>
+</blockquote>
+<ul>
+<li>1、阅读对象<br>本篇教程适合新手阅读，老手直接略过</li>
+<li>2、教程难度<br>初级</li>
+<li>3、Demo 地址<br><a href="https://github.com/tigerchain/DesignPattern" target="_blank" rel="noopener">https://github.com/tigerchain/DesignPattern</a> 请看 FactoryPatttern/Builder 部分</li>
+</ul>
+<blockquote>
+<p>正文</p>
+</blockquote>
+<h3 id="一、什么是建造者模式"><a href="#一、什么是建造者模式" class="headerlink" title="一、什么是建造者模式"></a>一、什么是建造者模式</h3><h4 id="1、生活中的建造者模式"><a href="#1、生活中的建造者模式" class="headerlink" title="1、生活中的建造者模式"></a>1、生活中的建造者模式</h4><blockquote>
+<p>1、盖房子</p>
+</blockquote>
+<p>我们在生活中盖房子，一般就是打地基，盖框架「用砖头或钢筋混凝土」，然后是粉刷。基本上就是这个路子。当然我们这些工作全部可以自己做，可也以找几个工人去干，当然还可以可以直接找一个设计师，直接说我就要这样的房子，然后就不管了，最后问设计师「设计师给一张纸给工人，工人就啪啪的干了」验收房子即可「至于你是如何建的过程我不关心，我只要结果」—这就是建造者模式</p>
+<blockquote>
+<p>2、组装电脑</p>
+</blockquote>
+<p>我们买的电脑都是由主板、内存、cpu、显卡等组成，如何把这些东西组装起来给用户这就是建造者模式的作用，不同的人对电脑的配置需求不一样的「打游戏的对显卡要求高」，但是电脑构成部件是固定的，我们找电脑城的装机人员把电脑装起来这一过程就是建造模式</p>
+<blockquote>
+<p>3、软件开发</p>
+</blockquote>
+<p>我们开发一款产品，需要技术主管、产品经理、苦逼的程序员。在这里，产品经理就是指挥者「Director」和客户沟通，了解产品需求，技术主管是抽象的建造者[Builder]，让猿们杂做就杂做，而程序员就是体力劳动者「即具体的建造者，按照技术主管下发的任务去做」— 这就是一个接近完美的建造者模式「为什么说接近呢？因为没有百分之百，靠：又忘记吃药了」</p>
+<h4 id="2、程序中的建造者模式"><a href="#2、程序中的建造者模式" class="headerlink" title="2、程序中的建造者模式"></a>2、程序中的建造者模式</h4><blockquote>
+<p>建造者模式的定义</p>
+</blockquote>
+<p>将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示，这是官方定义，通俗的说就是：建造者模式就是如何一步步构建一个包含多个组成部件的对象，相同的构建过程可以创建不同的产品</p>
+<blockquote>
+<p>建造者模式的特点</p>
+</blockquote>
+<p>建造者模式是一种创建型模式，适用于那些流程固定「顺序不一定固定」，建造的目标对象会有所改变这种场景「比如画一条狗，这个目标不变，但是不同的是有黄狗，胖狗，瘦狗等」，还有一种场景是代替多参数构造器</p>
+<blockquote>
+<p>建造者模式的作用</p>
+</blockquote>
+<ul>
+<li>1、用户不知道对象的建造过程和细节就可以创建出复杂的对象「屏蔽了建造的具体细节」</li>
+<li>2、用户只需给出复杂对象的内容和类型可以创建出对象</li>
+<li>3、建造者模工按流程一步步的创建出复杂对象</li>
+</ul>
+<blockquote>
+<p>建造者模式的结构</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>类别</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Builder</td>
+<td>接口或抽象类</td>
+<td>抽象的建造者，不是必须的</td>
+</tr>
+<tr>
+<td>ConcreateBuilder</td>
+<td>具体的建造者</td>
+<td>可以有多个「因为每个建造风格可能不一样」</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>普通的类</td>
+<td>具体的产品「即被建造的对象」</td>
+</tr>
+<tr>
+<td>Director</td>
+<td>导演也叫指挥者</td>
+<td>统一指挥建造者去建造目标，导演不是必须的</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>建造者模式简单的 UML</p>
+</blockquote>
+<img src="/2019/07/07/builder/BuilderPattern.jpg" title="建造者模式简单的 UML">
+
+<h3 id="二、建造者模式的举例"><a href="#二、建造者模式的举例" class="headerlink" title="二、建造者模式的举例"></a>二、建造者模式的举例</h3><blockquote>
+<p>1、组装电脑</p>
+</blockquote>
+<p>小明想组装一个台式电脑，小明对电脑配置一窍不通，就直接跑到电脑城给装机老板说我要一台打游戏非常爽的电脑，麻烦你给装一下「配置什么的你给我推荐一下吧」，于是老板就让它的员工「小美」按小明的要求装了一个性能灰常牛 B 的电脑，1 个小时后电脑装好了，小明交钱拿电脑走人。不一会儿小张又来了，要一个满足平时写文章就可以的电脑，老板针对小张的要求给不同的装机配置。不同的人有不同的配置方案「但是装机流程是一样的」，这就是一个典型的建造者模式</p>
+<p><code>组装电脑简单的 UML</code></p>
+<img src="/2019/07/07/builder/AssemblerComputerBuilderUml.jpg" title="组装电脑简单的 UML">
+
+<p><code>根据 UML 撸码</code></p>
+<ul>
+<li>1、创建被建造的对象电脑 — Computer.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 产品类--被建造的对象
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Computer</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String cpu <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// cpu</span>
+    <span class="token keyword">private</span> String hardDisk <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//硬盘</span>
+    <span class="token keyword">private</span> String mainBoard <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 主板</span>
+    <span class="token keyword">private</span> String memory <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 内存</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 省略 getter 和 setter
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>2、抽象的建造者 — Builder.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 抽象的建造者，即装电脑的步骤
+ * 至于安装什么型号的主板，不是我关心，而是具体的建造者关心的
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Builder</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 安装主板</span>
+    <span class="token keyword">void</span> <span class="token function">createMainBoard</span><span class="token punctuation">(</span>String mainBoard<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 安装 cpu</span>
+    <span class="token keyword">void</span> <span class="token function">createCpu</span><span class="token punctuation">(</span>String cpu<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 安装硬盘</span>
+    <span class="token keyword">void</span> <span class="token function">createhardDisk</span><span class="token punctuation">(</span>String hardDisk<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 安装内存</span>
+    <span class="token keyword">void</span> <span class="token function">createMemory</span><span class="token punctuation">(</span>String memory<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 组成电脑</span>
+    Computer <span class="token function">createComputer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>3、具体建造者，也就是装机工人小美 — AssemblerBuilder.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 具体的建造者，这里是商场的一个装机人员
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AssemblerBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">Builder</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> Computer computer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Computer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createCpu</span><span class="token punctuation">(</span>String cpu<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        computer<span class="token punctuation">.</span><span class="token function">setCpu</span><span class="token punctuation">(</span>cpu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createhardDisk</span><span class="token punctuation">(</span>String hardDisk<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        computer<span class="token punctuation">.</span><span class="token function">setHardDisk</span><span class="token punctuation">(</span>hardDisk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createMainBoard</span><span class="token punctuation">(</span>String mainBoard<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        computer<span class="token punctuation">.</span><span class="token function">setMainBoard</span><span class="token punctuation">(</span>mainBoard<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createMemory</span><span class="token punctuation">(</span>String memory<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        computer<span class="token punctuation">.</span><span class="token function">setMemory</span><span class="token punctuation">(</span>memory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> Computer <span class="token function">createComputer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> computer<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>4、还有老板「”指手画脚的人”」安排装机工工作 — Direcror.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 声明一个导演类「指挥者，这里可以装电脑的老板」，用来指挥组装过程，也就是组装电脑的流程
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Direcror</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> Builder builder <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 使用多态，装机工非常多，我管你小美，小兰，小猪，我统统收了</span>
+    <span class="token keyword">public</span> <span class="token function">Direcror</span><span class="token punctuation">(</span>Builder builder<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>builder <span class="token operator">=</span> builder <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 老板最后只想看到装成的成品---要交到客户手中</span>
+    <span class="token keyword">public</span> Computer <span class="token function">createComputer</span><span class="token punctuation">(</span>String cpu<span class="token punctuation">,</span>String hardDisk<span class="token punctuation">,</span>String mainBoard<span class="token punctuation">,</span>String memory<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 具体的工作是装机工去做</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">createMainBoard</span><span class="token punctuation">(</span>mainBoard<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">createCpu</span><span class="token punctuation">(</span>cpu<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">createMemory</span><span class="token punctuation">(</span>memory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">createhardDisk</span><span class="token punctuation">(</span>hardDisk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">createComputer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>5、测试类</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 测试类
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 装机员小美</span>
+      Builder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AssemblerBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 老板把小明的需求转给小美</span>
+      Direcror direcror <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Direcror</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 老板最后拿到成品机子，工作全由小美去做</span>
+      Computer computer <span class="token operator">=</span> direcror<span class="token punctuation">.</span><span class="token function">createComputer</span><span class="token punctuation">(</span><span class="token string">"Intel 酷睿i9 7900X"</span><span class="token punctuation">,</span><span class="token string">"三星M9T 2TB （HN-M201RAD）"</span><span class="token punctuation">,</span><span class="token string">"技嘉AORUS Z270X-Gaming 7"</span><span class="token punctuation">,</span><span class="token string">"科赋Cras II 红灯 16GB DDR4 3000"</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"小明这台电脑使用的是：\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getMainBoard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" 主板\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getCpu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" CPU\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getHardDisk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"硬盘\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getMainBoard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" 内存\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>6、运行查看结果</li>
+</ul>
+<img src="/2019/07/07/builder/computer_builder.png" title="装机结果">
+
+<p>怎么样，至于小张，小猪要装机把自己要的配置给老板即可，然后老板如何装机不用你管，你就等着收装好的机子吧</p>
+<blockquote>
+<p>2、盖房子</p>
+</blockquote>
+<p>盖房子的基本步骤和流程是固定的无非就是打地基、盖框架、然后浇筑「至于盖平房、还是楼房那是每个客户的具体需求」。总体来说盖房子以有以三种方式：</p>
+<ul>
+<li>1、自己盖房子「没有办法有的人就是牛 B ,自己设计，自己动手，当然这属于小房子，你让一个人盖个32 层让我看看」</li>
+<li>2、想盖房子的人是一个包工头，自己找一帮工人自己就把房子搞定了</li>
+<li>3、想盖房子的人就是一个普通人，啥也不会，找一个设计师说“我就要盖个房子，南北通透，四秀常春”，设计师说没有问题，设计师把设计出来的图纸扔给包工头说：“就照这个样子盖”，包工头拿着图纸给工人们分工派活，最后完工</li>
+</ul>
+<p><code>盖房子建造者模式简单的 UML</code></p>
+<img src="/2019/07/07/builder/houseBuilderUml.jpg" title="盖房子建造者模式简单的 UML">
+
+<p><code>根据 UML 撸码</code></p>
+<ul>
+<li>1、房子对象 House.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 最终的产品---房子
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">House</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 打地基</span>
+    <span class="token keyword">private</span> String foundation <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 盖框架</span>
+    <span class="token keyword">private</span> String frame <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 浇筑</span>
+    <span class="token keyword">private</span> String pouring <span class="token punctuation">;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 省略 setter 和 getter 
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>2、抽象建造者「包工头」 HouseBuilder.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">HouseBuilder</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 打地基</span>
+    <span class="token keyword">void</span> <span class="token function">doFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 盖框架</span>
+    <span class="token keyword">void</span> <span class="token function">doFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 浇灌</span>
+    <span class="token keyword">void</span> <span class="token function">dpPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 房子建成 </span>
+    House <span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>3、具体建造者「工人」–盖平房 PingFangBuilder.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 盖平房
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PingFangBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">HouseBuilder</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> House house <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">House</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        house<span class="token punctuation">.</span><span class="token function">setFoundation</span><span class="token punctuation">(</span><span class="token string">"盖平房的地基"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        house<span class="token punctuation">.</span><span class="token function">setFrame</span><span class="token punctuation">(</span><span class="token string">"盖平房的框架"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">dpPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        house<span class="token punctuation">.</span><span class="token function">setPouring</span><span class="token punctuation">(</span><span class="token string">"盖平房不用浇灌，直接人工手刷就可以"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> House <span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> house<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>4、具体建造者「工人」–盖楼房 LouFangBuilder.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 盖楼房
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LouFangBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">HouseBuilder</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> House house <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">House</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        house<span class="token punctuation">.</span><span class="token function">setFoundation</span><span class="token punctuation">(</span><span class="token string">"盖楼房的地基就打十米深"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        house<span class="token punctuation">.</span><span class="token function">setFrame</span><span class="token punctuation">(</span><span class="token string">"楼房的框架要使用非常坚固钢筋混凝土"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">dpPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        house<span class="token punctuation">.</span><span class="token function">setPouring</span><span class="token punctuation">(</span><span class="token string">"楼房拿个罐车把框架拿混凝土灌满即可"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> House <span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> house<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>5、指挥者「设计师」 HouseDirector.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 设计师
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HouseDirector</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 指挥包工头</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">buildHouse</span><span class="token punctuation">(</span>HouseBuilder houseBuilder<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        houseBuilder<span class="token punctuation">.</span><span class="token function">doFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        houseBuilder<span class="token punctuation">.</span><span class="token function">doFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        houseBuilder<span class="token punctuation">.</span><span class="token function">dpPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>6、测试一下 Test.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 测试
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token comment" spellcheck="true">// 方式一、客户自己盖房子，亲力亲为</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"========客户自己建房子，必须知道盖房的细节========"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        House house <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">House</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        house<span class="token punctuation">.</span><span class="token function">setFoundation</span><span class="token punctuation">(</span><span class="token string">"用户自己建造房子：打地基"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        house<span class="token punctuation">.</span><span class="token function">setFrame</span><span class="token punctuation">(</span><span class="token string">"用户自己建造房子：盖框架"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        house<span class="token punctuation">.</span><span class="token function">setPouring</span><span class="token punctuation">(</span><span class="token string">"用户自己建造房子：浇筑"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>house<span class="token punctuation">.</span><span class="token function">getFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>house<span class="token punctuation">.</span><span class="token function">getFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>house<span class="token punctuation">.</span><span class="token function">getPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token comment" spellcheck="true">// 方式二、客户找一个建造者盖房子「充当包工头角色」，但是要知道如何盖房子「调用建造者盖房子的顺序」</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"========客户直接找盖房子的工人「建造者」，客户要调用建造者方法去盖房子，客户必须得知道房子如何造========"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        HouseBuilder houseBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PingFangBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        houseBuilder<span class="token punctuation">.</span><span class="token function">doFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        houseBuilder<span class="token punctuation">.</span><span class="token function">doFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        houseBuilder<span class="token punctuation">.</span><span class="token function">dpPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        House house1 <span class="token operator">=</span> houseBuilder<span class="token punctuation">.</span><span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>house1<span class="token punctuation">.</span><span class="token function">getFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>house1<span class="token punctuation">.</span><span class="token function">getFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>house1<span class="token punctuation">.</span><span class="token function">getPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 方式三、使用建造者模式，找一个设计师「设计师拉一帮建造者去干活」，告诉他我想要什么样的房子，最后客户只问设计师要房子即可</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"========客户直接找一个设计师，设计师统一指挥建造者盖房子，房子杂盖，客户不关心，最后只是找设计师要房子即可========"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        HouseBuilder pingFangBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PingFangBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        HouseDirector houseDirector <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HouseDirector</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        houseDirector<span class="token punctuation">.</span><span class="token function">buildHouse</span><span class="token punctuation">(</span>pingFangBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        House houseCreateByBuilder <span class="token operator">=</span> pingFangBuilder<span class="token punctuation">.</span><span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>houseCreateByBuilder<span class="token punctuation">.</span><span class="token function">getFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>houseCreateByBuilder<span class="token punctuation">.</span><span class="token function">getFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>houseCreateByBuilder<span class="token punctuation">.</span><span class="token function">getPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>我们对比了三种方式，自己盖房子，找工人盖房子，找设计师盖房子来逐步感受一下建造者模式的优点</p>
+<ul>
+<li>6、运行查看结果</li>
+</ul>
+<img src="/2019/07/07/builder/housebuild_result.png" title="盖房子结果">
+
+<p>可以看到最后一种最舒服，盖房子的时候直接外包给设计师自己就不用管了，到时候问设计师要建好的成品房子即可，这样对客户来说具体如何盖房子我不需要知道，屏蔽细节「只能说有钱就是任性」</p>
+<blockquote>
+<p>3、替代多参数构造函数的建造者模式，以组装电脑为例子</p>
+</blockquote>
+<p>前面我们说了在建造者模式中 Director 不是必须的，Director 的作用不是构造产品「建造产品是建造者的事情」而是指挥协调建造的步骤「当有一个新的建造者的时候直接实现抽象建造者，而不用关心具体的执行步骤，这就是 Director 干的事情」，我们直接看代码吧</p>
+<ul>
+<li>1、原始的 Computer.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Computer</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String mainBoard <span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// 主板</span>
+    <span class="token keyword">private</span> String cpu <span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">// cpu</span>
+    <span class="token keyword">private</span> String hd <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 硬盘</span>
+    <span class="token keyword">private</span> String powerSupplier <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 电源</span>
+    <span class="token keyword">private</span> String graphicsCard<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 显卡</span>
+
+    <span class="token comment" spellcheck="true">// 其它一些可选配置</span>
+    <span class="token keyword">private</span> String mouse <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 鼠标</span>
+    <span class="token keyword">private</span> String computerCase <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//机箱</span>
+    <span class="token keyword">private</span> String mousePad <span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//鼠标垫</span>
+    <span class="token keyword">private</span> String other <span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//其它配件</span>
+
+
+    <span class="token keyword">public</span> <span class="token function">Computer</span><span class="token punctuation">(</span>String mainBoard<span class="token punctuation">,</span>String cpu<span class="token punctuation">,</span>String hd<span class="token punctuation">,</span>String powerSupplier<span class="token punctuation">,</span>
+                      String graphicsCard<span class="token punctuation">,</span>String mouse<span class="token punctuation">,</span>String computerCase<span class="token punctuation">,</span>String mousePad<span class="token punctuation">,</span>String other<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mainBoard <span class="token operator">=</span> mainBoard <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>cpu <span class="token operator">=</span> cpu <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>hd <span class="token operator">=</span> hd <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>powerSupplier <span class="token operator">=</span> powerSupplier <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>graphicsCard <span class="token operator">=</span> graphicsCard <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mouse <span class="token operator">=</span> mouse <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>computerCase <span class="token operator">=</span> computerCase <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mousePad <span class="token operator">=</span> mousePad <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>other <span class="token operator">=</span> other <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">Computer</span><span class="token punctuation">(</span>String mainBoard<span class="token punctuation">,</span>String cpu<span class="token punctuation">,</span>String hd<span class="token punctuation">,</span>String powerSupplier<span class="token punctuation">,</span>
+                    String graphicsCard<span class="token punctuation">,</span>String mouse<span class="token punctuation">,</span>String computerCase<span class="token punctuation">,</span>String mousePad<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mainBoard <span class="token operator">=</span> mainBoard <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>cpu <span class="token operator">=</span> cpu <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>hd <span class="token operator">=</span> hd <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>powerSupplier <span class="token operator">=</span> powerSupplier <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>graphicsCard <span class="token operator">=</span> graphicsCard <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mouse <span class="token operator">=</span> mouse <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>computerCase <span class="token operator">=</span> computerCase <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mousePad <span class="token operator">=</span> mousePad <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 省略其它的构造方法和 setter 和 getter 方法
+<span class="token punctuation">}</span></code></pre>
+<p>如果我们想要调用这个类就得在构参数方法中传递“无数个参数”「如果有的参是一些可选项，我们还得重写构造方法」，要么就要调用多个 setter 方法，才能给一个对象赋值，方法虽然可行，但是也太扯淡了「谁能记住那些参数呀」，那么建造者模式可以解决多参数构造方法来建造对象</p>
+<ul>
+<li>2、使用建造者建立 ComputerB.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Created by TigerChain
+ * 替代多参构造方法--建造者模式
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ComputerB</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> String mainBoard <span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// 主板</span>
+    <span class="token keyword">private</span> String cpu <span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">// cpu</span>
+    <span class="token keyword">private</span> String hd <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 硬盘</span>
+    <span class="token keyword">private</span> String powerSupplier <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 电源</span>
+    <span class="token keyword">private</span> String graphicsCard<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 显卡</span>
+
+    <span class="token comment" spellcheck="true">// 其它一些可选配置</span>
+    <span class="token keyword">private</span> String mouse <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 鼠标</span>
+    <span class="token keyword">private</span> String computerCase <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//机箱</span>
+    <span class="token keyword">private</span> String mousePad <span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//鼠标垫</span>
+    <span class="token keyword">private</span> String other <span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//其它配件</span>
+
+    <span class="token comment" spellcheck="true">// ComputerB 自己充当 Director </span>
+    <span class="token keyword">private</span> <span class="token function">ComputerB</span><span class="token punctuation">(</span>ComputerBuilder builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mainBoard <span class="token operator">=</span> builder<span class="token punctuation">.</span>mainBoard <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>cpu <span class="token operator">=</span> builder<span class="token punctuation">.</span>cpu <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>hd <span class="token operator">=</span> builder<span class="token punctuation">.</span>hd <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>powerSupplier <span class="token operator">=</span> builder<span class="token punctuation">.</span>powerSupplier <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>graphicsCard <span class="token operator">=</span> builder<span class="token punctuation">.</span>graphicsCard <span class="token punctuation">;</span>
+
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mouse <span class="token operator">=</span> builder<span class="token punctuation">.</span>mouse <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>computerCase <span class="token operator">=</span> builder<span class="token punctuation">.</span>computerCase <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mousePad <span class="token operator">=</span> builder<span class="token punctuation">.</span>mousePad <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>other <span class="token operator">=</span> builder<span class="token punctuation">.</span>other <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 声明一个静态内存类 Builder</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">ComputerBuilder</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 一个电脑的必须配置</span>
+        <span class="token keyword">private</span> String mainBoard <span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// 主板</span>
+        <span class="token keyword">private</span> String cpu <span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">// cpu</span>
+        <span class="token keyword">private</span> String hd <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 硬盘</span>
+        <span class="token keyword">private</span> String powerSupplier <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 电源</span>
+        <span class="token keyword">private</span> String graphicsCard<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 显卡</span>
+
+        <span class="token comment" spellcheck="true">// 其它一些可选配置</span>
+        <span class="token keyword">private</span> String mouse <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 鼠标</span>
+        <span class="token keyword">private</span> String computerCase <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//机箱</span>
+        <span class="token keyword">private</span> String mousePad <span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//鼠标垫</span>
+        <span class="token keyword">private</span> String other <span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//其它配件</span>
+
+        <span class="token comment" spellcheck="true">// 这里声明一些必须要传的参数「规定这些参数是必须传的，这里只是举例，再实中可能参数都是可选的」</span>
+        <span class="token keyword">public</span> <span class="token function">ComputerBuilder</span><span class="token punctuation">(</span>String mainBoard<span class="token punctuation">,</span>String cpu<span class="token punctuation">,</span>String hd<span class="token punctuation">,</span>String powerSupplier<span class="token punctuation">,</span>String graphicsCard<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>mainBoard <span class="token operator">=</span> mainBoard <span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>cpu <span class="token operator">=</span> cpu <span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>hd <span class="token operator">=</span> hd <span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>powerSupplier <span class="token operator">=</span> powerSupplier <span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>graphicsCard <span class="token operator">=</span> graphicsCard <span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> ComputerBuilder <span class="token function">setMainBoard</span><span class="token punctuation">(</span>String mainBoard<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>mainBoard <span class="token operator">=</span> mainBoard<span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span> <span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">public</span> ComputerBuilder <span class="token function">setCpu</span><span class="token punctuation">(</span>String cpu<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>cpu <span class="token operator">=</span> cpu<span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span> <span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+           <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 其它的一些 <span class="token function">setXXX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法
+
+        <span class="token comment" spellcheck="true">// 生成最终的产品</span>
+        <span class="token keyword">public</span> ComputerB <span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ComputerB</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>代码注释非常详细，乍一看好像和建造者模式没有毛关系，但是我们细细一分析这个确实是一个建造者模式，我们看一看：产品是–&gt;ComputerB,具体的建造者是一个静态内存类–&gt;ComputerBuilder,但是没有抽象的建造者和指挥者「其实 ComputerB 充当的就是指挥者的角色」，我们说过建造者模式中指挥者和抽象建造者都不是必须的，所以这是一个典型的建造者模式</p>
+<ul>
+<li>3、如何调用来个测试类 Test.java</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token comment" spellcheck="true">// 不使用建造者模式</span>
+        Computer computer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Computer</span><span class="token punctuation">(</span><span class="token string">"主板"</span><span class="token punctuation">,</span><span class="token string">"cpu"</span><span class="token punctuation">,</span><span class="token string">"hd"</span><span class="token punctuation">,</span><span class="token string">"电源"</span><span class="token punctuation">,</span><span class="token string">"显卡"</span>
+        <span class="token punctuation">,</span><span class="token string">"鼠标"</span><span class="token punctuation">,</span><span class="token string">"机箱"</span><span class="token punctuation">,</span><span class="token string">"鼠标垫"</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"使用普通的构造方法组装电脑："</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 使用建造者模式</span>
+        ComputerB computerB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ComputerB<span class="token punctuation">.</span>ComputerBuilder</span><span class="token punctuation">(</span><span class="token string">"主板"</span><span class="token punctuation">,</span><span class="token string">"cpu"</span><span class="token punctuation">,</span><span class="token string">"hd"</span><span class="token punctuation">,</span><span class="token string">"电源"</span><span class="token punctuation">,</span><span class="token string">"显卡"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setMouse</span><span class="token punctuation">(</span><span class="token string">"鼠标"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMousePad</span><span class="token punctuation">(</span><span class="token string">"垫子"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"使用建造者模式组装电脑："</span><span class="token operator">+</span>computerB<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>我们分别使用普通构造方法「调用者能吐血」和建造者模式组装电脑，可以看到建造者模式调用 new ComputerB.ComputerBuilder(xxx).setxxx().setxxx().build() 调用方法直接打点调用「也叫流式调用，这样调用方便多了，想点那个就点那个」，如果使用过 rx 的话会非常有感觉</p>
+<ul>
+<li>4、运行查看一下结果</li>
+</ul>
+<img src="/2019/07/07/builder/computer_replace_cons.png" title="替代多参数构造方法的的建造者模式结果">
+
+<p>如果在以后如果遇到多参数构造对象的时候不仿考虑使用建造者模式</p>
+<h3 id="三、Android-源码中的建造者模式"><a href="#三、Android-源码中的建造者模式" class="headerlink" title="三、Android 源码中的建造者模式"></a>三、Android 源码中的建造者模式</h3><blockquote>
+<p>1、AlertDialog</p>
+</blockquote>
+<p>做 Android 的朋友一定不会对 AlertDialog 陌生，它是一个可以添加列表、单选列表、文本输入框，多选列表等弹窗组件，内部使用的是典型的建造者模式，我们看看 AlertDialog 的基本使用方法</p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 创建构建器</span>
+   AlertDialog<span class="token punctuation">.</span>Builder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AlertDialog<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 使用建造者模式代替多参构造函数</span>
+   Dialog dialog<span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">setTitle</span><span class="token punctuation">(</span>XXX<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setIcon</span><span class="token punctuation">(</span>XXX<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setXXX</span><span class="token punctuation">(</span>xxx<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+   dialog<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span></code></pre>
+<p><code>AlertDialog 简单的 UML</code></p>
+<img src="/2019/07/07/builder/AlertDialogUml.jpg" title="AlertDialog 简单的 UML">
+
+<p><code>AlertDialog 核心代码剥离</code></p>
+<img src="/2019/07/07/builder/AlertDialog_Code.png" title="AlertDialog 核心代码剥离">
+
+<p>上图明显的显示出了 AlertDialog 的建造者模式「AlertDialog.Builder 同时扮演了 Builder、ConcreateBuilder、Director 等角色」</p>
+<blockquote>
+<p>2、Notification 的 setLatestEventInfo 方法「过时了，但是思想可以学习」</p>
+</blockquote>
+<p>我们看看 Notification 的 setLatestEventInfo 一看便知道使用的是建造者模式，我们看下图</p>
+<img src="/2019/07/07/builder/notification.png" title="setLatestEventInfo">
+
+<p>以上的方法被 Notification.Builder 替代了「setLatestEventInfo 从终也是调用 Notification.Builder」，真正的建造者模式是 Notification.Builder </p>
+<p>如果要支持到低版本可以使用 android.support.v4.app.NotificationCompat.Builder 来创建 Notification 名字一看又是一个建造者模式，感兴趣的可以看看 NotificationCompat.Builder 的源码</p>
+<blockquote>
+<p>3、AnimatorSet.Builder</p>
+</blockquote>
+<p>AnimatorSet 用作将一个动画集合按选定的顺序执行，我们可以使用 AnimatorSet.Builder 添加播放动画顺序「这只是其中一个方法」</p>
+<p><code>使用方法举例</code></p>
+<pre class=" language-java"><code class="language-java">AnimatorSet animSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AnimatorSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token comment" spellcheck="true">//AnimatorSet.Builder 不能直接建立 ，只能通过 play(Animation)</span>
+AnimatorSet<span class="token punctuation">.</span>Builder builder <span class="token operator">=</span> animSet<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span>anim2<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+builder<span class="token punctuation">.</span><span class="token function">with</span><span class="token punctuation">(</span>anim3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">after</span><span class="token punctuation">(</span>anim1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span>anim4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// anim1先执行，然后再同步执行anim2、anim3，最后执行anim4  </span>
+animSet<span class="token punctuation">.</span><span class="token function">setDuration</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+animSet<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  </code></pre>
+<p><code>核心代码</code></p>
+<img src="/2019/07/07/builder/AnimatorSet_builder.png" title="AnimatorSet.Builder 部分代码">
+
+<h3 id="四、建造者模式的优缺点"><a href="#四、建造者模式的优缺点" class="headerlink" title="四、建造者模式的优缺点"></a>四、建造者模式的优缺点</h3><blockquote>
+<p>优点</p>
+</blockquote>
+<ul>
+<li>1、使创建产品的步骤「把创建产品步骤放在不同的方法中，更加清晰直观」和产品本身分离，即使用相同的创建过程要吧创建出不同的产品</li>
+<li>2、每个建造者都是独立的互不影响，这样就达到解耦的目的，所以如果想要替换现有的建造者那非常方便，添加一个实现即可。</li>
+</ul>
+<blockquote>
+<p>缺点</p>
+</blockquote>
+<ul>
+<li>1、只适用于产品具有相同的特点「过程和步骤」，如果产品之间差异非常大，则不适用「使用范围受限」</li>
+<li>2、万一那天产品内部发生改变，那多个建造者都要修改，成本太大</li>
+</ul>
+<h3 id="五、建造者模式的使用场景"><a href="#五、建造者模式的使用场景" class="headerlink" title="五、建造者模式的使用场景"></a>五、建造者模式的使用场景</h3><ul>
+<li>1、如果一个对象有非常复杂的内部结构「这些产品通常有很多属性」，那么使用建造者模式</li>
+<li>2、如果想把复杂对象的创建和使用分离开来，那么使用建造者模式「使用相同的创建步骤可以创建不同的产品」</li>
+</ul>
+<h3 id="六、建造者模式-VS-简单工厂模式"><a href="#六、建造者模式-VS-简单工厂模式" class="headerlink" title="六、建造者模式 VS 简单工厂模式"></a>六、建造者模式 VS 简单工厂模式</h3><blockquote>
+<p>相似点</p>
+</blockquote>
+<p>它们都属于创建型模式「都是创建产品的」</p>
+<blockquote>
+<p>区别 </p>
+</blockquote>
+<ul>
+<li>1、创建对象的粒度不同</li>
+</ul>
+<p>工厂模式创建的对象都是一个鸟样子，而建造者模式创建的是一个复合产品，由各个复杂的部件组成，部件不同所构成的产品也不同</p>
+<ul>
+<li>2、关注点不同：</li>
+</ul>
+<p>工厂模式注重只要把这个对象创建出来就 o 了「不关心这个产品的组成部分」，而建造者模式不仅要创造出这个产品，还有知道这个产品的组成部分</p>
+<p>到此为止，我们就介绍完了建造者模式，一定要动手试一下哦！你们的支持是我最大的动力</p>
+<p>作者: <a href="http://tigerchain.github.io" target="_blank" rel="noopener">TigerChain</a> 订阅查看更多内容<br>本文出自 <a href="http://tigerchain.github.io" target="_blank" rel="noopener">TigerChain</a>  <a href="http://tigerchain.github.io/categories/人人都会设计模式/" target="_blank" rel="noopener">人人都会设计模式</a></p>
+<p><a href="https://mp.weixin.qq.com/s/Qiu8koRHd9oSWQO05Wumhw" target="_blank" rel="noopener">阅读原文</a></p>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                       
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                         <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                   
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+
+                     <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7c76d2aabb5d87123368',
+        clientSecret: '59586251faddd830ba7ac6144d9a54e4ae0acf9e',
+        repo: 'tigerchain.github.io',
+        owner: 'TigerChain',
+        admin: "TigerChain",
+        id: '2019-07-07T21-07-24',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/07/07/builder/">
+                    <div class="card-image">
+                        
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/design_patterns_common_logo.png" class="responsive-img" alt="07、建造者模式">
+                        
+                        <span class="card-title">07、建造者模式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            建造者模式是一种创建型模式，适应于流程固定创建目标多种这种情况
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/人人都会设计模式/" class="post-category" target="_blank">
+                                    人人都会设计模式
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/设计模式/" target="_blank">
+                        <span class="chip bg-color">设计模式</span>
+                    </a>
+                    
+                    <a href="/tags/Android/" target="_blank">
+                        <span class="chip bg-color">Android</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/07/06/observer/">
+                    <div class="card-image">
+                        
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/design_patterns_common_logo.png" class="responsive-img" alt="06、观察者模式">
+                        
+                        <span class="card-title">06、观察者模式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            观察者模式是一种一对多关系，一个被观察者对应多个观察者
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/人人都会设计模式/" class="post-category" target="_blank">
+                                    人人都会设计模式
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/设计模式/" target="_blank">
+                        <span class="chip bg-color">设计模式</span>
+                    </a>
+                    
+                    <a href="/tags/Android/" target="_blank">
+                        <span class="chip bg-color">Android</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站是<a href="http://tigerchain.github.io/" target="_blank"> TigerChain </a>
+的学习、分享、吹水的官方博客.
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">32.5k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/TigerChain" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:tigerchain001@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+
+<!--  --></div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
