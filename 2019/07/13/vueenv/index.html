@@ -4,20 +4,19 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="02、永不过时的 HelloWorld, tigerchain">
+    <meta name="keywords" content="01、环境搭建, tigerchain">
     <meta name="description" content="
 
+
+版权声明：本文为博主原创文章，未经博主允许不得转载
+
+ PS：转载请注明出处作者: TigerChain本文出自 TigerChain  手把手教Vue
 
 教程简介
 
 
 1、阅读对象本篇教程适合新手阅读，老手直接略过
-2、教程难度初级，本人水平有限，文章内容难免会出现问题，如果有问题欢迎指出，谢谢
-
-
-正文
-
-一、目录结构在上一小节中我们介绍了 Flutter 的安装方法以及 Flutt">
+2、教程难度初级">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +24,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>02、永不过时的 HelloWorld | tigerchain</title>
+    <title>01、环境搭建 | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -254,13 +253,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/flutter_common_page_logo.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/vue_logo.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        02、永不过时的 HelloWorld
+                        01、环境搭建
                     </div>
                 </div>
             </div>
@@ -282,16 +281,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/移动端/" target="_blank">
-                                <span class="chip bg-color">移动端</span>
-                            </a>
-                        
                             <a href="/tags/前端/" target="_blank">
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/Flutter/" target="_blank">
-                                <span class="chip bg-color">Flutter</span>
+                            <a href="/tags/vue/" target="_blank">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -302,8 +297,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/从头整-Flutter/" class="post-category" target="_blank">
-                                从头整 Flutter
+                            <a href="/categories/手把手教Vue/" class="post-category" target="_blank">
+                                手把手教Vue
                             </a>
                         
                     </div>
@@ -314,21 +309,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-29
+                    2019-07-13
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.5k
+                        1.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        6 分
                     </div>
                     
                 
@@ -344,8 +339,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <img src="/2019/06/29/flutterhelloworld/flutter_hello_page_logo.png" title="本节大纲">
+                <img src="/2019/07/13/vueenv/env_logo.png" title="本节大纲">
 
+<blockquote>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载</p>
+</blockquote>
+<p> <strong>PS</strong>：转载请注明出处<br>作者: <a href="http://tigerchain.github.io" target="_blank" rel="noopener">TigerChain</a><br>本文出自 <a href="http://tigerchain.github.io/categories/手把手教Vue/" target="_blank" rel="noopener">TigerChain  手把手教Vue</a></p>
 <blockquote>
 <p>教程简介</p>
 </blockquote>
@@ -356,87 +355,155 @@
 <blockquote>
 <p>正文</p>
 </blockquote>
-<h3 id="一、目录结构"><a href="#一、目录结构" class="headerlink" title="一、目录结构"></a>一、目录结构</h3><p>在上一小节中我们介绍了 Flutter 的安装方法以及 Flutter 的开发环境「IDE」，并且运行了 Flutter 默认给我们生成的项目，但是代码我们应该写在那里以及项目的组成部分我们还是一概不知的，下面我们先来看看项目的目录吧</p>
-<img src="/2019/06/29/flutterhelloworld/flutter_struct.jpg" title="flutter 的项目结构">
-
-<h4 id="1、基本结构"><a href="#1、基本结构" class="headerlink" title="1、基本结构"></a>1、基本结构</h4><p>如果熟悉 ReactNative 的童鞋对这个目录不会陌生，基本上来说就是 Android 和 IOS 来承载 flutter，一般情况下 Android 和 IOS 中的文件我们不会去动，除非要混合开发，而我们的 flutter 文件是在 lib 文件夹中的，并且入口文件是 main.dart，其它的没什么好说的，不过要注意一点就是 pubspec.yaml 文件它是 flutter 的配置文件，类似于 Android 中的 gradle 和 Manifest 文件，具体后面会说</p>
-<h4 id="2、初识-main-dart-文件"><a href="#2、初识-main-dart-文件" class="headerlink" title="2、初识 main.dart 文件"></a>2、初识 main.dart 文件</h4><p>此文件是 flutter 的入口文件，默认会给我们生成一个界面，也就是我们上节看到的界面，我们来看看里面有啥东东</p>
-<img src="/2019/06/29/flutterhelloworld/main_dart.jpg" title="默认的 main.dart 文件">
-
-<p>我靠啥东东吗「如果初学 flutter 看到这个东西会晕晕的」，在组件化流行之后「以 React/Vue 等为代表」，flutter 也不例外也是采用组件化「其实就是借鉴了 React，但是 Google 叫它为 Widget – 小部件，就是一个组件，和 React/Vue 的 Component 是一个东东」，一个 flutter 项目就是由一个个 Widget 组成的「关于如何定义 Widget 后面章节说，不在本节范围内」</p>
-<p>总之一句话，这个 main.dart 文件第一次看不懂，看不懂，那么我们就不看了「后面通过学习，自然懂了」，只需要知道这个货就是 flutter 的入口文件即可</p>
-<h3 id="二、手写-HelloWorld"><a href="#二、手写-HelloWorld" class="headerlink" title="二、手写 HelloWorld"></a>二、手写 HelloWorld</h3><h4 id="1、命令式和声明式"><a href="#1、命令式和声明式" class="headerlink" title="1、命令式和声明式"></a>1、命令式和声明式</h4><p>命令式和声明式是两种编程方式，我们来说说吧</p>
-<p><strong>命令式</strong></p>
-<p>命令式就是所有功能和属性是通过指令来响应的，玩过 jquery「操作 DOM」 都知道基本上事件驱动的都是基于此种模式的，举个例子吧，比如我们要取得输入框的值，使用 js 来操作    </p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 取得 input 元素</span>
-<span class="token keyword">var</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-input<span class="token punctuation">.</span>onChange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">var</span> value <span class="token operator">=</span> input<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
-<span class="token punctuation">}</span></code></pre>
-<p>就是发送一个消息告诉系统一步步如何去做</p>
-<p><strong>声明式</strong></p>
-<p>比如 React/Vue 或者是 Android 中的布局 xml 文件都是声明式的，它主要是告诉系统做什么，但是具体如何做是系统的事情，拿 Jquery 和 React/Vue 对比就非常清楚了，Jquery 通过命令式来操作 DOM 但是 React/Vue 把操作 DOM 屏蔽了，只要通过声明来实想要的效果，使用 vue 实现上述效果</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-    <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
-      data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        message<span class="token punctuation">:</span> <span class="token string">''</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
-<p><strong>flutter 属于声明式</strong></p>
-<p>我们在写组件或界面的时候基本上都是给类似于 key:value 这种形式来指明我想的东西，至于东西杂样出来底层帮你做了「你不用关心」</p>
-<h4 id="2、手写-helloworld"><a href="#2、手写-helloworld" class="headerlink" title="2、手写 helloworld"></a>2、手写 helloworld</h4><p>看到上面的 main.dart 文件我们晕晕的，那就直接把它内容删掉，只保留第一行「import 语句」，一个最简单的 flutter 应用只有一个 runApp 方法和一个组件，官网上说的很清楚，如下</p>
-<img src="/2019/06/29/flutterhelloworld/minimal_fultter.jpg" title="最小的 flutter app]">
-
-<p>void main 就是程序的主入口，相当于 java 的 main 方法没什么好说的，通过 runApp 来加载组件并且将其添加到屏幕上，这是比较简单的 flutter 应用，但还不够简单，更简单应该就是 runApp 直接来个 组件如：</p>
-<pre class=" language-dart"><code class="language-dart"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token function">runApp</span><span class="token punctuation">(</span>
-     <span class="token keyword">new</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>
-       <span class="token string">'Hello'</span><span class="token punctuation">,</span>
-       <span class="token comment" spellcheck="true">// 文字方向，从左向右</span>
-       textDirection<span class="token punctuation">:</span> TextDirection<span class="token punctuation">.</span>ltr
-     <span class="token punctuation">)</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>没啥说的看看效果吧，直接 flutter run 看效果</p>
-<img src="/2019/06/29/flutterhelloworld/flutter_hello.jpg" title="文本左对齐">
-
-<p>看到了吧一个最简单的 flutter 应用就出来了，显示了一个 hello 但是位置被挡住了「没关系我们调整即可」</p>
-<p>这里 Text 就是一个组件，如果想让 Hello 水平居中使用其 textAlign 属性来选择水平对齐方式，如果我们想让 hello 在屏幕的中间，则需要给 Text 外面套一个组件 Center 或 Align 即可，我们套一个 Center 来试试</p>
-<img src="/2019/06/29/flutterhelloworld/flutter_hello_center.jpg" title="居中对齐">
-
-<p>如果我们在命令行输入 flutter run 运行起来以后，修改代码直接使用 shift+r「即 R」就可以实现热加载，不废话看效果</p>
-<img src="/2019/06/29/flutterhelloworld/flutter_hello_center_code.gif" title="文本居中">
-
-<p>我们在 Text 外套了一个 Center 组件，然后我按了一个 R 所修改的效果就出来了「是不是感觉很爽」，有可能初次写这些东西的时候不清楚是什么意思，没关系我们说组件的时候会详细的介绍，只需要知道 Center 是一个组件里面有一个 child 组件 Text</p>
-<h3 id="三、Flutter-组成"><a href="#三、Flutter-组成" class="headerlink" title="三、Flutter 组成"></a>三、Flutter 组成</h3><p>一个 flutter 应用是由各个组件组成的，面向对象是一切皆对象，React/Vue 一切皆组件，flutter 也是一切皆组件，提前说一下组件的组成方式，在 flutter 中通过组件嵌套的方式生成应用，这里就以上面的例子来说明吧</p>
-<img src="/2019/06/29/flutterhelloworld/flutter_hello_center.jpg" title="组件组成">
-
-<p>此 demo 由一个 Center 组件和 Text 组件组成</p>
-<img src="/2019/06/29/flutterhelloworld/hello_component.jpg" title="demo 组件组成图">
-
-<p>这没有什么好说的，当然这个 demo 太简单，真实情况比这复杂多了，但是再复杂的 flutter 应用也是由一个个组件组成的，如图所示</p>
-<img src="/2019/06/29/flutterhelloworld/flutter_widget_tree.jpg" title="demo flutter 由一个个小部件组成">
-
-<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><ul>
-<li>1、了解 flutter 目录结构</li>
-<li>2、手写 hello world ，并且了解命令式编程和声明式程序的区别</li>
-<li>3、flutter 的组成以及组件化思想</li>
+<h3 id="一、什么是-Vue"><a href="#一、什么是-Vue" class="headerlink" title="一、什么是 Vue"></a>一、什么是 Vue</h3><p>Vue 是一个用于构建用户界面的渐进式框架「注意读音类似于 View，作者的初衷也是让其起 View 的功能」，Vue 只注重视图层，这点和 React 的是一毛一样的</p>
+<blockquote>
+<p>vue 的特点</p>
+</blockquote>
+<ul>
+<li>简单、易用</li>
+<li>灵活</li>
+<li>高效</li>
 </ul>
-<p>本节和上一小节是一个预热，下一小节我们说说 flutter 常用的组件，熟悉了这些组件「以及如何使用它们」我们就可以开干 flutter 应用的界面了</p>
-<hr>
-<p>作者: <a href="https://github.com/TigerChain" target="_blank" rel="noopener">TigerChain</a> 订阅查看更多内容，公号「TigerChain」首发</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/qrcode.jpg" alt="tigerchain"></p>
+<h3 id="二、Vue-环境搭建"><a href="#二、Vue-环境搭建" class="headerlink" title="二、Vue 环境搭建"></a>二、Vue 环境搭建</h3><h4 id="1、Vue-的使用方式"><a href="#1、Vue-的使用方式" class="headerlink" title="1、Vue 的使用方式"></a>1、Vue 的使用方式</h4><blockquote>
+<p>1、下载 vue.js 引入到项目中</p>
+</blockquote>
+<p>我们直接下载 vue.js 然后引入 <script></script> 标签中即可，Vue 分为开发版本和生产版本</p>
+<ul>
+<li>1、开发版本：<a href="https://vuejs.org/js/vue.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.js</a></li>
+<li>2、生产版本：<a href="https://vuejs.org/js/vue.min.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.min.js</a></li>
+</ul>
+<p><strong>PS：</strong> 开发版本有完整的调试和警告，而生产版本则是一个精简版本，删除了警告，如果我们在开发的时候建议选择开发版本方便调试</p>
+<p>使用方式</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+     <span class="token comment" spellcheck="true">&lt;!-- 引入 vue.js 所在的目录--></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<blockquote>
+<p>2、使用 CDN 引用</p>
+</blockquote>
+<p>官方推荐使用 <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a></p>
+<blockquote>
+<p>3、使用 nmp/yarn 安装</p>
+</blockquote>
+<ul>
+<li>1、安装 node </li>
+</ul>
+<p>使用 npm 和 yarn 首先要安装 node，可以去官网下载：<a href="https://nodejs.org/en/download/current/" target="_blank" rel="noopener">https://nodejs.org/en/download/current/</a></p>
+<img src="/2019/07/13/vueenv/node_dowonload.png" title="下载 node">
+
+<p>下载对应 win 系统还是 mac 系统的版本，然后安装即可</p>
+<p>在我的 mac 电脑上我直接使用 <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a> 安装的</p>
+<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> node </code></pre>
+<p>安装完 node 会自带 npm「node 的包管理器」,安装完成以后在命令行中输入</p>
+<pre class=" language-bash"><code class="language-bash">node -v</code></pre>
+<p>看到以下 node 的版本信息则表示安装成功了</p>
+<img src="/2019/07/13/vueenv/node-v.png" title="查看 node 的版本">
+
+<ul>
+<li>2、使用 npm 安装 vue</li>
+</ul>
+<p>在命令行输入以下命令即完成安装</p>
+<pre class=" language-bash"><code class="language-bash">// 全局安装
+<span class="token function">npm</span> <span class="token function">install</span> -g vue</code></pre>
+<p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
+<img src="/2019/07/13/vueenv/vue-v.png" title="npm 安装 vue">
+
+<ul>
+<li>3、使用 yar「替代 npm 的包管理器」 安装</li>
+</ul>
+<p><strong>a)、</strong> 要使用 yarn 先需要安装 yarn , 在这里我们使用 npm 安装 yarn </p>
+<pre class=" language-bash"><code class="language-bash">// 全局安装
+<span class="token function">npm</span> <span class="token function">install</span> yarn -g </code></pre>
+<p><strong>b)、</strong> 使用 yarn 安装 vue</p>
+<pre class=" language-bash"><code class="language-bash">yarn global add vue </code></pre>
+<p>以上命令在 win 系统上安装完成以后，在命令行中使用 vue 可能会出现 Command not found 命令，那么我们需要配置一下环境变量。把 yarn 的 bin 目录配置到环境变量即可「配置到 path 路径下」，使用以下命令直接查看 yarn 的 bin 目录「把此命令显示出的路径直接配置到 path 后面即可」</p>
+<pre class=" language-bash"><code class="language-bash">yarn global bin </code></pre>
+<p>由于我这里是 mac 电脑，所以就不演示了，如果碰到这个问题，就配置一下环境变量即可</p>
+<p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
+<img src="/2019/07/13/vueenv/vue-v.png" title="yarn 安装 vue">
+
+<h4 id="2、使用-cli-「命令行工具」"><a href="#2、使用-cli-「命令行工具」" class="headerlink" title="2、使用 cli 「命令行工具」"></a>2、使用 cli 「命令行工具」</h4><p>我们除了上面的引用或安装 vue 外，还可以使用 vue-cli「脚手架工具」</p>
+<p>vue-cli 是一个脚手架工具「就是一个工具集合，可以快速的创建一个 vue 项目」</p>
+<p>同样使用 yarn/npm 来安装 vue-cli，我们全局安装</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --global vue-cli 
+或者使用
+yarn global add vue-cli</code></pre>
+<p>安装完以后，我们输入 vue -V 查看是否安装成功，或使用 vue-list 查看</p>
+<img src="/2019/07/13/vueenv/vue-list.png" title="vue-list">
+
+<p>看到上面内容则证明我们的 vue-cli 脚手架工具安装成功了</p>
+<h4 id="3、使用-vue-cli-来创建一个项目"><a href="#3、使用-vue-cli-来创建一个项目" class="headerlink" title="3、使用 vue-cli 来创建一个项目"></a>3、使用 vue-cli 来创建一个项目</h4><ul>
+<li>1、新建一个目录，我这里放在桌面「我以 mac 电脑演示，win 同理」</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash"> <span class="token function">cd</span> Desktop
+ <span class="token function">mkdir</span> myvuedemo
+ <span class="token function">cd</span> myvuedemo</code></pre>
+<ul>
+<li>2、使用 vue-cli 创建项目</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash">vue init webpack myfirstvuedemo</code></pre>
+<p>这里的 vue 项目是基于 webpack 的，使用上述命令我就可以创建一个名为 myfirstvuedemo 的 vue 项目</p>
+<p>当我们输入上述命令以后就会开始下载模版，然后会提示输入项目名「自己写一个即可」，完了一路回车，出现 yes 就直接回车「目前先这样搞，别管为什么，但是如果看过我的 react 教程就会了解，最后提示使用 npm 还是 yarn 来管理包，我选择的是 yarn」</p>
+{% asset_img vue-init-project.png  vue init project %}
+
+<p>安装完依赖以后，就会出现下面的命令</p>
+{% asset_img finish-vue-project.png  项目创建成功提示 %}
+
+<p>如图所示，我们成功创建出了项目，如果大家使用 npm 或是 yarn 出现安装不了的情况，那么切换一下源即可「tabao 的源就非常不错」，我们根据上面的提示，进入到项目中，然后运行一下项目看看结果</p>
+<ul>
+<li>3、运行项目</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> myfirstvuedemo
+然后运行
+yarn run dev</code></pre>
+<p>我们就会看到使用 webpack 启动服务，然后编译，完成以后提示项目运行的地址：默认是–<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
+<img src="/2019/07/13/vueenv/run-vue-project.png" title="启动项目">
+
+<p>我们在浏览器中输入 <code>http://localhost:8080</code> 回车，看结果</p>
+<img src="/2019/07/13/vueenv/vue-cli-show-result.png" title="vue-cli 项目结果显示">
+
+<p>怎么样，我们使用 vue-cli 就成功创建出一个 vue 项目，只不过他默认的主页是 Vue 的一些介绍，要搞成自己项目修改即可「后面说到 vue-cli 创建项目会说到的」，怎么样？脚手架创建项目简单吧「建议初学者不要直接使用 vue-cli 来创建项目，而是引入 vue.js 来使用，后面熟练了再使用 vue-cli」</p>
+<h3 id="三、Vue-开发工具"><a href="#三、Vue-开发工具" class="headerlink" title="三、Vue 开发工具"></a>三、Vue 开发工具</h3><ul>
+<li>1、webstorm </li>
+</ul>
+<img src="/2019/07/13/vueenv/webstrom.png" title="webstorm">
+
+<ul>
+<li>2、sublime</li>
+</ul>
+<img src="/2019/07/13/vueenv/sublime.png" title="sublime">
+
+<ul>
+<li>3、atom</li>
+</ul>
+<img src="/2019/07/13/vueenv/atom.png" title="atom">
+
+<ul>
+<li>4、Visual Studio Code[即 vscode]</li>
+</ul>
+<img src="/2019/07/13/vueenv/vscode.png" title="vscode">
+
+<p>对于开发工具来说，没有最好，只有最合适，完全看个人习惯，有的就习惯使用 vim 开发「你咬我呀」,我个人习惯于使用 atom 和 webstrom </p>
+<h4 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h4><p><strong>Vue 的特点：</strong></p>
+<ul>
+<li>简单、易用、灵活高效</li>
+</ul>
+<p><strong>Vue 的使用方式：</strong></p>
+<ul>
+<li>1、直接引入 script</li>
+<li>2、使用 CDN</li>
+<li>3、使用 yarn/npm</li>
+<li>4、使用 vue-cli 脚手架</li>
+</ul>
+<p>到此为之，我们简单介绍了一下 vue，并创建了第一个小 demo ，感受一下吧，下节我们看看 vue 的些指令完成一些交互 </p>
+<p>作者: <a href="http://tigerchain.github.io" target="_blank" rel="noopener">TigerChain</a> 公号同名，订阅查看更多内容</p>
+<p>本文出自 <a href="http://tigerchain.github.io" target="_blank" rel="noopener">TigerChain</a>  <a href="http://tigerchain.github.io/categories/手把手教Vue/" target="_blank" rel="noopener">手把手教Vue</a></p>
+<p>我将源码发布到了 <a href="https://github.com/TigerChain/vue-lesson" target="_blank" rel="noopener">手把手教 Vue</a> 方便大家查看，欢迎大家 fork，喜欢的话给个 star </p>
+<p><a href="https://mp.weixin.qq.com/s/cVrii2EYl5Xg0frLLR0mTA" target="_blank" rel="noopener">阅读原文</a></p>
 
             </div>
             <hr/>
@@ -602,7 +669,7 @@ input<span class="token punctuation">.</span>onChange <span class="token operato
         repo: 'tigerchain.github.io',
         owner: 'TigerChain',
         admin: "TigerChain",
-        id: '2019-06-29T11-14-25',
+        id: '2019-07-13T14-28-19',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -623,28 +690,82 @@ input<span class="token punctuation">.</span>onChange <span class="token operato
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/07/02/simplefactory/">
+                <a href="/2019/07/13/vueenv/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/design_patterns_common_logo.png" class="responsive-img" alt="01、简单工厂模式">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/vue_logo.jpg" class="responsive-img" alt="01、环境搭建">
                         
-                        <span class="card-title">01、简单工厂模式</span>
+                        <span class="card-title">01、环境搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简单工厂，从字面意思也能理解出来，就是一个很简单的工厂「W T F」
+                            Vue 是一个用于构建用户界面的渐进式框架「注意读音类似于 View」
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-02
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/手把手教Vue/" class="post-category" target="_blank">
+                                    手把手教Vue
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/前端/" target="_blank">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/vue/" target="_blank">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/07/10/decorator/">
+                    <div class="card-image">
+                        
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/design_patterns_common_logo.png" class="responsive-img" alt="09、装饰模式">
+                        
+                        <span class="card-title">09、装饰模式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在不改变原有对象的基础之下给原有对象扩展功能，是对继承关系的一种替换方案
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -666,62 +787,6 @@ input<span class="token punctuation">.</span>onChange <span class="token operato
                     
                     <a href="/tags/Android/" target="_blank">
                         <span class="chip bg-color">Android</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/06/15/flutterevninit/">
-                    <div class="card-image">
-                        
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/flutter_common_page_logo.jpg" class="responsive-img" alt="01、环境搭建">
-                        
-                        <span class="card-title">01、环境搭建</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            在说 flutter 是什么之前，我们先来看看目前移动端开发几种模式
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/从头整-Flutter/" class="post-category" target="_blank">
-                                    从头整 Flutter
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/移动端/" target="_blank">
-                        <span class="chip bg-color">移动端</span>
-                    </a>
-                    
-                    <a href="/tags/前端/" target="_blank">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/Flutter/" target="_blank">
-                        <span class="chip bg-color">Flutter</span>
                     </a>
                     
                 </div>
