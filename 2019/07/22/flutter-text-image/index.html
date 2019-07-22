@@ -39,8 +39,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -360,19 +359,19 @@
 <h4 id="1、无状态组件"><a href="#1、无状态组件" class="headerlink" title="1、无状态组件"></a>1、无状态组件</h4><p><strong>无状态组件定义</strong></p>
 <p>无状态组件就是不能修改状态的组件，也就是传递过去的值不能动态修改，我们说过组件是一个类，无状态组件就是继承 <strong>StatelessWidget</strong> 类的组件</p>
 <p><strong>无状态组件声明</strong></p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">class</span> <span class="token class-name">CustomWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+<pre class=" language-dart"><code class="language-dart"><span class="token keyword">class</span> <span class="token class-name">CustomWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
   <span class="token metadata symbol">@override</span>
   Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token function">Container</span><span class="token punctuation">(</span>
 
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>即通过继承 StatelessWidget 类并重写其 build 方法就可以声明一个无状态组件「build 方法就相当于 React 中的 Render 方法」</p>
 <h4 id="2、有状态组件"><a href="#2、有状态组件" class="headerlink" title="2、有状态组件"></a>2、有状态组件</h4><p><strong>有状态组件定义</strong></p>
 <p>有状态组件和无状态组件是相对的即我们想动态修改数据的时候必须定义的组件，它是继承 <strong>StatefulWidget</strong> 类的组件</p>
 <p><strong>有状态组件声明</strong></p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">class</span> <span class="token class-name">CustomWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+<pre class=" language-dart"><code class="language-dart"><span class="token keyword">class</span> <span class="token class-name">CustomWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
   <span class="token metadata symbol">@override</span>
   _CustomWidgetState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">_CustomWidgetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -384,7 +383,7 @@
 
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>和无状态组件声明还是有点区别要重写 createState 方法并且重写 State 的 build 方法来构建界面</p>
 <p>总之不管是无状态组件还是有状态组件都是通过重写 build 方法来构建界面的「至于底层是如何渲染界面的，后面专门开一篇来说」，以上两种定义组件的基本骨架一定要把它记下</p>
 <h3 id="三、组件-Text-amp-Image"><a href="#三、组件-Text-amp-Image" class="headerlink" title="三、组件 Text &amp; Image"></a>三、组件 Text &amp; Image</h3><h4 id="1、文本组件-Text"><a href="#1、文本组件-Text" class="headerlink" title="1、文本组件 Text"></a>1、文本组件 Text</h4><p>先来个最简单的组件文本组件–Text 可以定义一个文本并且声明其颜色字体大小，颜色、对齐方式等样式</p>
@@ -519,7 +518,7 @@
 <p>到此我们就把 Text 组件大概说了一下，我们学习一个组件的时候，直接进去看它的构造方法就像查 API 一样学习，这样就能掌握此组件了，当然有的属性我们没有试，就留给读者吧，下面我看看 Image 组件</p>
 <h4 id="2、图片组件-Image"><a href="#2、图片组件-Image" class="headerlink" title="2、图片组件 Image"></a>2、图片组件 Image</h4><p><strong>Image 的若干构造方法</strong></p>
 <p>在一个应用中除了文本之外使用最多的就是图片组件了，上面说了，学习一个组件就是看它的构造方法，不废话我们直接看 Image() 的构造方法</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">const</span> <span class="token function">Image</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class=" language-dart"><code class="language-dart"><span class="token keyword">const</span> <span class="token function">Image</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     Key key<span class="token punctuation">,</span>
     <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>image<span class="token punctuation">,</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>frameBuilder<span class="token punctuation">,</span>
@@ -537,7 +536,7 @@
     <span class="token keyword">this</span><span class="token punctuation">.</span>matchTextDirection <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>gaplessPlayback <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>filterQuality <span class="token operator">=</span> FilterQuality<span class="token punctuation">.</span>low<span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>我们可以看到 Image 有众多属性，有宽、高、颜色、填充方式等等，我们知道图片的来源有很多种，有来自本地图片，有来自网络图片，有来自内存的图片，上面的构造方法是从 ImageProvider 中加载图片，什么是 ImageProvider 后面会说，根据以上说的图片来源方式，Image 的构造方法分为以下几种：</p>
 <ul>
 <li>Image() 上面贴出了全部构造方法参数，从 ImageProvider 中加载图片</li>
@@ -552,15 +551,15 @@
 <p>在使用 Image.asset() 方法来加载本地资源目录中「一般创建叫 assets 目录，当然可以叫别的名字」的图片之前我们先要在项目根目录下创建 assets 目录</p>
 <p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/flutter/imgs/img_asset_folder.jpg" alt="新建 assets 目录"></p>
 <p>如图所示创建 assets 目录「当然你可以直接在里面放进图片，也可以分别建立子目录放图片，不一定非要和我一样创建 imgs/img 这样的目录，并且主目录也不一定非叫 assets 」，这还没完还要在 pubspec.yaml 文件中配置才可以使用</p>
-<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">flutter</span><span class="token punctuation">:</span>  // 在此命令下面配置
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">flutter</span><span class="token punctuation">:</span>  // 在此命令下面配置
 <span class="token key atrule">assets</span><span class="token punctuation">:</span> // 名字不能变
  <span class="token punctuation">-</span> assets/images/
- <span class="token punctuation">-</span> assets/images/image/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+ <span class="token punctuation">-</span> assets/images/image/</code></pre>
 <p><strong>ps：</strong> 如果在 assets 目录下有子目录就要像上面配置先配置主目录再配置子目录，如果有多个目录类似配置即可，使用的时候我可以使用 Image.asset(‘assets/imgs/img/xxx.png’) 加载即可</p>
 <p>为了方便，我们将图片路径定义成一个常量方便调用</p>
-<pre class="line-numbers language-dart"><code class="language-dart"><span class="token keyword">const</span> _PATH <span class="token operator">=</span> <span class="token string">"assets/imgs/img"</span><span class="token punctuation">;</span>
+<pre class=" language-dart"><code class="language-dart"><span class="token keyword">const</span> _PATH <span class="token operator">=</span> <span class="token string">"assets/imgs/img"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> _IMG04 <span class="token operator">=</span> <span class="token string">"$_PATH/img_04.png"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> _IMG06 <span class="token operator">=</span> <span class="token string">"https://xxx.yyy.zzz.jpg"</span> <span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 网络图片</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">const</span> _IMG06 <span class="token operator">=</span> <span class="token string">"https://xxx.yyy.zzz.jpg"</span> <span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 网络图片</span></code></pre>
 <p>下面看看我们使用 Image.asset() 加载图片的一个效果</p>
 <blockquote>
 <p>效果图</p>

@@ -39,8 +39,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -433,7 +432,7 @@
 <ul>
 <li>1、创建被建造的对象电脑 — Computer.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 产品类--被建造的对象
  */</span>
@@ -443,11 +442,11 @@
     <span class="token keyword">private</span> String mainBoard <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 主板</span>
     <span class="token keyword">private</span> String memory <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 内存</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 省略 getter 和 setter
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>2、抽象的建造者 — Builder.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象的建造者，即装电脑的步骤
  * 至于安装什么型号的主板，不是我关心，而是具体的建造者关心的
@@ -464,11 +463,11 @@
     <span class="token comment" spellcheck="true">// 组成电脑</span>
     Computer <span class="token function">createComputer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <ul>
 <li>3、具体建造者，也就是装机工人小美 — AssemblerBuilder.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的建造者，这里是商场的一个装机人员
  */</span>
@@ -499,11 +498,11 @@
     <span class="token keyword">public</span> Computer <span class="token function">createComputer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> computer<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>4、还有老板「”指手画脚的人”」安排装机工工作 — Direcror.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 声明一个导演类「指挥者，这里可以装电脑的老板」，用来指挥组装过程，也就是组装电脑的流程
  */</span>
@@ -522,11 +521,11 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">createhardDisk</span><span class="token punctuation">(</span>hardDisk<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">createComputer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>5、测试类</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 测试类
  */</span>
@@ -541,7 +540,7 @@
       System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"小明这台电脑使用的是：\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getMainBoard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" 主板\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getCpu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" CPU\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getHardDisk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"硬盘\n"</span><span class="token operator">+</span>computer<span class="token punctuation">.</span><span class="token function">getMainBoard</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" 内存\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>6、运行查看结果</li>
 </ul>
@@ -564,7 +563,7 @@
 <ul>
 <li>1、房子对象 House.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 最终的产品---房子
  */</span>
@@ -576,11 +575,11 @@
     <span class="token comment" spellcheck="true">// 浇筑</span>
     <span class="token keyword">private</span> String pouring <span class="token punctuation">;</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 省略 setter 和 getter 
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>2、抽象建造者「包工头」 HouseBuilder.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">HouseBuilder</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">HouseBuilder</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 打地基</span>
     <span class="token keyword">void</span> <span class="token function">doFoundation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 盖框架</span>
@@ -589,11 +588,11 @@
     <span class="token keyword">void</span> <span class="token function">dpPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 房子建成 </span>
     House <span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>3、具体建造者「工人」–盖平房 PingFangBuilder.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 盖平房
  */</span>
@@ -620,11 +619,11 @@
     <span class="token keyword">public</span> House <span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> house<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>4、具体建造者「工人」–盖楼房 LouFangBuilder.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 盖楼房
  */</span>
@@ -650,11 +649,11 @@
     <span class="token keyword">public</span> House <span class="token function">getHouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> house<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>5、指挥者「设计师」 HouseDirector.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 设计师
  */</span>
@@ -666,11 +665,11 @@
         houseBuilder<span class="token punctuation">.</span><span class="token function">dpPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <ul>
 <li>6、测试一下 Test.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 测试
  */</span>
@@ -714,7 +713,7 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>houseCreateByBuilder<span class="token punctuation">.</span><span class="token function">getPouring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>我们对比了三种方式，自己盖房子，找工人盖房子，找设计师盖房子来逐步感受一下建造者模式的优点</p>
 <ul>
 <li>6、运行查看结果</li>
@@ -729,7 +728,7 @@
 <ul>
 <li>1、原始的 Computer.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Computer</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Computer</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> String mainBoard <span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// 主板</span>
     <span class="token keyword">private</span> String cpu <span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">// cpu</span>
     <span class="token keyword">private</span> String hd <span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 硬盘</span>
@@ -768,12 +767,12 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span>mousePad <span class="token operator">=</span> mousePad <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 省略其它的构造方法和 setter 和 getter 方法
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>如果我们想要调用这个类就得在构参数方法中传递“无数个参数”「如果有的参是一些可选项，我们还得重写构造方法」，要么就要调用多个 setter 方法，才能给一个对象赋值，方法虽然可行，但是也太扯淡了「谁能记住那些参数呀」，那么建造者模式可以解决多参数构造方法来建造对象</p>
 <ul>
 <li>2、使用建造者建立 ComputerB.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 替代多参构造方法--建造者模式
  */</span>
@@ -845,12 +844,12 @@
             <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ComputerB</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>代码注释非常详细，乍一看好像和建造者模式没有毛关系，但是我们细细一分析这个确实是一个建造者模式，我们看一看：产品是–&gt;ComputerB,具体的建造者是一个静态内存类–&gt;ComputerBuilder,但是没有抽象的建造者和指挥者「其实 ComputerB 充当的就是指挥者的角色」，我们说过建造者模式中指挥者和抽象建造者都不是必须的，所以这是一个典型的建造者模式</p>
 <ul>
 <li>3、如何调用来个测试类 Test.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
         <span class="token comment" spellcheck="true">// 不使用建造者模式</span>
@@ -863,7 +862,7 @@
                 <span class="token punctuation">.</span><span class="token function">setMouse</span><span class="token punctuation">(</span><span class="token string">"鼠标"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMousePad</span><span class="token punctuation">(</span><span class="token string">"垫子"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"使用建造者模式组装电脑："</span><span class="token operator">+</span>computerB<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>我们分别使用普通构造方法「调用者能吐血」和建造者模式组装电脑，可以看到建造者模式调用 new ComputerB.ComputerBuilder(xxx).setxxx().setxxx().build() 调用方法直接打点调用「也叫流式调用，这样调用方便多了，想点那个就点那个」，如果使用过 rx 的话会非常有感觉</p>
 <ul>
 <li>4、运行查看一下结果</li>
@@ -875,11 +874,11 @@
 <p>1、AlertDialog</p>
 </blockquote>
 <p>做 Android 的朋友一定不会对 AlertDialog 陌生，它是一个可以添加列表、单选列表、文本输入框，多选列表等弹窗组件，内部使用的是典型的建造者模式，我们看看 AlertDialog 的基本使用方法</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 创建构建器</span>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 创建构建器</span>
    AlertDialog<span class="token punctuation">.</span>Builder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AlertDialog<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 使用建造者模式代替多参构造函数</span>
    Dialog dialog<span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">setTitle</span><span class="token punctuation">(</span>XXX<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setIcon</span><span class="token punctuation">(</span>XXX<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setXXX</span><span class="token punctuation">(</span>xxx<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-   dialog<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+   dialog<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span></code></pre>
 <p><code>AlertDialog 简单的 UML</code></p>
 <img src="/2019/07/07/builder/AlertDialogUml.jpg" title="AlertDialog 简单的 UML">
 
@@ -900,12 +899,12 @@
 </blockquote>
 <p>AnimatorSet 用作将一个动画集合按选定的顺序执行，我们可以使用 AnimatorSet.Builder 添加播放动画顺序「这只是其中一个方法」</p>
 <p><code>使用方法举例</code></p>
-<pre class="line-numbers language-java"><code class="language-java">AnimatorSet animSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AnimatorSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<pre class=" language-java"><code class="language-java">AnimatorSet animSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AnimatorSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 <span class="token comment" spellcheck="true">//AnimatorSet.Builder 不能直接建立 ，只能通过 play(Animation)</span>
 AnimatorSet<span class="token punctuation">.</span>Builder builder <span class="token operator">=</span> animSet<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span>anim2<span class="token punctuation">)</span><span class="token punctuation">;</span>  
 builder<span class="token punctuation">.</span><span class="token function">with</span><span class="token punctuation">(</span>anim3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">after</span><span class="token punctuation">(</span>anim1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span>anim4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// anim1先执行，然后再同步执行anim2、anim3，最后执行anim4  </span>
 animSet<span class="token punctuation">.</span><span class="token function">setDuration</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
-animSet<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+animSet<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  </code></pre>
 <p><code>核心代码</code></p>
 <img src="/2019/07/07/builder/AnimatorSet_builder.png" title="AnimatorSet.Builder 部分代码">
 

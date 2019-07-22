@@ -39,8 +39,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -415,17 +414,17 @@
 <ul>
 <li>1、定义一个路的抽象策略</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 抽象的策略，定义逃跑路线
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IRunStrategy</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 逃跑线路</span>
     <span class="token keyword">void</span> <span class="token function">escapeRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>2、定义具体的路径–大路</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 具体的策略一走大路
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Highroad</span> <span class="token keyword">implements</span> <span class="token class-name">IRunStrategy</span> <span class="token punctuation">{</span>
@@ -433,11 +432,11 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">escapeRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"走大路"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>3、定义具体路线–华容道</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 具体的策略二走华容道
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HuaRongRoad</span> <span class="token keyword">implements</span> <span class="token class-name">IRunStrategy</span> <span class="token punctuation">{</span>
@@ -446,11 +445,11 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"走华容道"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <ul>
 <li>4、定义上下文，选择方式</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 上下文 持有 IRunStrategy 的引用
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ContextRunStrategy</span> <span class="token punctuation">{</span>
@@ -467,11 +466,11 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">choiceRoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         iRunStrategy<span class="token punctuation">.</span><span class="token function">escapeRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>5、主角曹操登场，看看曹操是如何选择道路的</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 曹操选择路线
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CaoCao</span> <span class="token punctuation">{</span>
@@ -485,7 +484,7 @@
         contextRunStrategy<span class="token punctuation">.</span><span class="token function">choiceRoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>真的走了华容道，好吧 no zuo no die ，我们可以看到上面曹操选择逃跑路线都是行为，所以很适合策略模式「策略模式就是一种选择模式，当你举棋不定的时候就使用策略模式」</p>
 <p><strong>注意：</strong> 策略的核心不是如何实现算法，而是如何更优雅的把这些算法组织起来，让客户端非常好调用「虽然策略非常多，可以自由切换，但是同一时间客户端只能调用一个策略，其实也很好理解，你不可能同时既坐飞机，又坐火车」。</p>
 <blockquote>
@@ -513,40 +512,40 @@
 
 <p><code>根据 UML 撸码</code></p>
 <p>首先我们要使用　AsyncHttpClient、Retorfit 等，先添加配置 Gradle「项目 Module 的 build.gradle中」</p>
-<pre class="line-numbers language-gradle"><code class="language-gradle">compile 'com.squareup.retrofit2:retrofit:2.3.0'
+<pre class=" language-gradle"><code class="language-gradle">compile 'com.squareup.retrofit2:retrofit:2.3.0'
 compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 compile 'io.reactivex.rxjava2:rxjava:2.1.5'
-compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+compile 'com.loopj.android:android-async-http:1.4.9'</code></pre>
 <p><strong>注：</strong> 以下代码纯粹是为了演示策略模式，顺手写的，好多细节可能没有考虑到，但是基本框架就是这样的，可以自行完善</p>
 <ul>
 <li>1、分别新建 MVP 的基类接口,IPresenter,IModel,IView</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Description MVP 中的 Presnter 基类
  * @Creator TigerChain（创建者）
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IPresenter</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java">
+</code></pre>
+<pre class=" language-java"><code class="language-java">
 <span class="token comment" spellcheck="true">/**
  * @Description MVP 中的 Model 基类
  * @Creator TigerChain（创建者）
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IModel</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Description MVP 中的 View 基类
  * @Creator TigerChain（创建者）
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IView</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <ul>
 <li>2、新建 MVP 的关联接口 <code>ILoginContact.java</code> 「当然也可以不写此类，直接写登录 MVP 的直接子类」</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> designpattern<span class="token punctuation">.</span>tigerchain<span class="token punctuation">.</span>com<span class="token punctuation">.</span>mvphttpstrategy<span class="token punctuation">.</span>mvp<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> designpattern<span class="token punctuation">.</span>tigerchain<span class="token punctuation">.</span>com<span class="token punctuation">.</span>mvphttpstrategy<span class="token punctuation">.</span>mvp<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> designpattern<span class="token punctuation">.</span>tigerchain<span class="token punctuation">.</span>com<span class="token punctuation">.</span>mvphttpstrategy<span class="token punctuation">.</span>mvp<span class="token punctuation">.</span>domain<span class="token punctuation">.</span>User<span class="token punctuation">;</span>
 <span class="token keyword">import</span> io<span class="token punctuation">.</span>reactivex<span class="token punctuation">.</span>Observable<span class="token punctuation">;</span>
@@ -599,13 +598,13 @@ compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" cla
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>其中 ILoginModel 就是一个抽象策略，这里是登录功能</p>
 <ul>
 <li>3、分别实现具体的策略「使用不同的网络请求库调用登录 API」</li>
 </ul>
 <p><code>具体策略1：使用 AsyncHttpClient 调用登录</code></p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Description 具体策略使用 AsyncHttpClient 来调用登录 API
  * @Creator TigerChain（创建者）
  */</span>
@@ -643,9 +642,9 @@ compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" cla
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><code>具体策略2：使用 Volley 调用登录 API</code></p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Description 具体策略使用 Volley 实现登录功能
  * @Creator TigerChain（创建者）
  */</span>
@@ -663,9 +662,9 @@ compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" cla
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><code>具体策略3：使用 RetorFit 调用登录 API</code></p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Description 具体策略 使用 RetorFit 实现登录功能性
  * @Creator TigerChain（创建者）
  */</span>
@@ -680,9 +679,9 @@ compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" cla
         ILoginRetorfitApi loginService <span class="token operator">=</span> retrofit<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>ILoginRetorfitApi<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
         <span class="token keyword">return</span> loginService<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span>uName<span class="token punctuation">,</span>uPass<span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>其中 User 和 ILoginRetorfitApi 类分别是：</p>
-<pre class="line-numbers language-java"><code class="language-java"># User<span class="token punctuation">.</span>java
+<pre class=" language-java"><code class="language-java"># User<span class="token punctuation">.</span>java
 
 <span class="token comment" spellcheck="true">/**
  * @Description 普通人的 Java
@@ -709,8 +708,8 @@ compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" cla
         Upass <span class="token operator">=</span> upass<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java"># ILoginRetorfitApi<span class="token punctuation">.</span>java
+</code></pre>
+<pre class=" language-java"><code class="language-java"># ILoginRetorfitApi<span class="token punctuation">.</span>java
 <span class="token comment" spellcheck="true">/**
  * @Description Retorfit API
  * @Creator TigerChain（创建者）
@@ -721,11 +720,11 @@ compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" cla
     Observable<span class="token operator">&lt;</span>User<span class="token operator">></span> <span class="token function">login</span><span class="token punctuation">(</span> <span class="token annotation punctuation">@Field</span><span class="token punctuation">(</span><span class="token string">"userName"</span><span class="token punctuation">)</span> String userName<span class="token punctuation">,</span>
                             <span class="token annotation punctuation">@Field</span><span class="token punctuation">(</span><span class="token string">"passWord"</span><span class="token punctuation">)</span>String passWord<span class="token punctuation">)</span> <span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <ul>
 <li>4、策略中的上下文「这里就是我们具体的 P」 LoginPresenterImpl.java</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Description MVP 中的P ，就相当于策略中Context
  * @Creator junjun（创建者）
  */</span>
@@ -783,7 +782,7 @@ compile 'com.loopj.android:android-async-http:1.4.9'<span aria-hidden="true" cla
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         loginView<span class="token punctuation">.</span><span class="token function">clearEditText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>到此为止，我们的 MVP+RX+Retorfit 带策略的登录功能就完成了。</p>
 <ul>
 <li>5、客户端调用「在 Activity 中调用」</li>

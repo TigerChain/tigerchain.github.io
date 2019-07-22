@@ -39,8 +39,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -463,7 +462,7 @@
 <ul>
 <li>1、 定义一个 View 类</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
 
     <span class="token keyword">private</span> OnClickListener onClickListener <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 触发点击事件</span>
@@ -481,11 +480,11 @@
         <span class="token comment" spellcheck="true">// 定义回调方法</span>
         <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>2、定义一个 Button 类</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义一个按钮
  */</span>
@@ -494,11 +493,11 @@
         <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <ul>
 <li>3、测试类 Test</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
 
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         Button button <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
@@ -512,7 +511,7 @@
         <span class="token comment" spellcheck="true">// 模拟用户点击这个运作，Android 系统的 View 是重写手势来调用这个方法的，没有暴露给用户</span>
         button<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>4、运行查看结果</li>
 </ul>
@@ -525,7 +524,7 @@
 <ul>
 <li>定义 View 「被观察者」</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">//被观察者的列表</span>
     <span class="token keyword">private</span> ArrayList<span class="token operator">&lt;</span>OnClickListener<span class="token operator">></span> onClickListeners <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 触发通知</span>
@@ -551,21 +550,21 @@
             onClickListeners<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>onClickListener<span class="token punctuation">)</span> <span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><strong>注意</strong>这里的 OnClickListener 就是抽象的观察者</p>
 <ul>
 <li>2、定义一个 Button </li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Button</span> <span class="token keyword">extends</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
 
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>3、测试 Test</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">//定义一个被观察者</span>
         Button button <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
@@ -586,7 +585,7 @@
         <span class="token comment" spellcheck="true">// 被观察者触发事件</span>
         button<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>4、运行查看结果</li>
 </ul>
@@ -610,7 +609,7 @@
 <ul>
 <li>1、定义抽象的被观察者 IWxServerSubject.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义主题「被观察者接口」，所有的公号作者共同属性「其实这里功能上微信系统的功能，直接抽象成被观察者」
  */</span>
@@ -621,22 +620,22 @@
     <span class="token keyword">void</span> <span class="token function">detachObserver</span><span class="token punctuation">(</span>IObserver iObserver<span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 通知观察者</span>
     <span class="token keyword">void</span> <span class="token function">notifyObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>2、定义抽象的观察者接口 IObserver.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义观察者接口,即关注公号的微信用户共同属性
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IObserver</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 观察者收到信息,内容为 info</span>
     <span class="token keyword">void</span> <span class="token function">reciveContent</span><span class="token punctuation">(</span>String info<span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>3、定义具体的被观察者「公号作者 TigerChain」 TigerChainSubject.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义一个真实的被观察者 TigerChain「公号的作者」
  * 里面存了订阅 TigerChain 微信公众账号的读者
@@ -685,11 +684,11 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">notifyObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <ul>
 <li>4、定义一个具体的观察者「普通的微信用户」 ReaderObserver.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 微信用户
  */</span>
@@ -710,12 +709,12 @@
     <span class="token keyword">public</span> String <span class="token function">getUname</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>uname <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>可以看到微信用户有接收推送文章的能力「前提是要关注公号作者」</p>
 <ul>
 <li>5、来个 Test 类测试一下吧</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 测试类
  */</span>
@@ -744,7 +743,7 @@
             System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>zhaoLiu<span class="token punctuation">.</span><span class="token function">getUname</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"你好！你还没有关注 TigerChain ，请关注先，谢谢"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>我们看到和现实情况一样，普通微信用户关注公号作者，然后作者发送文章，用户就可以收到文章了</p>
 <ul>
 <li>6、运行查看结果</li>
@@ -762,7 +761,7 @@
 <ul>
 <li>1、抽象被观察者功能 IWolf.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象的被观察者
  */</span>
@@ -773,11 +772,11 @@
     <span class="token keyword">void</span> <span class="token function">detchObserver</span><span class="token punctuation">(</span>NormalWolf observer<span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 通知观察者</span>
     <span class="token keyword">void</span> <span class="token function">notifyObserver</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>2、抽象观察者普通的狼 NormalWolf.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by 抽象的观察者，普通的狼
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">NormalWolf</span> <span class="token punctuation">{</span>
@@ -790,12 +789,12 @@
      * @param str
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">reciveCommand</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>3、定义具体的被观察者狼王 LangWang.</li>
 </ul>
 <p>由于一个狼群中只有一个狼王，所以狼王是一个单例「顺便把单例模式也用一把」</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 狼王「被观察者，下面的狼都看狼王的眼色行事」，是一个单例模式
  */</span>
@@ -846,11 +845,11 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span>mingLing <span class="token operator">=</span> mingLing <span class="token punctuation">;</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">notifyObserver</span><span class="token punctuation">(</span>mingLing<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>4、定义一个观察者侦查狼 ZhenChaLang.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 侦查狼，另一个观察者
  */</span>
@@ -865,12 +864,12 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reciveCommand</span><span class="token punctuation">(</span>String string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"侦查狼：狼王开会传递的信息是 \n"</span><span class="token operator">+</span>string<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>在这里我们实例化一个侦查狼的时候就会把它注册到被观察者中，也就是狼王开会的时候，群狼肯定狼群中的一员「外来狼可不行」，只有内部狼「内部会员」才有资格开会「这种关系就相当于注册这个过程」</p>
 <ul>
 <li>5、定义另一个观察者捕猎狼 BuLieLang.</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 捕猎狼---观察者
  */</span>
@@ -886,11 +885,11 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reciveCommand</span><span class="token punctuation">(</span>String string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"捕猎狼：狼王开会传递的信息是 \n"</span><span class="token operator">+</span>string<span class="token operator">+</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>测试类 Test</li>
 </ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 测试类
  */</span>
@@ -907,7 +906,7 @@
                                      <span class="token string">"2、侦查狼永远把危险放在第一位，遇到危险第一时间提醒大家撤退"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>6、运行查看结果</li>
 </ul>
@@ -941,7 +940,7 @@
 
 <p><code>抽取 ViewTreeObserver 部分代码讲解</code></p>
 <p>这里说说 view.getViewTreeObserver().addOnGlobalLayoutListener(xxx) 场景，其它的雷同</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">ViewTreeObserver</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">ViewTreeObserver</span> <span class="token punctuation">{</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
  <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">OnGlobalLayoutListener</span> <span class="token punctuation">{</span>
         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onGlobalLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -975,10 +974,10 @@
                 listeners<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span></code></pre>
 <p>现在我们有了观察者 ViewTreeObserver ，观察者是 ViewTree 我们说了，主要问题的就是 dispatchOnGlobalLayout 谁调用了，只有触发了这个方法那么事件就回调回来了「这个方法肯定是被观察者调用了，系统调用的」，方法在 ViewRootImpl「关于 ViewRootImpl 可自行去查看，不在本篇的范围」 中体现出来了</p>
 <p><code>看看 ViewRootImpl 的部分代码</code></p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">ViewRootImpl</span> <span class="token keyword">implements</span> <span class="token class-name">ViewParent</span><span class="token punctuation">,</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">ViewRootImpl</span> <span class="token keyword">implements</span> <span class="token class-name">ViewParent</span><span class="token punctuation">,</span>
         View<span class="token punctuation">.</span>AttachInfo<span class="token punctuation">.</span>Callbacks<span class="token punctuation">,</span> ThreadedRenderer<span class="token punctuation">.</span>DrawCallbacks <span class="token punctuation">{</span>
  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">performTraversals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -1001,10 +1000,10 @@
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
  <span class="token punctuation">}</span>
  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p>看到了没，mAttachInfo.mTreeObserver.dispatchOnGlobalLayout() 方法是在 ViewRootImpl 中调用了「即是 View 调用了，只要 View 树而已发生改变，就会调用」，是由系统调用的「View 的布局完成这后，就会调用」，并且还调用了自定义 View 的测量，布局，绘制方法。</p>
 <p>使用场景：比如我们想在 Activity 的 onCreate() 方法中取得某个 View 的宽高，此时是取不到的，由于布局还没有完成加载之前取到的是 0 ,所以使用 view.getViewTreeObserver().addOnGlobalLayoutListener(xxx) 里面就可以获取到 view 的宽高了,demo 代码如下</p>
-<pre class="line-numbers language-java"><code class="language-java">  view<span class="token punctuation">.</span><span class="token function">getViewTreeObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addOnGlobalLayoutListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OnGlobalLayoutListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java">  view<span class="token punctuation">.</span><span class="token function">getViewTreeObserver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addOnGlobalLayoutListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OnGlobalLayoutListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
             <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onGlobalLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">// 当layout执行结束后回调</span>
                 <span class="token comment" spellcheck="true">//使用完必须撤销监听（只测量一次），否则，会一直不停的不定时的测量，这比较耗性能</span>
@@ -1013,7 +1012,7 @@
                 <span class="token keyword">int</span> width <span class="token operator">=</span> view<span class="token punctuation">.</span><span class="token function">getMeasuredWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token keyword">int</span> width2 <span class="token operator">=</span> view<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//和上面的值是一样的</span>
             <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <blockquote>
 <p>3、ListView</p>
 </blockquote>
