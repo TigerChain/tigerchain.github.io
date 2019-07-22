@@ -39,7 +39,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -413,7 +414,7 @@
 <li>3、实例方法静态化</li>
 </ul>
 <p>简单的代码结构就是</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> SingleTon instance <span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token function">SingleTon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> SingleTon <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -422,7 +423,7 @@
         <span class="token punctuation">}</span>
         <span class="token keyword">return</span> instance <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在实际开发中，我们按照以上三步法就可以创建出一个单例来「直接用方法套用即可」</p>
 <h3 id="二、单例模式举例"><a href="#二、单例模式举例" class="headerlink" title="二、单例模式举例"></a>二、单例模式举例</h3><blockquote>
 <p>单例模式举例</p>
@@ -435,13 +436,13 @@
 <ul>
 <li>1、定义一个狼的接口，比如这里是下达任务</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IWolf</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IWolf</span> <span class="token punctuation">{</span>
     <span class="token keyword">void</span> <span class="token function">doSomting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、定义一个侦察狼，它是放哨和探路的</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 侦察狼
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ZhenChaLang</span> <span class="token keyword">implements</span> <span class="token class-name">IWolf</span> <span class="token punctuation">{</span>
@@ -455,11 +456,11 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fangShao</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">" 去放哨"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、定义一个捕猎狼，猎羊</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 捕猎狼
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BuLieLang</span> <span class="token keyword">implements</span> <span class="token class-name">IWolf</span> <span class="token punctuation">{</span>
@@ -468,11 +469,11 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">" 去猎羊"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>4、主角狼王上场，统一安排规划</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 狼王
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LangWang</span> <span class="token keyword">implements</span> <span class="token class-name">IWolf</span> <span class="token punctuation">{</span>
@@ -516,7 +517,7 @@
         buLieLang1<span class="token punctuation">.</span><span class="token function">doSomting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我们可以看到狼王是一个单例的「一个狼群确实只有一个狼王」，下面我们来验证一下结果</p>
 <img src="/2019/07/02/singleton/singleton_deom.png" title="狼王单例 demo">
 
@@ -534,7 +535,7 @@
 <li><code>优点：</code>没有加锁，执行效率非常高「其实是以空间来换时间」</li>
 <li><code>缺点：</code>在类加载的时候就会初始化，浪费内存「你知道我要不要使用这个实例吗，你就给我初始化，太任性了」</li>
 </ul>
-<h5 id="演示代码"><a href="#演示代码" class="headerlink" title="演示代码"></a>演示代码</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
+<h5 id="演示代码"><a href="#演示代码" class="headerlink" title="演示代码"></a>演示代码</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 1、成员变量静态化  饿汉式直接在类加载的时候就初始化实例</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> SingleTon instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleTon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 2、构造方法私有化</span>
@@ -543,7 +544,7 @@
     <span class="token keyword">public</span> <span class="token keyword">static</span> SingleTon <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">return</span> instance <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="2、懒汉式线程不安全"><a href="#2、懒汉式线程不安全" class="headerlink" title="2、懒汉式线程不安全"></a>2、懒汉式线程不安全</h4><p>懒汉式单例模式，是在我需要的时候才去初始化实例，也就是说在类加载的时候，静态成员变量是 null 的，只有需要它的时候才去初始化实例，所以懒汉式可以延时加载</p>
 <h5 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h5><ul>
 <li>1、线程不安全</li>
@@ -553,7 +554,7 @@
 <li>1、<code>优点：</code>延时初始化类，省资源，不想用的时候就不会浪费内存</li>
 <li>2、<code>缺点：</code>线程不安全，多线程操作就会有问题</li>
 </ul>
-<h5 id="演示代码-1"><a href="#演示代码-1" class="headerlink" title="演示代码"></a>演示代码</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
+<h5 id="演示代码-1"><a href="#演示代码-1" class="headerlink" title="演示代码"></a>演示代码</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 1、类变量静态化 类加载的时候是空的，所以不开辟内存</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> SingleTon instance <span class="token operator">=</span> null <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 2、构造方法私有化，这没什么好说的</span>
@@ -565,7 +566,7 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> instance <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="3、懒汉式线程安全"><a href="#3、懒汉式线程安全" class="headerlink" title="3、懒汉式线程安全"></a>3、懒汉式线程安全</h4><p>懒汉式线程安全比懒汉式线程不全多了一个线程安全</p>
 <h5 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h5><ul>
 <li>1、线程安全</li>
@@ -575,7 +576,7 @@
 <li>1、<code>优点：</code>延时初始化类，省资源，不想用的时候就不会浪费内存，并且线程安全</li>
 <li>2、<code>缺点：</code>虽然线程安全，但是加了锁对性能影响非常大「相当于排队获取资源，没有拿到锁子就干等」</li>
 </ul>
-<h5 id="演示代码-2"><a href="#演示代码-2" class="headerlink" title="演示代码"></a>演示代码</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
+<h5 id="演示代码-2"><a href="#演示代码-2" class="headerlink" title="演示代码"></a>演示代码</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon</span><span class="token punctuation">{</span>
 
     <span class="token keyword">private</span> <span class="token keyword">static</span> SingleTon instance <span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token function">SingleTon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -586,7 +587,7 @@
         <span class="token punctuation">}</span>
         <span class="token keyword">return</span> instance <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="4、DCL「双重检查锁-double-checked-locking」-单例"><a href="#4、DCL「双重检查锁-double-checked-locking」-单例" class="headerlink" title="4、DCL「双重检查锁:double-checked locking」 单例"></a>4、DCL「双重检查锁:double-checked locking」 单例</h4><p>如其名，双检锁，这种方式单例模式在多线程的情况下能提高性能</p>
 <h5 id="特点-3"><a href="#特点-3" class="headerlink" title="特点"></a>特点</h5><ul>
 <li>1、线程安全</li>
@@ -596,7 +597,7 @@
 <li>1、<code>优点：</code>延时初始化类，省资源，不想用的时候就不会浪费内存，并且线程安全，双重加锁，多线程仿问性能达到提升「后面详细说 WHY」</li>
 <li>2、<code>缺点：</code>虽然线程安全，但是加了锁对性能影响非常大「相当于排队获取资源，没有拿到锁子就干等」</li>
 </ul>
-<h5 id="演示代码-3"><a href="#演示代码-3" class="headerlink" title="演示代码"></a>演示代码</h5><pre class=" language-java"><code class="language-java">
+<h5 id="演示代码-3"><a href="#演示代码-3" class="headerlink" title="演示代码"></a>演示代码</h5><pre class="line-numbers language-java"><code class="language-java">
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DCLSingleTon</span> <span class="token punctuation">{</span>
 
     <span class="token comment" spellcheck="true">/**1、成员变量静态化**/</span>
@@ -615,7 +616,7 @@
         <span class="token keyword">return</span> instance <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>双检锁性能提高</p>
 </blockquote>
@@ -627,7 +628,7 @@
 </blockquote>
 <p>这样做看起来很不错，解决了多线程问题并延时加载，并且同步一次性能有了不错的提升，但是这样做仍然会有问题，这和 Java 的内存模型有关「这种内存模型可以让处理器大大的提高执行效率」</p>
 <p>如果再深入的说，就要说 JAVA 的内存模型了「这不在本节范围之内」，大家只要记住，Java 的指令重排会导致多线程问题「单线程不会受影响」，指令排序通俗的说就是代码执行顺序改变了，比如:以下一个简单的例子「下面代码只是为了说明问题，并不是真实情况下的代码」</p>
-<pre class=" language-java"><code class="language-java">
+<pre class="line-numbers language-java"><code class="language-java">
 <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
 
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> a<span class="token punctuation">,</span>b <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span>
@@ -637,7 +638,7 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"a = "</span><span class="token operator">+</span>a<span class="token operator">+</span><span class="token string">"b = "</span><span class="token operator">+</span>b<span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>如果按照正常情况下肯定结果是 a=1,b=2。但是如果指令排序多线程情况下就有可能会出现 a=0,b=2 ，也就是 a = 1 和 b =2 调用顺序反过来了「便于理解，实际比这个复杂多了」，这样就大概解释了指令重排，详细可以看看美团点评技术团队的<a href="https://tech.meituan.com/java-memory-reordering.html" target="_blank" rel="noopener">Java内存访问重排序的研究</a> 讲的还是非常好的</p>
 <blockquote>
 <p>DCL 遇到指令重排出现问题分析</p>
@@ -657,7 +658,7 @@
 <li>2、让保证初始化 intance 时只有一个线程来操作「就是单线程操作，单线程不会存在排序问题」</li>
 </ul>
 <h5 id="解决方案一：不发生指令排序"><a href="#解决方案一：不发生指令排序" class="headerlink" title="解决方案一：不发生指令排序"></a>解决方案一：不发生指令排序</h5><p>使用 volatile 关键字「Java 5 之后 volatile 就可以禁止对指令重新排序 」，就可以指令不发生重排，修改代码</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DCLSingleTon</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DCLSingleTon</span> <span class="token punctuation">{</span>
 
     <span class="token comment" spellcheck="true">/**1、成员变量静态化**/</span>
     <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">static</span> DCLSingleTon instance <span class="token punctuation">;</span>
@@ -674,11 +675,11 @@
         <span class="token punctuation">}</span>
         <span class="token keyword">return</span> instance <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>当然了，Java 5 之后才能完美的使用 volatile ，那么之前如何解决 DCL 安全问题呢？可以使用 Thread Local ，临时变量等具体可以看关于 DCL 的讲解以及改善 <a href="http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html" target="_blank" rel="noopener">双重锁定被破坏声明</a> 说的非常的好</p>
 <h5 id="解决方案二：静态内存部类-其实就是我们要说的第-5-种单例模式"><a href="#解决方案二：静态内存部类-其实就是我们要说的第-5-种单例模式" class="headerlink" title="解决方案二：静态内存部类 其实就是我们要说的第 5 种单例模式"></a>解决方案二：静态内存部类 其实就是我们要说的第 5 种单例模式</h5><p>利用 classloder 的机制来保证初始化 instance 时只有一个线程。JVM 在类初始化阶段会获取一个锁，这个锁可以同步多个线程对同一个类的初始化</p>
 <p>修改代码</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DCLSingleTon</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DCLSingleTon</span> <span class="token punctuation">{</span>
 
     <span class="token keyword">private</span> <span class="token function">DCLSingleTon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SingleTonHolder</span><span class="token punctuation">{</span>
@@ -690,7 +691,7 @@
     <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="5、静态内部类单例模式"><a href="#5、静态内部类单例模式" class="headerlink" title="5、静态内部类单例模式"></a>5、静态内部类单例模式</h4><p>静态内部类可以允许指令重排，但是对别的线程是不可见的，那么就想当于单线程指令重排对结果是没有影响的「这是内存模型的特点」，我们来一下单线程的执行行时序图，我们来看 <code>SingleTon instence = new SingleTon()</code> 这一过程</p>
 <img src="/2019/07/02/singleton/thread_run_time.jpg" title="线程执行时序图">
 
@@ -704,7 +705,7 @@
 <li>1、<code>优点：</code>延时初始化类，省资源，不想用的时候就不会浪费内存,并且线程安全，还可以执行其它的静态方法</li>
 <li>2、<code>缺点：</code> –</li>
 </ul>
-<h5 id="演示代码-4"><a href="#演示代码-4" class="headerlink" title="演示代码"></a>演示代码</h5><pre class=" language-java"><code class="language-java">
+<h5 id="演示代码-4"><a href="#演示代码-4" class="headerlink" title="演示代码"></a>演示代码</h5><pre class="line-numbers language-java"><code class="language-java">
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleTon</span> <span class="token punctuation">{</span>
 
    <span class="token keyword">private</span> <span class="token function">SingleTon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -717,13 +718,13 @@
         <span class="token keyword">return</span> SingleTonHolder<span class="token punctuation">.</span>instance <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <img src="/2019/07/02/singleton/static_single.png" title="静态内部类单例">
 
 
 <h4 id="6、枚举类单例"><a href="#6、枚举类单例" class="headerlink" title="6、枚举类单例"></a>6、枚举类单例</h4><p>枚举类单例模式是 《Effective Java》 作者极力推荐的单例的方法</p>
 <h5 id="特点-5"><a href="#特点-5" class="headerlink" title="特点"></a>特点</h5><p>特点也就是检举类的特点，我们先看看枚举类的特点吧，多说无用，我们结合 java 代码来分析</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 一周的枚举，这里为了说明问题，只列举到周三</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 一周的枚举，这里为了说明问题，只列举到周三</span>
 <span class="token keyword">public</span> <span class="token keyword">enum</span> EnumDemo <span class="token punctuation">{</span>
 
   MONDAY<span class="token punctuation">,</span>
@@ -732,7 +733,7 @@
 
   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">donSomthing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>以上就是一个简单的枚举 Java 类，我们反编译来看一下它的实现机制是杂样的，在这里我使用 <a href="https://varaneckas.com/jad/" target="_blank" rel="noopener">jad</a> 来反编译「当然你也可以使用 javap 来反编译还能看到二制」,以上 java 代码反编译出来的结果如下：</p>
 <img src="/2019/07/02/singleton/enum_dcode.png" title="枚举类单例">
 
@@ -750,7 +751,7 @@
 <li>1、<code>优点：</code>除以上特点优点之外，枚举类还有两个优点：<code>写法简单</code>、<code>支持序列化和反序列化操作「以上的单例序列化和反序列化会破坏单例模式」</code>、<code>并且反射也不能调用构造方法</code></li>
 <li>2、<code>缺点：</code> –</li>
 </ul>
-<h5 id="演示代码-5"><a href="#演示代码-5" class="headerlink" title="演示代码"></a>演示代码</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">enum</span>  EnumSingleTon <span class="token punctuation">{</span>
+<h5 id="演示代码-5"><a href="#演示代码-5" class="headerlink" title="演示代码"></a>演示代码</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">enum</span>  EnumSingleTon <span class="token punctuation">{</span>
 
     INSTACE<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 定义一个枚举原素，代表 EnumSingleTon 一个实例</span>
 
@@ -766,13 +767,13 @@
         Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">"枚举类单例"</span><span class="token punctuation">,</span><span class="token string">"这是枚举单例中的方法"</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>一般情况下，不建议使用第 2 种和第 3 种懒汉式单例，建议使用第 1 种饿汉式单例，如果项目中明确要使用延时加载那么使用第 5 种静态内存类的单例，如果有序列化反序列化操作可以使用第 6 种单例模式，如果是其它需求可以使用第 4 种 DCL 单例</p>
 <h3 id="三、Android-中的单例模式"><a href="#三、Android-中的单例模式" class="headerlink" title="三、Android 中的单例模式"></a>三、Android 中的单例模式</h3><blockquote>
 <p>1、 InputMethodManager 类</p>
 </blockquote>
 <p>InputMethodManager 就一个服务类「输入法类」源码目录 <code>Androidsdk\sources\android-26\android\view\inputmethod</code>,部分代码如下：</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@SystemService</span><span class="token punctuation">(</span>Context<span class="token punctuation">.</span>INPUT_METHOD_SERVICE<span class="token punctuation">)</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@SystemService</span><span class="token punctuation">(</span>Context<span class="token punctuation">.</span>INPUT_METHOD_SERVICE<span class="token punctuation">)</span>
 <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">InputMethodManager</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 省略若干行代码</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
@@ -812,13 +813,13 @@
 
     <span class="token comment" spellcheck="true">// 省略若干行代码</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>从上面代码可以看出，InputMethodManager 是一个典型的– <code>线程安全的懒汉式单例</code></p>
 <blockquote>
 <p>2、Editable 类</p>
 </blockquote>
 <p>文件目录:frameworks/base/core/java/android/text/Editable.java 部分代码如下：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> Editable<span class="token punctuation">.</span>Factory sInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Editable<span class="token punctuation">.</span>Factory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> Editable<span class="token punctuation">.</span>Factory sInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Editable<span class="token punctuation">.</span>Factory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 
 <span class="token comment" spellcheck="true">/** 
  * Returns the standard Editable Factory. 
@@ -826,7 +827,7 @@
 <span class="token keyword">public</span> <span class="token keyword">static</span> Editable<span class="token punctuation">.</span>Factory <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
     <span class="token keyword">return</span> sInstance<span class="token punctuation">;</span>  
 <span class="token punctuation">}</span>  
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可以看到非常典型的一个饿汉式单例模式</p>
 <p>Android 源码中有非常多的单例模式的例子，这里就一一列举了，相信你看完上面的介绍绝对可以写出一个适合自己项目的单例了</p>
 <p>到此为止，我们就把单例械说完了，动手试试吧</p>

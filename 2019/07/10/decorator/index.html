@@ -39,7 +39,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -436,18 +437,18 @@
 <ul>
 <li>1、装饰装饰肯定要有装饰的对象，定义一个抽象的被装饰者 Person.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象的构件--人
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 取得搭配的衣服</span>
     String <span class="token function">getCloths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>java
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、定义具体的构件–即具体的被装饰者 TigerChain.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的构件 -- TigerChain  即被装饰的对象
  */</span>
@@ -457,21 +458,21 @@
         String selectResult <span class="token operator">=</span> <span class="token string">"TigerChain 搭配衣服："</span> <span class="token punctuation">;</span>
         <span class="token keyword">return</span> selectResult<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、穿一身衣服有上衣、裤子、鞋子等，这里只考虑上衣和裤子「上衣和裤子也是各种样式 和品牌，我们统一抽象成装饰者」，定义抽象装饰者上衣 IOuter.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 上衣，抽象的装饰者，被装饰的对象是人
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IOuter</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
     String <span class="token function">getOuter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>4、定义具体的上衣装饰者 1 西装 Suit.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 上衣具体的装饰者---西服
  */</span>
@@ -492,11 +493,11 @@
     <span class="token keyword">public</span> String <span class="token function">getOuter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"---上衣 "</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>5、定义具体的上衣装饰者 2 夹克 Jacket.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的上衣装饰者，皮夹克
  */</span>
@@ -517,21 +518,21 @@
     <span class="token keyword">public</span> String <span class="token function">getOuter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"---上衣"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>6、定义抽象的装饰者裤子 ITrousers.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象的装饰者--裤子
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ITrousers</span> <span class="token punctuation">{</span>
     String <span class="token function">getCloths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>7、定义具体的裤子装饰者 1 西裤 Pants.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 裤子的具体装饰者--西裤
  */</span>
@@ -547,11 +548,11 @@
     <span class="token keyword">public</span> String <span class="token function">getCloths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> person<span class="token punctuation">.</span><span class="token function">getCloths</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"西裤"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>8、定义具体的裤子装饰者 2 牛仔裤 Jean.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的裤子装饰者--牛仔裤
  */</span>
@@ -565,11 +566,11 @@
     <span class="token keyword">public</span> String <span class="token function">getCloths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> person<span class="token punctuation">.</span><span class="token function">getCloths</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"牛仔裤"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>9、来个测试类，测试一下 Test.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 测试类
  */</span>
@@ -594,7 +595,7 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>jean<span class="token punctuation">.</span><span class="token function">getCloths</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>10、运行查看结果</li>
 </ul>
@@ -613,18 +614,18 @@
 <ul>
 <li>1、定义抽象的被装饰的对象 AbstractHouse.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象的构件房子
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractHouse</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 取得房子的风格</span>
     <span class="token keyword">abstract</span> String <span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、定义具体的被装饰对象简约房子 JianYi.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的构件1 简易房子
  */</span>
@@ -633,11 +634,11 @@
     String <span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"简易风格的房子"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、定义具体的被装饰对象欧美房子 OuMei.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的构件2 欧美风格房子
  */</span>
@@ -646,22 +647,22 @@
     String <span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"欧美风格的房子"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>4、定义抽象的装饰者 AbstractDecorator.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象的装饰者
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractDecorator</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractHouse</span><span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 返回装修价格</span>
     <span class="token keyword">abstract</span> String <span class="token function">getCost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>5、定义简约风格房子具体装饰者 DiDiaoDecorator.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的装饰者之一:简易装修
  */</span>
@@ -681,11 +682,11 @@
     String <span class="token function">getCost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">" 8 万元装修"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>6、定义欧美风格房子具体装饰者 GaoDuanDecorator.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的装饰者--高端装修
  */</span>
@@ -706,11 +707,11 @@
     String <span class="token function">getCost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">" 10 万元装修"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>7、来测试一下 Test.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         AbstractHouse jianYiHouse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JianYi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
         AbstractDecorator diDiaoDecorator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DiDiaoDecorator</span><span class="token punctuation">(</span>jianYiHouse<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -721,7 +722,7 @@
         AbstractDecorator gaoDuanDecorator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GaoDuanDecorator</span><span class="token punctuation">(</span>ouMei<span class="token punctuation">)</span> <span class="token punctuation">;</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>gaoDuanDecorator<span class="token punctuation">.</span><span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>gaoDuanDecorator<span class="token punctuation">.</span><span class="token function">getCost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>8、运行查看结果</li>
 </ul>
@@ -750,20 +751,20 @@
 <ul>
 <li>1、声明 XML</li>
 </ul>
-<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>com.diegocarloslima.fgelv.lib.FloatingGroupExpandableListView</span>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>com.diegocarloslima.fgelv.lib.FloatingGroupExpandableListView</span>
 <span class="token attr-name"><span class="token namespace">android:</span>id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>@+id/my_list<span class="token punctuation">"</span></span>
 <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
-<span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
+<span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、在 Activity.onCreate() 或 Fragment.onCreateView() 方法中添加如下代码</li>
 </ul>
-<pre class=" language-java"><code class="language-java">FloatingGroupExpandableListView myList <span class="token operator">=</span> <span class="token punctuation">(</span>FloatingGroupExpandableListView<span class="token punctuation">)</span> <span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>my_list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java"><code class="language-java">FloatingGroupExpandableListView myList <span class="token operator">=</span> <span class="token punctuation">(</span>FloatingGroupExpandableListView<span class="token punctuation">)</span> <span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>my_list<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 自己定义的 BaseExpandableListAdapter</span>
 BaseExpandableListAdapter myAdapter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyAdapter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//看到了吧，从名字可以看到这是一个包装器，用来包装 ExpandableListAdapter 的</span>
 WrapperExpandableListAdapter wrapperAdapter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WrapperExpandableListAdapter</span><span class="token punctuation">(</span>myAdapter<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 这里把包装 adapter 传进去就达到了悬浮组头的目的</span>
-myList<span class="token punctuation">.</span><span class="token function">setAdapter</span><span class="token punctuation">(</span>wrapperAdapter<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+myList<span class="token punctuation">.</span><span class="token function">setAdapter</span><span class="token punctuation">(</span>wrapperAdapter<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>怎么样，原来的 BaseExpandableListAdapter 压根不用修改就达到扩展的目的，很爽吧，当然当配合 FloatingGroupExpandableListView「扩展了解ExpandableListView 」 来使用</p>
 <p><code>具体代码</code></p>
 <p>具体的代码我就不贴了，我上传到 github 上了，大家可自行下载去查看，Demo 地址：<a href="https://github.com/githubchen001/DesignPattern" target="_blank" rel="noopener">https://github.com/githubchen001/DesignPattern</a> 的 wrapperExpandableListAdapter 部分</p>
@@ -788,7 +789,7 @@ myList<span class="token punctuation">.</span><span class="token function">setAd
 <p>2、 android.hardware.camera2.utils.Decorator</p>
 </blockquote>
 <p>感兴趣的可以扒扒这部分源码，同样使用的装饰模式</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/***
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/***
 This is an implementation of the 'decorator' design pattern using java's proxy mechanism.
 See also:
 newInstance(java.lang.Object,android.hardware.camera2.utils.Decorator.DecoratorListener)
@@ -812,7 +813,7 @@ Hide:
     <span class="token punctuation">}</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 省略若干代码
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>从注释就可以看出使用的装饰模式</p>
 <h3 id="四、装饰模式的分类"><a href="#四、装饰模式的分类" class="headerlink" title="四、装饰模式的分类"></a>四、装饰模式的分类</h3><blockquote>
 <p>1、 透明</p>

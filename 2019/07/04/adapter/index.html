@@ -39,7 +39,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -444,7 +445,7 @@
 <ul>
 <li>1、定义目标接口 VgaOrHdmi </li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 目标角色，对投影仪来说就要 VAG 或 HDMI
  * @auther TigerChain
  */</span>
@@ -452,11 +453,11 @@
     <span class="token comment" spellcheck="true">/**输出 VGA 或是 Hdmi 接口*/</span>
     String <span class="token function">getVgaOrHdmi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、定义源类 MiniDp</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 源角色，MAC 电脑上的 MINIDP 接口
  * @auther TigerChain
  */</span>
@@ -465,11 +466,11 @@
     <span class="token keyword">public</span> String <span class="token function">outPutMinkDp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"我是 mac 上的 MiniDp 输入接口"</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、定义适配器类 MidiDp2VgaOrHdmiAdapter </li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 适配器，既是 MINIDP 接口也是 VAGORHDMI 接口，这样就可以把 MINIDP 转成
  * VAG OR HDMI 接口
  * @auther TigerChain
@@ -492,11 +493,11 @@
         str <span class="token operator">=</span> <span class="token string">"输出变成  VGA 和 HDMI 接口"</span> <span class="token punctuation">;</span>
         <span class="token keyword">return</span> str <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>4、定义打印机类 Projector</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 这是投影仪，我就是 VGA 和 HDMI 接口的
  * @auther TigerChain
  */</span>
@@ -506,11 +507,11 @@
             <span class="token keyword">return</span> vgaOrHdmi<span class="token punctuation">.</span><span class="token function">getVgaOrHdmi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>5、定义测试类 Test</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 测试类
  * @auther TigerChain
  */</span>
@@ -525,7 +526,7 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>6、运行查看结果</li>
 </ul>
@@ -543,7 +544,7 @@
 <ul>
 <li>1、修改 MidiDp2VgaOrHdmiAdapter </li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * 适配器，既是 MINIDP 接口也是 VAGORHDMI 接口，这样就可以把 MINIDP 转成
  * VAG OR HDMI 接口
  */</span>
@@ -572,7 +573,7 @@
         str <span class="token operator">=</span> <span class="token string">"输出变成  VGA 和 HDMI 接口"</span> <span class="token punctuation">;</span>
         <span class="token keyword">return</span> str <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、修改测试类，并运行查看结果</li>
 </ul>
@@ -594,27 +595,27 @@
 <ul>
 <li>1、新建 ISpeakEn 接口</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by tigerchain on 11/12/17.
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ISpeakEn</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 说英文</span>
     String <span class="token function">speakEnglish</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、新建 ISpeakCn 接口</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by tigerchain on 11/12/17.
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ISpeakCn</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 说中文</span>
     String <span class="token function">speakCn</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、翻译的接口「适配器」 Iinterpreter </li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by tigerchain on 11/12/17.
  * 翻译的接口
  */</span>
@@ -624,11 +625,11 @@
     <span class="token keyword">void</span> <span class="token function">chinese2English</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 英文翻译成中文</span>
     <span class="token keyword">void</span> <span class="token function">english2Chinese</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>4、具体的翻译员小张 ZhangTranslation</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by tigerchain on 11/12/17.
  * 举个例子，成龙有一个张翻译，能把英文翻译成中文，也能把中文翻译成英文
  */</span>
@@ -662,11 +663,11 @@
         <span class="token keyword">return</span> str<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>5、来一个老外「要对话肯定要有关建人物呀」 Foreigner </li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by tigerchain on 11/12/17.
  * 一个老外用英文给成龙打招呼
  */</span>
@@ -678,11 +679,11 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>say<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> say <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>6、成龙上场「另一个关建人物」 JackieChan</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by tigerchain on 11/12/17.
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JackieChan</span> <span class="token keyword">implements</span> <span class="token class-name">ISpeakCn</span> <span class="token punctuation">{</span>
@@ -693,11 +694,11 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>say<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> say <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>7、测试对话 Test</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by tigerchain on 11/12/17.
  * 这是一个成龙对话老外的测试类
  */</span>
@@ -717,7 +718,7 @@
         zhangTranslation<span class="token punctuation">.</span><span class="token function">chinese2English</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
         zhangTranslation<span class="token punctuation">.</span><span class="token function">english2Chinese</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>8、运行查看结果</li>
 </ul>
@@ -735,7 +736,7 @@
 <ul>
 <li>1、先看看 Adapter </li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Adapter</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Adapter</span> <span class="token punctuation">{</span>
 <span class="token keyword">int</span> <span class="token function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     Object <span class="token function">getItem</span><span class="token punctuation">(</span><span class="token keyword">int</span> var1<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -751,12 +752,12 @@
     <span class="token keyword">int</span> <span class="token function">getViewTypeCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token keyword">boolean</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span></code></pre>
+ <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、ListAdapter 继承 Adapter 接口，所以拥有 Adapter 所有功能</li>
 <li>3、BaseAdapter 实现 ListAdapter 所以不仅拥有 ListAdapteer 的所有能力</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">BaseAdapter</span> <span class="token keyword">implements</span> <span class="token class-name">ListAdapter</span><span class="token punctuation">,</span> SpinnerAdapter<span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">BaseAdapter</span> <span class="token keyword">implements</span> <span class="token class-name">ListAdapter</span><span class="token punctuation">,</span> SpinnerAdapter<span class="token punctuation">{</span>
 
     <span class="token comment" spellcheck="true">//省略苦干代码</span>
     <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">areAllItemsEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -782,11 +783,11 @@
     <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>    
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、再来看看 ArrayAdapter<t></t></li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayAdapter</span><span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token keyword">extends</span> <span class="token class-name">BaseAdapter</span> <span class="token keyword">implements</span> <span class="token class-name">Filterable</span><span class="token punctuation">,</span> ThemedSpinnerAdapter <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayAdapter</span><span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token keyword">extends</span> <span class="token class-name">BaseAdapter</span> <span class="token keyword">implements</span> <span class="token class-name">Filterable</span><span class="token punctuation">,</span> ThemedSpinnerAdapter <span class="token punctuation">{</span>
 
  <span class="token keyword">private</span> List<span class="token operator">&lt;</span>T<span class="token operator">></span> mObjects<span class="token punctuation">;</span>  
     <span class="token comment" spellcheck="true">//列出其中一个构造方法 </span>
@@ -820,7 +821,7 @@
         <span class="token keyword">return</span> <span class="token function">createViewFromResource</span><span class="token punctuation">(</span>mInflater<span class="token punctuation">,</span> position<span class="token punctuation">,</span> convertView<span class="token punctuation">,</span> parent<span class="token punctuation">,</span> mResource<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">//其它代码流省略</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我们通过源码可以看到 ArrayAdapter<t> 就是把 List<t> 的数据源采用一系列方法转化成 ListAdapter 需要的几种方法 getView getPosition 等等「这就是一个适配的过程」</t></t></p>
 <p><code>ListAdapter 既是策略模式又是适配器模式</code></p>
 <p>根据选择模式使用那种适配器 ListAdapter 就是策略模式，但是根据每个策略所实现功能「它就是适配器模式」</p>

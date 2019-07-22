@@ -39,7 +39,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -410,7 +411,7 @@
 <ul>
 <li>1、定义抽象产品果汁接口 IJuice.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Description 创建一个果汁接口
  * @Creator TigerChain（创建者）
  */</span>
@@ -418,11 +419,11 @@
     String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">//也可以声明一些其它的业务方法</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、定义具体的产品，苹果汁「<code>AppleJuice.java</code>」，桔汁「<code>OrangeJuice.java</code>」</li>
 </ul>
-<pre class=" language-java"><code class="language-java"># AppleJuice<span class="token punctuation">.</span>java
+<pre class="line-numbers language-java"><code class="language-java"># AppleJuice<span class="token punctuation">.</span>java
 
 <span class="token comment" spellcheck="true">/**
  * @Description 一个具体的产品--- 苹果汁
@@ -437,8 +438,8 @@
         Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span><span class="token string">"我是苹果汁"</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token string">"我是苹果汁"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-java"><code class="language-java"># OrangeJuice<span class="token punctuation">.</span>java
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java"><code class="language-java"># OrangeJuice<span class="token punctuation">.</span>java
 
 <span class="token comment" spellcheck="true">/**
  * @Description 具体的产品桔子汁
@@ -454,11 +455,11 @@
         <span class="token keyword">return</span> <span class="token string">"我是桔子汁"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、创建榨汁机「工厂类」 JuiceFactory.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java">
+<pre class="line-numbers language-java"><code class="language-java">
 <span class="token comment" spellcheck="true">/**
  * @Description  果汁机---工厂
  * @Creator junjun（创建者）
@@ -482,12 +483,12 @@
 
         <span class="token keyword">return</span> iJuice <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>4、在 MainActivity 中使用</li>
 </ul>
 <p>核心代码，其它的代码是布局有两个按钮和一个文本，并且添加点击事件，这里不贴代码了。</p>
-<pre class=" language-java"><code class="language-java"> <span class="token annotation punctuation">@Override</span>
+<pre class="line-numbers language-java"><code class="language-java"> <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View view<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">switch</span> <span class="token punctuation">(</span>view<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token keyword">case</span> R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>btn_create_apple<span class="token operator">:</span>
@@ -505,7 +506,7 @@
         <span class="token punctuation">}</span>
 
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>5、运行结果看果</li>
 </ul>

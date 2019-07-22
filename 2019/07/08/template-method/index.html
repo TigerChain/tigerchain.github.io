@@ -39,7 +39,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -430,7 +431,7 @@
 <ul>
 <li>1、抽象出一个冰箱接口 IRefrige.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象冰箱
  */</span>
@@ -439,22 +440,22 @@
     String <span class="token function">getRefrigeModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">//设置冰箱品牌</span>
     <span class="token keyword">void</span> <span class="token function">setModel</span><span class="token punctuation">(</span>String model<span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、抽象一个动物类 Animail.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义动物的抽象类
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Animail</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// 取得动物的名字</span>
     <span class="token keyword">abstract</span> String <span class="token function">getAnimailName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、定义抽象模版方法类 AbstractMothodWork.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 抽象的模版类
  */</span>
@@ -472,12 +473,12 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putin</span><span class="token punctuation">(</span>animail<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//第二步</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//第三步</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我们看到冰箱装动物的步骤是固定的，但是具体步骤内部实现交给子类去处理吧，这就是模版模式的使用场景</p>
 <ul>
 <li>4、来一个具体的模版 ConcreateMethodWork.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 具体的模版类
  */</span>
@@ -502,11 +503,11 @@
     <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"第 3 步把冰箱门盖上"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>5、来一个松下冰箱「当然可以是任意品牌的冰箱」 PanasonnicRefrige.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义一台松下冰箱
  */</span>
@@ -522,11 +523,11 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setModel</span><span class="token punctuation">(</span>String model<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>model <span class="token operator">=</span> model <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>6、被装的对象大象「当然还可以任何动物」 Elephant.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 创建一个动物--大象
  */</span>
@@ -536,11 +537,11 @@
     String <span class="token function">getAnimailName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"大象"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>7、测试一下 Test.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 测试类
  */</span>
@@ -558,7 +559,7 @@
         <span class="token comment" spellcheck="true">// 执行步骤</span>
         work<span class="token punctuation">.</span><span class="token function">handle</span><span class="token punctuation">(</span>panasonnicRefrige<span class="token punctuation">,</span>elephant<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>8、运行查看结果</li>
 </ul>
@@ -592,7 +593,7 @@
 <ul>
 <li>1、定义抽象的模版–数据库增、删、改查抽象类 AbstractDAO.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义抽象的数据库增、删、改、查的模版
  */</span>
@@ -607,12 +608,12 @@
     <span class="token keyword">abstract</span> T <span class="token function">findById</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 查找所有数据</span>
     <span class="token keyword">abstract</span> List<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">findall</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我们这里以泛型去接收实体类，至于查那个交给子类去实现–这样就把共同点抽象出来了</p>
 <ul>
 <li>2、我们操作用户表吧，定义一个 Person.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * Created by TigerChain
  * 定义一个 javaBean 对应数据库中的表
  */</span>
@@ -623,11 +624,11 @@
     <span class="token keyword">private</span> String address <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 地址</span>
     <span class="token comment" spellcheck="true">// 省略 setter 和 getter 方法</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>   
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、定义一个操作用户表的 DAO PersonConCreateDAO.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token operator">*</span><span class="token operator">*</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token operator">*</span><span class="token operator">*</span>
  <span class="token operator">*</span> Created by TigerChain
  <span class="token operator">*</span> 一个具体的模版对用户表的增、删、改、查
  <span class="token operator">*</span><span class="token operator">/</span>
@@ -677,11 +678,11 @@
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"查找所有的 person "</span><span class="token operator">+</span> persons<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> persons<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>4、测试一下 Test.java</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 模拟两个用户数据</span>
         Person person1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
@@ -713,7 +714,7 @@
         personConCreateDAO<span class="token punctuation">.</span><span class="token function">findall</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
 
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>5、运行查看结果</li>
 </ul>
@@ -725,7 +726,7 @@
 </blockquote>
 <p>考试卷对每个考生来说都是一样的「考试卷就是一个模版」，至于每个人如何答题那是每个考生的事情，针对考试答题我们可以使用模版方法模式来模拟这一过程，代码就不贴了「我上传到了 github 上」，具体看这里：<a href="https://github.com/githubchen001/designpattern_javademo/tree/master/src/template/examination_page" target="_blank" rel="noopener">https://github.com/githubchen001/designpattern_javademo/tree/master/src/template/examination_page</a></p>
 <p><strong>PS:</strong>模版方法模式除了抽象模版、具体模版之外，还可能会有一个钩子方法「Hook」,也就是说抽象模版中把规定好了算法的步骤 1 2 3 4 ，如果我只想使用 1 2 3 ，不想使用 4 呢？Hook 方法就派上用场了，以下是抽象模版带 Hook 的伪代码</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractTemplateMethod</span><span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractTemplateMethod</span><span class="token punctuation">{</span>
 
     <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">step1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
     <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">step2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
@@ -747,7 +748,7 @@
     <span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">isUseStep4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token boolean">false</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>子类重写 isUseStep4() 的方法返回 true 或 fals 决定是否使用 step4 步骤,这就是钩子方法，大家自行感受一下，其实就是一个开关而已</p>
 <h3 id="三、Android-源码中的模版方法模式"><a href="#三、Android-源码中的模版方法模式" class="headerlink" title="三、Android 源码中的模版方法模式"></a>三、Android 源码中的模版方法模式</h3><blockquote>
 <p>1、View 中的 draw(Canvas canvas) 方法</p>
@@ -760,7 +761,7 @@
 <p>2、最熟悉的 Activity</p>
 </blockquote>
 <p>Activity 就是一个模版，其中生命周期的方法就是”不固定”的方法，如果要改变子类重写即可</p>
-<pre class=" language-java"><code class="language-java">  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Activity</span> <span class="token keyword">extends</span> <span class="token class-name">ApplicationContext</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java">  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Activity</span> <span class="token keyword">extends</span> <span class="token class-name">ApplicationContext</span> <span class="token punctuation">{</span>
       <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
       <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -774,7 +775,7 @@
       <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onStop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
       <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这里定义成 protected 方法，那么这个方法既可以是固定的也可以是不固定的「子类实现就不固定，如果不实现就是固定的,很灵活」，Activity 就是一个模版方法模式「你天天使用 Activity 知道它是模版模式吗？」</p>
 <blockquote>
 <p>3、封装 BaseActivity</p>
@@ -783,7 +784,7 @@
 <img src="/2019/07/08/template-method/baseActivity.png" title="封装 BaseActivity">
 
 <p>然后不同的界面写不同的子类继承即可，我们使用伪代码来模拟一下</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">TemplateMethodActivity</span> <span class="token keyword">extends</span> <span class="token class-name">AppCompatActivity</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">TemplateMethodActivity</span> <span class="token keyword">extends</span> <span class="token class-name">AppCompatActivity</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> Button titlebar_btn_left<span class="token punctuation">,</span>titlebar_btn_right <span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 左右按钮 </span>
     <span class="token keyword">private</span> TextView titlebar_tv_center <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 中间文字</span>
     <span class="token keyword">private</span> RelativeLayout content <span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">// 内容布局</span>
@@ -810,7 +811,7 @@
         LayoutInflater<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">inflate</span><span class="token punctuation">(</span>ResId<span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">// 省略若干方法</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后子类继承这个 Activity 重写抽象方法即可实现自己的界面内容，我们写一个登录界面继承 TemplateMethodActivity ，代码不贴了，直接上地址：<a href="https://github.com/githubchen001/DesignPattern" target="_blank" rel="noopener">https://github.com/githubchen001/DesignPattern</a> 查看 TemplateMethod 相关代码即可</p>
 <p>最终运行效果如下：</p>
 <img src="/2019/07/08/template-method/loginActivity.png" title="模版方法模式实现 BaseActivity 结果">

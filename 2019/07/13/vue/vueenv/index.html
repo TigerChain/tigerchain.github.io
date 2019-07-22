@@ -39,7 +39,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -374,14 +375,14 @@
 </ul>
 <p><strong>PS：</strong> 开发版本有完整的调试和警告，而生产版本则是一个精简版本，删除了警告，如果我们在开发的时候建议选择开发版本方便调试</p>
 <p>使用方式</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
      <span class="token comment" spellcheck="true">&lt;!-- 引入 vue.js 所在的目录--></span>
      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>2、使用 CDN 引用</p>
 </blockquote>
@@ -397,9 +398,9 @@
 
 <p>下载对应 win 系统还是 mac 系统的版本，然后安装即可</p>
 <p>在我的 mac 电脑上我直接使用 <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a> 安装的</p>
-<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> node </code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">brew <span class="token function">install</span> node <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>安装完 node 会自带 npm「node 的包管理器」,安装完成以后在命令行中输入</p>
-<pre class=" language-bash"><code class="language-bash">node -v</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>看到以下 node 的版本信息则表示安装成功了</p>
 <img src="/2019/07/13/vue/vueenv/node-v.png" title="查看 node 的版本">
 
@@ -407,8 +408,8 @@
 <li>2、使用 npm 安装 vue</li>
 </ul>
 <p>在命令行输入以下命令即完成安装</p>
-<pre class=" language-bash"><code class="language-bash">// 全局安装
-<span class="token function">npm</span> <span class="token function">install</span> -g vue</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">// 全局安装
+<span class="token function">npm</span> <span class="token function">install</span> -g vue<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
 <img src="/2019/07/13/vue/vueenv/vue-v.png" title="npm 安装 vue">
 
@@ -416,12 +417,12 @@
 <li>3、使用 yar「替代 npm 的包管理器」 安装</li>
 </ul>
 <p><strong>a)、</strong> 要使用 yarn 先需要安装 yarn , 在这里我们使用 npm 安装 yarn </p>
-<pre class=" language-bash"><code class="language-bash">// 全局安装
-<span class="token function">npm</span> <span class="token function">install</span> yarn -g </code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">// 全局安装
+<span class="token function">npm</span> <span class="token function">install</span> yarn -g <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><strong>b)、</strong> 使用 yarn 安装 vue</p>
-<pre class=" language-bash"><code class="language-bash">yarn global add vue </code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">yarn global add vue <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>以上命令在 win 系统上安装完成以后，在命令行中使用 vue 可能会出现 Command not found 命令，那么我们需要配置一下环境变量。把 yarn 的 bin 目录配置到环境变量即可「配置到 path 路径下」，使用以下命令直接查看 yarn 的 bin 目录「把此命令显示出的路径直接配置到 path 后面即可」</p>
-<pre class=" language-bash"><code class="language-bash">yarn global bin </code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">yarn global bin <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>由于我这里是 mac 电脑，所以就不演示了，如果碰到这个问题，就配置一下环境变量即可</p>
 <p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
 <img src="/2019/07/13/vue/vueenv/vue-v.png" title="yarn 安装 vue">
@@ -429,9 +430,9 @@
 <h4 id="2、使用-cli-「命令行工具」"><a href="#2、使用-cli-「命令行工具」" class="headerlink" title="2、使用 cli 「命令行工具」"></a>2、使用 cli 「命令行工具」</h4><p>我们除了上面的引用或安装 vue 外，还可以使用 vue-cli「脚手架工具」</p>
 <p>vue-cli 是一个脚手架工具「就是一个工具集合，可以快速的创建一个 vue 项目」</p>
 <p>同样使用 yarn/npm 来安装 vue-cli，我们全局安装</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --global vue-cli 
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --global vue-cli 
 或者使用
-yarn global add vue-cli</code></pre>
+yarn global add vue-cli<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>安装完以后，我们输入 vue -V 查看是否安装成功，或使用 vue-list 查看</p>
 <img src="/2019/07/13/vue/vueenv/vue-list.png" title="vue-list">
 
@@ -439,13 +440,13 @@ yarn global add vue-cli</code></pre>
 <h4 id="3、使用-vue-cli-来创建一个项目"><a href="#3、使用-vue-cli-来创建一个项目" class="headerlink" title="3、使用 vue-cli 来创建一个项目"></a>3、使用 vue-cli 来创建一个项目</h4><ul>
 <li>1、新建一个目录，我这里放在桌面「我以 mac 电脑演示，win 同理」</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash"> <span class="token function">cd</span> Desktop
+<pre class="line-numbers language-bash"><code class="language-bash"> <span class="token function">cd</span> Desktop
  <span class="token function">mkdir</span> myvuedemo
- <span class="token function">cd</span> myvuedemo</code></pre>
+ <span class="token function">cd</span> myvuedemo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>2、使用 vue-cli 创建项目</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">vue init webpack myfirstvuedemo</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">vue init webpack myfirstvuedemo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这里的 vue 项目是基于 webpack 的，使用上述命令我就可以创建一个名为 myfirstvuedemo 的 vue 项目</p>
 <p>当我们输入上述命令以后就会开始下载模版，然后会提示输入项目名「自己写一个即可」，完了一路回车，出现 yes 就直接回车「目前先这样搞，别管为什么，但是如果看过我的 react 教程就会了解，最后提示使用 npm 还是 yarn 来管理包，我选择的是 yarn」</p>
 {% asset_img vue-init-project.png  vue init project %}
@@ -457,9 +458,9 @@ yarn global add vue-cli</code></pre>
 <ul>
 <li>3、运行项目</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> myfirstvuedemo
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> myfirstvuedemo
 然后运行
-yarn run dev</code></pre>
+yarn run dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>我们就会看到使用 webpack 启动服务，然后编译，完成以后提示项目运行的地址：默认是–<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
 <img src="/2019/07/13/vue/vueenv/run-vue-project.png" title="启动项目">
 
