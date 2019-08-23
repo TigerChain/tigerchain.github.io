@@ -5,8 +5,8 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="baidu-site-verification" content="xE6FXnG3Pd">
-    <meta name="keywords" content="分类, tigerchain">
-    <meta name="description" content="分类 | tigerchain">
+    <meta name="keywords" content="标签: bui, tigerchain">
+    <meta name="description" content="标签: bui | tigerchain">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>分类 | tigerchain</title>
+    <title>标签: bui | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -269,60 +269,85 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
     
 
-<div id="category-cloud" class="container chip-container">
+<div id="tags" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
             </div>
             <div class="tag-chips">
                 
                 
-                
-                <a href="/categories/人人都会设计模式/" title="人人都会设计模式: 9">
+                <a href="/tags/设计模式/" title="设计模式: 9">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">人人都会设计模式
+                            data-tagname="设计模式" style="background-color: #F9EBEA;">设计模式
                         <span class="tag-length">9</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/bui-开发玩-Android-app/" title="bui 开发玩 Android app: 1">
+                <a href="/tags/Android/" title="Android: 9">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">bui 开发玩 Android app
+                            data-tagname="Android" style="background-color: #F5EEF8;">Android
+                        <span class="tag-length">9</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/移动端/" title="移动端: 7">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="移动端" style="background-color: #D5F5E3;">移动端
+                        <span class="tag-length">7</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/前端/" title="前端: 11">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="前端" style="background-color: #E8F8F5;">前端
+                        <span class="tag-length">11</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/bui/" title="bui: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="bui" style="background-color: #FEF9E7;">bui
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/从头整-Flutter/" title="从头整 Flutter: 6">
+                <a href="/tags/Flutter/" title="Flutter: 6">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">从头整 Flutter
+                            data-tagname="Flutter" style="background-color: #F8F9F9;">Flutter
                         <span class="tag-length">6</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/侃大山/" title="侃大山: 1">
+                <a href="/tags/侃大山/" title="侃大山: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">侃大山
+                            data-tagname="侃大山" style="background-color: #82E0AA;">侃大山
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/手把手教Vue/" title="手把手教Vue: 4">
+                <a href="/tags/vue/" title="vue: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">手把手教Vue
+                            data-tagname="vue" style="background-color: #D7BDE2;">vue
                         <span class="tag-length">4</span>
                     </span>
                 </a>
-                
                 
             </div>
         </div>
@@ -330,64 +355,45 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
 
     
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"人人都会设计模式","max":10},{"name":"bui 开发玩 Android app","max":10},{"name":"从头整 Flutter","max":10},{"name":"侃大山","max":10},{"name":"手把手教Vue","max":10}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [9,1,6,1,4],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-</script>
-    
-
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="移动端, 前端, bui" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/08/23/bui-wandroid-lessonstruct/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="00、课程大纲">
+                            
+                            <span class="card-title">00、课程大纲</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/bui-开发玩-Android-app/" class="post-category" target="_blank">
+                                bui 开发玩 Android app
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
