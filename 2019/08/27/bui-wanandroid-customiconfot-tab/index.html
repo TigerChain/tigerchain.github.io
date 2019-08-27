@@ -9,11 +9,7 @@
     <meta name="description" content="视频 
 
 
-一、课程简介本节我们使用自定义字体图片来替换我们的首页 tab 所对应的图片，目前我们的 tab 是这个样子
-
-我们要实现的一个效果
-
-二、制作自定义字体图片这里我们使用阿里的 iconfont 来制作字体图片，没有账号的先注册">
+ps: 注意视频中打 tag 的方式有误，应该在保证某个分支开发完成再打 tag ，不能在 tag 的基础上打 tag ,视频中的内容我们就在 master 分支上开发，开发完成后提交到 github 上，然后在 master ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -406,7 +402,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.3k
+                        1.4k
                     </div>
                     
 
@@ -432,7 +428,9 @@
                 <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=113439611&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
 </iframe>
 
-<h3 id="一、课程简介"><a href="#一、课程简介" class="headerlink" title="一、课程简介"></a>一、课程简介</h3><p>本节我们使用自定义字体图片来替换我们的首页 tab 所对应的图片，目前我们的 tab 是这个样子</p>
+<p><strong>ps:</strong> 注意视频中打 tag 的方式有误，应该在保证某个分支开发完成再打 tag ，不能在 tag 的基础上打 tag ,视频中的内容我们就在 master 分支上开发，开发完成后提交到 github 上，然后在 master 的基础上打出 tag</p>
+<pre><code>git tag 04、使用自定义字体图片完成首页tab </code></pre><p>然后再使用以下命令把本地 tag 推到 github 远程 tag 上</p>
+<pre><code>git push origin 04、使用自定义字体图片完成首页tab </code></pre><h3 id="一、课程简介"><a href="#一、课程简介" class="headerlink" title="一、课程简介"></a>一、课程简介</h3><p>本节我们使用自定义字体图片来替换我们的首页 tab 所对应的图片，目前我们的 tab 是这个样子</p>
 <p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/old_tab.png" alt="老 tab"></p>
 <p>我们要实现的一个效果</p>
 <p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/source_tab.png" alt="目标 tab"></p>
@@ -464,7 +462,7 @@
 <pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
     <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"icon"</span><span class="token punctuation">;</span>
     <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url("../font/iconfont.eot")</span><span class="token punctuation">;</span>
-    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url("../font/confont.eot?#iefix")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"embedded-opentype"</span><span class="token punctuation">)</span>, 
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url("../font/iconfont.eot?#iefix")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"embedded-opentype"</span><span class="token punctuation">)</span>, 
     <span class="token url">url("../font/iconfont.woff")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"woff"</span><span class="token punctuation">)</span>, 
     <span class="token url">url("../font/iconfont.ttf")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"truetype"</span><span class="token punctuation">)</span>, 
     <span class="token url">url("../font/iconfont.svg#iconfont")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"svg"</span><span class="token punctuation">)</span>
@@ -772,18 +770,18 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/27/bui-wanandroid-pushcodegithub/">
+                <a href="/2019/08/27/bui-wanandroid-pushcodegit-modify/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="03、使用 github 管理代码">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="04、处理使用自定义字体图片完成 tab 的几处问题(2)">
                         
-                        <span class="card-title">03、使用 github 管理代码</span>
+                        <span class="card-title">04、处理使用自定义字体图片完成 tab 的几处问题(2)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本节我们对使用将 bui 玩 Android 的源码托管在 github 上
+                            本节对上节课中的几处小问题处理一下，大家需要注意一下，不要犯错哦
                         
                     </div>
                     <div class="publish-info">
@@ -933,7 +931,7 @@
 的学习、分享、吹水的官方博客.
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">70.6k</span>
+                <span class="white-color">70.8k</span>
             
 
             
