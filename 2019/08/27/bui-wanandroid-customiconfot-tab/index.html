@@ -5,8 +5,15 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="baidu-site-verification" content="xE6FXnG3Pd">
-    <meta name="keywords" content="搜索, tigerchain">
-    <meta name="description" content="搜索 | tigerchain">
+    <meta name="keywords" content="04、使用自定义字体图片完成首页 tab, tigerchain">
+    <meta name="description" content="视频 
+
+
+一、课程简介本节我们使用自定义字体图片来替换我们的首页 tab 所对应的图片，目前我们的 tab 是这个样子
+
+我们要实现的一个效果
+
+二、制作自定义字体图片这里我们使用阿里的 iconfont 来制作字体图片，没有账号的先注册">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>搜索 | tigerchain</title>
+    <title>04、使用自定义字体图片完成首页 tab | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -243,13 +250,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        搜索
+                        04、使用自定义字体图片完成首页 tab
                     </div>
                 </div>
             </div>
@@ -358,12 +365,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/移动端/" target="_blank">
+                                <span class="chip bg-color">移动端</span>
+                            </a>
+                        
+                            <a href="/tags/前端/" target="_blank">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/bui/" target="_blank">
+                                <span class="chip bg-color">bui</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/bui-开发玩-Android-app/" class="post-category" target="_blank">
+                                bui 开发玩 Android app
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -371,21 +399,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-29
+                    2019-08-27
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        0
+                        1.3k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        5 分
                     </div>
                     
                 
@@ -401,7 +429,102 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=113439611&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
+</iframe>
+
+<h3 id="一、课程简介"><a href="#一、课程简介" class="headerlink" title="一、课程简介"></a>一、课程简介</h3><p>本节我们使用自定义字体图片来替换我们的首页 tab 所对应的图片，目前我们的 tab 是这个样子</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/old_tab.png" alt="老 tab"></p>
+<p>我们要实现的一个效果</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/source_tab.png" alt="目标 tab"></p>
+<h3 id="二、制作自定义字体图片"><a href="#二、制作自定义字体图片" class="headerlink" title="二、制作自定义字体图片"></a>二、制作自定义字体图片</h3><p>这里我们使用阿里的 <a href="https://www.iconfont.cn" target="_blank" rel="noopener">iconfont</a> 来制作字体图片，没有账号的先注册一个账号</p>
+<h4 id="1、准备图片"><a href="#1、准备图片" class="headerlink" title="1、准备图片"></a>1、准备图片</h4><p>在真实的场景中，肯定是我们的 UI 设计出来的图片，这里我们直接在阿里的 <a href="https://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a> 上面找图片，字体图片的制作也在这个网站上去完成，在 iconfont 的首页搜索首页然后出来</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/download_tab_svg.png" alt="首页 svg 下载"></p>
+<p>这里我们下载 svg 格式的图片「后面制作字体图片要用这种格式」，依次把我们需要的 tab 的图片 svg 全部下载下来「这里就不一一下载了，大家自行尝试去下，不一定非要和我的图片一样，方法学会即可」</p>
+<h4 id="2、上传到-iconfont-网站上"><a href="#2、上传到-iconfont-网站上" class="headerlink" title="2、上传到 iconfont 网站上"></a>2、上传到 iconfont 网站上</h4><p>准备好 5 大 tab 的 svg 图片以后，我们在 iconfont 的首页中依次找到图标管理我的项目</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/icon_mamager_myproject.png" alt="我的项目"></p>
+<p>然后点击右边的紫色按钮新建一个目录来存放我们的 svg 图片</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/create_new_project.png" alt="创建项目按钮"></p>
+<p>然后弹出创建对话框</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/alert_create_project.png" alt="弹出项目对话框"></p>
+<p>我们写入相应的名称等内容即可，接下来我们进入到刚才新建的项目中去上传我们准备的 svg 图片，有一上传至图片按钮</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/upload_pic_toproject.png" alt="上传svg图片至项目"></p>
+<p>到此会到上传界面</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/upload_svg.png" alt="上传svg界面"></p>
+<p>看到了吧，这里需要 svg 所以我们开始准备的就是 svg 图片，上传就可以了,上传完以后就会看到我们的图片</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_upload_svg.png" alt="上传svg成功显示"></p>
+<h4 id="3、下载制作好的-iconfont"><a href="#3、下载制作好的-iconfont" class="headerlink" title="3、下载制作好的 iconfont"></a>3、下载制作好的 iconfont</h4><p>经过上面的步骤我们就把自定义字体图片制作好了，下面下载下来看看「点击面图中的下载至地按钮」，我们来看看文本夹中有啥</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/download_custom_iconfont.png" alt="查看自定义 iconfont 目录"></p>
+<p>其中字体图片已经为我们生成了,下面我们看看如何使用</p>
+<h3 id="三、使用自定义图片"><a href="#三、使用自定义图片" class="headerlink" title="三、使用自定义图片"></a>三、使用自定义图片</h3><h4 id="1、查看-html-文件"><a href="#1、查看-html-文件" class="headerlink" title="1、查看 .html 文件"></a>1、查看 .html 文件</h4><p>把文件下载下来以后，我们直接点击 .html 文件就可以看到如何定义字体图片和使用它</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/custom_iconfont_html.png" alt="查看字体图片 html 文件"></p>
+<p>可以看到有三种使用方式「红框标出来」，我们直接使用第一种方式即可「各种方式里面都有使用说明」</p>
+<h4 id="2、在我们的项目中新建-custom-iconfont-css-文件"><a href="#2、在我们的项目中新建-custom-iconfont-css-文件" class="headerlink" title="2、在我们的项目中新建 custom_iconfont.css 文件"></a>2、在我们的项目中新建 custom_iconfont.css 文件</h4><p>我们在项目中新建一个 <code>custom_iconfont.css</code> 文件，然后将相应的字体图片放入到项目的 font 目录下「也可以定义一个目录去存放」，这里注意一下由于 bui 内置了字体图片所以不能以 iconfont 或是 icon 来命名，我们把我们的字体图片名字全部加一个前缀 custom_ </p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/put_customiconfont_tofont.png" alt="字体图片放入 font 目录中"></p>
+<p>我们在 bui.css 中查看一下他是如何使用字体图片的</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"icon"</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url("../font/iconfont.eot")</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url("../font/confont.eot?#iefix")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"embedded-opentype"</span><span class="token punctuation">)</span>, 
+    <span class="token url">url("../font/iconfont.woff")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"woff"</span><span class="token punctuation">)</span>, 
+    <span class="token url">url("../font/iconfont.ttf")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"truetype"</span><span class="token punctuation">)</span>, 
+    <span class="token url">url("../font/iconfont.svg#iconfont")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"svg"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token attribute">[class^="icon-"]</span>, <span class="token class">.icon</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"icon"</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+    <span class="token property">-webkit-font-smoothing</span><span class="token punctuation">:</span> antialiased<span class="token punctuation">;</span>
+    <span class="token property">-webkit-text-stroke-width</span><span class="token punctuation">:</span> <span class="token number">0.2</span>px<span class="token punctuation">;</span>
+    <span class="token property">-moz-osx-font-smoothing</span><span class="token punctuation">:</span> grayscale<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">background-position</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat
+<span class="token punctuation">}</span></code></pre>
+<p>可以看到上面是关联字体图片，下面是定义字体图片类，我们照猫画虎来一份稍作修改「前提是把我的字体图片放入到 font 目录中」</p>
+<pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*custom_iconfont.css*/</span>
+<span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"custom_icon"</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url("../font/custom_iconfont.eot")</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url("../font/custom_iconfont.eot?#iefix")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"embedded-opentype"</span><span class="token punctuation">)</span>,
+     <span class="token url">url("../font/custom_iconfont.woff")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"woff"</span><span class="token punctuation">)</span>, 
+     <span class="token url">url("../font/custom_iconfont.ttf")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"truetype"</span><span class="token punctuation">)</span>, 
+     <span class="token url">url("../font/custom_iconfont.svg#iconfont")</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"svg"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.custom_icon</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"custom_icon"</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+    <span class="token property">-webkit-font-smoothing</span><span class="token punctuation">:</span> antialiased<span class="token punctuation">;</span>
+    <span class="token property">-webkit-text-stroke-width</span><span class="token punctuation">:</span> <span class="token number">0.2</span>px<span class="token punctuation">;</span>
+    <span class="token property">-moz-osx-font-smoothing</span><span class="token punctuation">:</span> grayscale<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">background-position</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat
+<span class="token punctuation">}</span></code></pre>
+<p>经过上面步骤我们就引入了字体图片并且定义了一个 class 来加载</p>
+<p><strong>PS:由于 icon bui 使用了，所以我们这里使用 custom_icon 来作为 class</strong></p>
+<h4 id="3、将-custom-iconfont-css-引入到-index-html中"><a href="#3、将-custom-iconfont-css-引入到-index-html中" class="headerlink" title="3、将 custom_iconfont.css 引入到 index.html中"></a>3、将 custom_iconfont.css 引入到 index.html中</h4><pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/custom_iconfont.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>接下来就可以愉快的使用了，在我们生成的字体图片的 .html 文件中第三步就是使用字体图片</p>
+<pre><code>&lt;span class=&quot;iconfont&quot;&gt;&amp;#x33;&lt;/span&gt;</code></pre><p>当然这里的 class 要换成我们的 custom_icon,后面的值哪来的同样在字体文件的 .html 开头中就有了</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/unicode_icon_font.png" alt="字体图片码"></p>
+<p>找到这些字体图片，我们直接替换我们项目中 main.html 中的 tab 图标即可,以首页为例，其它的同理</p>
+<pre class=" language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-btn bui-box-vertical active<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pages/home/home.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- class="icon_home" 将其替换成我们的  custom_icon 并输入 &amp;#xe61c; 即可--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>custom_icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token entity" title="&#xe61c;">&amp;#xe61c;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>span1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        首页
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span></code></pre>
+<p>经过这些步骤我们就把原有的字体图片替换成我们自定义的字体图片了</p>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>这节课我们学习了如何使用自定义图标并且在自己的项目中使用它，动手试试吧</p>
+<p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
+<p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
+
             </div>
             <hr/>
 
@@ -566,7 +689,7 @@
         repo: 'tigerchain.github.io',
         owner: 'TigerChain',
         admin: "TigerChain",
-        id: '2019-06-29T13-09-08',
+        id: '2019-08-27T19-54-44',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -592,34 +715,53 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/search/index.html">
+                <a href="/2019/08/27/bui-wanandroid-customiconfot-tab/">
                     <div class="card-image">
                         
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="04、使用自定义字体图片完成首页 tab">
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="搜索">
-                        
-                        <span class="card-title">搜索</span>
+                        <span class="card-title">04、使用自定义字体图片完成首页 tab</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            本节我们对使用自定义字体图片来替换首页的 tab 的 5 个图标
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-27
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            TigerChain
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/bui-开发玩-Android-app/" class="post-category" target="_blank">
+                                    bui 开发玩 Android app
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/移动端/" target="_blank">
+                        <span class="chip bg-color">移动端</span>
+                    </a>
+                    
+                    <a href="/tags/前端/" target="_blank">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/bui/" target="_blank">
+                        <span class="chip bg-color">bui</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -627,27 +769,28 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/search/index.html">
+                <a href="/2019/08/27/bui-wanandroid-pushcodegithub/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="搜索">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">搜索</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
+title: 03、使用 github 管理代码date: 2019-08-27 19:32:33img: https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/b
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-27
                             </span>
                         <span class="publish-author">
                             
@@ -657,7 +800,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
