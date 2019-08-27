@@ -455,7 +455,8 @@ ps: 注意视频中打 tag 的方式有误，应该在保证某个分支开发�
 <h4 id="3、下载制作好的-iconfont"><a href="#3、下载制作好的-iconfont" class="headerlink" title="3、下载制作好的 iconfont"></a>3、下载制作好的 iconfont</h4><p>经过上面的步骤我们就把自定义字体图片制作好了，下面下载下来看看「点击面图中的下载至地按钮」，我们来看看文本夹中有啥</p>
 <p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/download_custom_iconfont.png" alt="查看自定义 iconfont 目录"></p>
 <p>其中字体图片已经为我们生成了,下面我们看看如何使用</p>
-<h3 id="三、使用自定义图片"><a href="#三、使用自定义图片" class="headerlink" title="三、使用自定义图片"></a>三、使用自定义图片</h3><h4 id="1、查看-html-文件"><a href="#1、查看-html-文件" class="headerlink" title="1、查看 .html 文件"></a>1、查看 .html 文件</h4><p>把文件下载下来以后，我们直接点击 .html 文件就可以看到如何定义字体图片和使用它</p>
+<h3 id="三、使用自定义图片"><a href="#三、使用自定义图片" class="headerlink" title="三、使用自定义图片"></a>三、使用自定义图片</h3><p>我们切换到 master 分支上开发，不能直接在 tag 的基础上打 tag ，我们在 master 开发完以后在 master 的基础上打 tag </p>
+<h4 id="1、查看-html-文件"><a href="#1、查看-html-文件" class="headerlink" title="1、查看 .html 文件"></a>1、查看 .html 文件</h4><p>把文件下载下来以后，我们直接点击 .html 文件就可以看到如何定义字体图片和使用它</p>
 <p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/custom_iconfont_html.png" alt="查看字体图片 html 文件"></p>
 <p>可以看到有三种使用方式「红框标出来」，我们直接使用第一种方式即可「各种方式里面都有使用说明」</p>
 <h4 id="2、在我们的项目中新建-custom-iconfont-css-文件"><a href="#2、在我们的项目中新建-custom-iconfont-css-文件" class="headerlink" title="2、在我们的项目中新建 custom_iconfont.css 文件"></a>2、在我们的项目中新建 custom_iconfont.css 文件</h4><p>我们在项目中新建一个 <code>custom_iconfont.css</code> 文件，然后将相应的字体图片放入到项目的 font 目录下「也可以定义一个目录去存放」，这里注意一下由于 bui 内置了字体图片所以不能以 iconfont 或是 icon 来命名，我们把我们的字体图片名字全部加一个前缀 custom_ </p>
