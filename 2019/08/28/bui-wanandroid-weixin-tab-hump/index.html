@@ -5,19 +5,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="baidu-site-verification" content="xE6FXnG3Pd">
-    <meta name="keywords" content="01、环境搭建, tigerchain">
-    <meta name="description" content="
+    <meta name="keywords" content="05、完成微信 tab 凸起效果, tigerchain">
+    <meta name="description" content="视频 
 
 
-版权声明：本文为博主原创文章，未经博主允许不得转载
+一、课程介绍本节我们来实现微信 tab 的一个凸起的一个效果
+目前的效果
 
- PS：转载请注明出处作者: TigerChain本文出自 TigerChain  手把手教Vue
+要实现的效果
 
-教程简介
+二、实现效果分析我们来看一下下面的图
 
+基本上分为三个步骤
 
-1、阅读对象本篇教程适合新手阅读，老手直接略过
-2、教程难度初级">
+按照分层叠加的方式实现这种效果，先准备三个层元素圆，长方形和微信 icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +26,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>01、环境搭建 | tigerchain</title>
+    <title>05、完成微信 tab 凸起效果 | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -254,13 +255,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/vue_logo.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        01、环境搭建
+                        05、完成微信 tab 凸起效果
                     </div>
                 </div>
             </div>
@@ -371,12 +372,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/移动端/" target="_blank">
+                                <span class="chip bg-color">移动端</span>
+                            </a>
+                        
                             <a href="/tags/前端/" target="_blank">
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/vue/" target="_blank">
-                                <span class="chip bg-color">vue</span>
+                            <a href="/tags/bui/" target="_blank">
+                                <span class="chip bg-color">bui</span>
                             </a>
                         
                     </div>
@@ -387,8 +392,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/手把手教Vue/" class="post-category" target="_blank">
-                                手把手教Vue
+                            <a href="/categories/bui-开发玩-Android-app/" class="post-category" target="_blank">
+                                bui 开发玩 Android app
                             </a>
                         
                     </div>
@@ -399,21 +404,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-13
+                    2019-08-28
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.6k
+                        496
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        6 分
+                        2 分
                     </div>
                     
                 
@@ -429,171 +434,83 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <img src="/2019/07/13/vue/vueenv/env_logo.png" title="本节大纲">
+                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=113872948&page=6" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
+</iframe>
 
-<blockquote>
-<p>版权声明：本文为博主原创文章，未经博主允许不得转载</p>
-</blockquote>
-<p> <strong>PS</strong>：转载请注明出处<br>作者: <a href="http://tigerchain.github.io">TigerChain</a><br>本文出自 <a href="http://tigerchain.github.io/categories/手把手教Vue/">TigerChain  手把手教Vue</a></p>
-<blockquote>
-<p>教程简介</p>
-</blockquote>
+<h3 id="一、课程介绍"><a href="#一、课程介绍" class="headerlink" title="一、课程介绍"></a>一、课程介绍</h3><p>本节我们来实现微信 tab 的一个凸起的一个效果</p>
+<p>目前的效果</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/old_weixin_tab.png" alt="目前效果"></p>
+<p>要实现的效果</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/impl_winxin_tab_result.png" alt="实现微信 tab 凸起效果"></p>
+<h3 id="二、实现效果分析"><a href="#二、实现效果分析" class="headerlink" title="二、实现效果分析"></a>二、实现效果分析</h3><p>我们来看一下下面的图</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/impl_tab_steps.png" alt="凸起实现步骤"></p>
+<p>基本上分为三个步骤</p>
 <ul>
-<li>1、阅读对象<br>本篇教程适合新手阅读，老手直接略过</li>
-<li>2、教程难度<br>初级，本人水平有限，文章内容难免会出现问题，如果有问题欢迎指出，谢谢</li>
+<li>按照分层叠加的方式实现这种效果，先准备三个层元素圆，长方形和微信 icon </li>
+<li>将圆放在最底层，长方形盖住圆去掉底部的圆弧，再把微信 icon 话在最外层</li>
+<li>把颜色设置成白色「这里设置红、桔色是为了看起来形象，其实本身应该设置成白色」</li>
 </ul>
-<blockquote>
-<p>正文</p>
-</blockquote>
-<h3 id="一、什么是-Vue"><a href="#一、什么是-Vue" class="headerlink" title="一、什么是 Vue"></a>一、什么是 Vue</h3><p>Vue 是一个用于构建用户界面的渐进式框架「注意读音类似于 View，作者的初衷也是让其起 View 的功能」，Vue 只注重视图层，这点和 React 的是一毛一样的</p>
-<blockquote>
-<p>vue 的特点</p>
-</blockquote>
-<ul>
-<li>简单、易用</li>
-<li>灵活</li>
-<li>高效</li>
-</ul>
-<h3 id="二、Vue-环境搭建"><a href="#二、Vue-环境搭建" class="headerlink" title="二、Vue 环境搭建"></a>二、Vue 环境搭建</h3><h4 id="1、Vue-的使用方式"><a href="#1、Vue-的使用方式" class="headerlink" title="1、Vue 的使用方式"></a>1、Vue 的使用方式</h4><blockquote>
-<p>1、下载 vue.js 引入到项目中</p>
-</blockquote>
-<p>我们直接下载 vue.js 然后引入 <script></script> 标签中即可，Vue 分为开发版本和生产版本</p>
-<ul>
-<li>1、开发版本：<a href="https://vuejs.org/js/vue.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.js</a></li>
-<li>2、生产版本：<a href="https://vuejs.org/js/vue.min.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.min.js</a></li>
-</ul>
-<p><strong>PS：</strong> 开发版本有完整的调试和警告，而生产版本则是一个精简版本，删除了警告，如果我们在开发的时候建议选择开发版本方便调试</p>
-<p>使用方式</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-     <span class="token comment" spellcheck="true">&lt;!-- 引入 vue.js 所在的目录--></span>
-     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
-<blockquote>
-<p>2、使用 CDN 引用</p>
-</blockquote>
-<p>官方推荐使用 <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a></p>
-<blockquote>
-<p>3、使用 nmp/yarn 安装</p>
-</blockquote>
-<ul>
-<li>1、安装 node </li>
-</ul>
-<p>使用 npm 和 yarn 首先要安装 node，可以去官网下载：<a href="https://nodejs.org/en/download/current/" target="_blank" rel="noopener">https://nodejs.org/en/download/current/</a></p>
-<img src="/2019/07/13/vue/vueenv/node_dowonload.png" title="下载 node">
+<p>通过以上三步就把微信 icon 凸起效果完成了</p>
+<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><p>我们拿出一个图来说一下具体的实现步骤吧</p>
+<h4 id="1、实现具体步骤"><a href="#1、实现具体步骤" class="headerlink" title="1、实现具体步骤"></a>1、实现具体步骤</h4><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/impl_weixin_tab_relsteps.png" alt="实现凸起 tab 的具体步骤"></p>
+<p>通过叠加和移动就完成效果了</p>
+<h4 id="2、main-html-中添加-css"><a href="#2、main-html-中添加-css" class="headerlink" title="2、main.html 中添加 css"></a>2、main.html 中添加 css</h4><p>我们看看具体的 css </p>
+<pre class=" language-css"><code class="language-css">    <span class="token selector">// 设置 tab条 的总背景
+    <span class="token class">.main_footer</span> </span><span class="token punctuation">{</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">// 包含微信 icon 的 li 的样式
+    <span class="token class">.main_footer</span> <span class="token class">.btn-weixin</span></span><span class="token punctuation">{</span>
+        <span class="token property">overflow</span><span class="token punctuation">:</span> visible<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/*画圆*/</span>
+    <span class="token selector"><span class="token class">.main_footer</span> <span class="token class">.layer1</span> </span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1.2</span>rem<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">1.2</span>rem<span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span> <span class="token punctuation">;</span>
+        <span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span>px <span class="token number">1</span>px <span class="token hexcode">#eee</span><span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> -<span class="token number">0.3</span>rem<span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span> <span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-<span class="token number">50%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-<p>下载对应 win 系统还是 mac 系统的版本，然后安装即可</p>
-<p>在我的 mac 电脑上我直接使用 <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a> 安装的</p>
-<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> node </code></pre>
-<p>安装完 node 会自带 npm「node 的包管理器」,安装完成以后在命令行中输入</p>
-<pre class=" language-bash"><code class="language-bash">node -v</code></pre>
-<p>看到以下 node 的版本信息则表示安装成功了</p>
-<img src="/2019/07/13/vue/vueenv/node-v.png" title="查看 node 的版本">
+    <span class="token comment" spellcheck="true">/*圆长方形*/</span>
+    <span class="token selector"><span class="token class">.main_footer</span> <span class="token class">.layer2</span> </span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span>rem<span class="token punctuation">;</span>
+        <span class="token property">bottom</span><span class="token punctuation">:</span>-<span class="token number">.05</span>rem<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/*微信 ICON 图标样式*/</span>
+    <span class="token selector"><span class="token class">.main_footer</span> <span class="token class">.btn-weixin</span> <span class="token class">.weixin-icon</span> </span><span class="token punctuation">{</span>
+        <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">.94</span>rem<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">.94</span>rem<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">.94</span>rem<span class="token punctuation">;</span>
+        <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">.94</span>rem<span class="token punctuation">;</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> -<span class="token number">.2</span>rem<span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<p>其中 main_footer 是给 footer 添加了一个 class</p>
+<h4 id="3、修改-tab-对应的-li"><a href="#3、修改-tab-对应的-li" class="headerlink" title="3、修改 tab 对应的 li"></a>3、修改 tab 对应的 li</h4><p>给出对应微信 tab 的 li 「这里修改一下」，并添加相应的 css 的 class</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-btn bui-box-vertical btn-weixin<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pages/weixin/weixin.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>custom_icon weixin-icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+       <span class="token entity" title="&#xe61e;">&amp;#xe61e;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
 
-<ul>
-<li>2、使用 npm 安装 vue</li>
-</ul>
-<p>在命令行输入以下命令即完成安装</p>
-<pre class=" language-bash"><code class="language-bash">// 全局安装
-<span class="token function">npm</span> <span class="token function">install</span> -g vue</code></pre>
-<p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
-<img src="/2019/07/13/vue/vueenv/vue-v.png" title="npm 安装 vue">
-
-<ul>
-<li>3、使用 yar「替代 npm 的包管理器」 安装</li>
-</ul>
-<p><strong>a)、</strong> 要使用 yarn 先需要安装 yarn , 在这里我们使用 npm 安装 yarn </p>
-<pre class=" language-bash"><code class="language-bash">// 全局安装
-<span class="token function">npm</span> <span class="token function">install</span> yarn -g </code></pre>
-<p><strong>b)、</strong> 使用 yarn 安装 vue</p>
-<pre class=" language-bash"><code class="language-bash">yarn global add vue </code></pre>
-<p>以上命令在 win 系统上安装完成以后，在命令行中使用 vue 可能会出现 Command not found 命令，那么我们需要配置一下环境变量。把 yarn 的 bin 目录配置到环境变量即可「配置到 path 路径下」，使用以下命令直接查看 yarn 的 bin 目录「把此命令显示出的路径直接配置到 path 后面即可」</p>
-<pre class=" language-bash"><code class="language-bash">yarn global bin </code></pre>
-<p>由于我这里是 mac 电脑，所以就不演示了，如果碰到这个问题，就配置一下环境变量即可</p>
-<p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
-<img src="/2019/07/13/vue/vueenv/vue-v.png" title="yarn 安装 vue">
-
-<h4 id="2、使用-cli-「命令行工具」"><a href="#2、使用-cli-「命令行工具」" class="headerlink" title="2、使用 cli 「命令行工具」"></a>2、使用 cli 「命令行工具」</h4><p>我们除了上面的引用或安装 vue 外，还可以使用 vue-cli「脚手架工具」</p>
-<p>vue-cli 是一个脚手架工具「就是一个工具集合，可以快速的创建一个 vue 项目」</p>
-<p>同样使用 yarn/npm 来安装 vue-cli，我们全局安装</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --global vue-cli 
-或者使用
-yarn global add vue-cli</code></pre>
-<p>安装完以后，我们输入 vue -V 查看是否安装成功，或使用 vue-list 查看</p>
-<img src="/2019/07/13/vue/vueenv/vue-list.png" title="vue-list">
-
-<p>看到上面内容则证明我们的 vue-cli 脚手架工具安装成功了</p>
-<h4 id="3、使用-vue-cli-来创建一个项目"><a href="#3、使用-vue-cli-来创建一个项目" class="headerlink" title="3、使用 vue-cli 来创建一个项目"></a>3、使用 vue-cli 来创建一个项目</h4><ul>
-<li>1、新建一个目录，我这里放在桌面「我以 mac 电脑演示，win 同理」</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash"> <span class="token function">cd</span> Desktop
- <span class="token function">mkdir</span> myvuedemo
- <span class="token function">cd</span> myvuedemo</code></pre>
-<ul>
-<li>2、使用 vue-cli 创建项目</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">vue init webpack myfirstvuedemo</code></pre>
-<p>这里的 vue 项目是基于 webpack 的，使用上述命令我就可以创建一个名为 myfirstvuedemo 的 vue 项目</p>
-<p>当我们输入上述命令以后就会开始下载模版，然后会提示输入项目名「自己写一个即可」，完了一路回车，出现 yes 就直接回车「目前先这样搞，别管为什么，但是如果看过我的 react 教程就会了解，最后提示使用 npm 还是 yarn 来管理包，我选择的是 yarn」</p>
-{% asset_img vue-init-project.png  vue init project %}
-
-<p>安装完依赖以后，就会出现下面的命令</p>
-{% asset_img finish-vue-project.png  项目创建成功提示 %}
-
-<p>如图所示，我们成功创建出了项目，如果大家使用 npm 或是 yarn 出现安装不了的情况，那么切换一下源即可「tabao 的源就非常不错」，我们根据上面的提示，进入到项目中，然后运行一下项目看看结果</p>
-<ul>
-<li>3、运行项目</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> myfirstvuedemo
-然后运行
-yarn run dev</code></pre>
-<p>我们就会看到使用 webpack 启动服务，然后编译，完成以后提示项目运行的地址：默认是–<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
-<img src="/2019/07/13/vue/vueenv/run-vue-project.png" title="启动项目">
-
-<p>我们在浏览器中输入 <code>http://localhost:8080</code> 回车，看结果</p>
-<img src="/2019/07/13/vue/vueenv/vue-cli-show-result.png" title="vue-cli 项目结果显示">
-
-<p>怎么样，我们使用 vue-cli 就成功创建出一个 vue 项目，只不过他默认的主页是 Vue 的一些介绍，要搞成自己项目修改即可「后面说到 vue-cli 创建项目会说到的」，怎么样？脚手架创建项目简单吧「建议初学者不要直接使用 vue-cli 来创建项目，而是引入 vue.js 来使用，后面熟练了再使用 vue-cli」</p>
-<h3 id="三、Vue-开发工具"><a href="#三、Vue-开发工具" class="headerlink" title="三、Vue 开发工具"></a>三、Vue 开发工具</h3><ul>
-<li>1、webstorm </li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/webstrom.png" title="webstorm">
-
-<ul>
-<li>2、sublime</li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/sublime.png" title="sublime">
-
-<ul>
-<li>3、atom</li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/atom.png" title="atom">
-
-<ul>
-<li>4、Visual Studio Code[即 vscode]</li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/vscode.png" title="vscode">
-
-<p>对于开发工具来说，没有最好，只有最合适，完全看个人习惯，有的就习惯使用 vim 开发「你咬我呀」,我个人习惯于使用 atom 和 webstrom </p>
-<h4 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h4><p><strong>Vue 的特点：</strong></p>
-<ul>
-<li>简单、易用、灵活高效</li>
-</ul>
-<p><strong>Vue 的使用方式：</strong></p>
-<ul>
-<li>1、直接引入 script</li>
-<li>2、使用 CDN</li>
-<li>3、使用 yarn/npm</li>
-<li>4、使用 vue-cli 脚手架</li>
-</ul>
-<p>到此为之，我们简单介绍了一下 vue，并创建了第一个小 demo ，感受一下吧，下节我们看看 vue 的些指令完成一些交互 </p>
+   <span class="token comment" spellcheck="true">&lt;!-- 去掉文本 &lt;div class="span1">
+        微信
+    &lt;/div> --></span>
+    <span class="token comment" spellcheck="true">&lt;!-- 添加两个层分别是圆和长方形 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>layer1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>layer2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span></code></pre>
+<p>到此我们就完成了凸起的微信 tab 的效果</p>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
-<p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/手把手教Vue/">手把手教Vue</a></p>
-<p>我将源码发布到了 <a href="https://github.com/TigerChain/vue-lesson" target="_blank" rel="noopener">手把手教 Vue</a> 方便大家查看，欢迎大家 fork，喜欢的话给个 star </p>
-<p><a href="https://mp.weixin.qq.com/s/cVrii2EYl5Xg0frLLR0mTA" target="_blank" rel="noopener">阅读原文</a></p>
+<p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
 
             </div>
             <hr/>
@@ -759,7 +676,7 @@ yarn run dev</code></pre>
         repo: 'tigerchain.github.io',
         owner: 'TigerChain',
         admin: "TigerChain",
-        id: '2019-07-13T14-28-19',
+        id: '2019-08-28T20-30-48',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -780,49 +697,55 @@ yarn run dev</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/07/14/vue/vueinstruction/">
+                <a href="/2019/08/28/bui-wanandroid-weixin-tab-hump/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/vue_logo.jpg" class="responsive-img" alt="02、Vue 常见指令">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="05、完成微信 tab 凸起效果">
                         
-                        <span class="card-title">02、Vue 常见指令</span>
+                        <span class="card-title">05、完成微信 tab 凸起效果</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Vue 指令作用是当表达式的值发生变化时会对 DOM 产生影响
+                            本节课我们来完成首页 tab 中的微信的一个凸起效果，开整吧
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/手把手教Vue/" class="post-category" target="_blank">
-                                    手把手教Vue
+                            <a href="/categories/bui-开发玩-Android-app/" class="post-category" target="_blank">
+                                    bui 开发玩 Android app
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/移动端/" target="_blank">
+                        <span class="chip bg-color">移动端</span>
+                    </a>
                     
                     <a href="/tags/前端/" target="_blank">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
-                    <a href="/tags/vue/" target="_blank">
-                        <span class="chip bg-color">vue</span>
+                    <a href="/tags/bui/" target="_blank">
+                        <span class="chip bg-color">bui</span>
                     </a>
                     
                 </div>
@@ -836,30 +759,30 @@ yarn run dev</code></pre>
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/10/decorator/">
+                <a href="/2019/08/27/bui-wanandroid-customiconfont-modify/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/design_patterns_common_logo.png" class="responsive-img" alt="09、装饰模式">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="04、处理使用自定义字体图片完成 tab 的几处问题(2)">
                         
-                        <span class="card-title">09、装饰模式</span>
+                        <span class="card-title">04、处理使用自定义字体图片完成 tab 的几处问题(2)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在不改变原有对象的基础之下给原有对象扩展功能，是对继承关系的一种替换方案
+                            本节对上节课中的几处小问题处理一下，大家需要注意一下，不要犯错哦
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-10
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/人人都会设计模式/" class="post-category" target="_blank">
-                                    人人都会设计模式
+                            <a href="/categories/bui-开发玩-Android-app/" class="post-category" target="_blank">
+                                    bui 开发玩 Android app
                                 </a>
                             
                             
@@ -869,12 +792,16 @@ yarn run dev</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/设计模式/" target="_blank">
-                        <span class="chip bg-color">设计模式</span>
+                    <a href="/tags/移动端/" target="_blank">
+                        <span class="chip bg-color">移动端</span>
                     </a>
                     
-                    <a href="/tags/Android/" target="_blank">
-                        <span class="chip bg-color">Android</span>
+                    <a href="/tags/前端/" target="_blank">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/bui/" target="_blank">
+                        <span class="chip bg-color">bui</span>
                     </a>
                     
                 </div>
