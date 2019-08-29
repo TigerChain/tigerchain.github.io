@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>06、前后端分离介绍</title>
+      <link href="/2019/08/29/bui-wanandroid-front-back-end-rep/"/>
+      <url>/2019/08/29/bui-wanandroid-front-back-end-rep/</url>
+      
+        <content type="html"><![CDATA[<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=114112159&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> </iframe><h3 id="一、为什么要前后端分离"><a href="#一、为什么要前后端分离" class="headerlink" title="一、为什么要前后端分离"></a>一、为什么要前后端分离</h3><p>前后分离是软件开发逐渐成熟的一种演变出来的开发模式，特别是在微服务大行其道的今天「微前端都在普遍使用了」，前后端开发不是趋势而是已经在大量使用的一种模式了，如果现今开发模式还没有分离要么是历史遗留的项目，要是就是你已经 out 了，我们先来看看前后端未分离之前的开发模式</p><h3 id="二、前后端未分离"><a href="#二、前后端未分离" class="headerlink" title="二、前后端未分离"></a>二、前后端未分离</h3><h4 id="1、前后端未分离架构图"><a href="#1、前后端未分离架构图" class="headerlink" title="1、前后端未分离架构图"></a>1、前后端未分离架构图</h4><p>前后端未分离之前，前端和后端是耦合在一块的代表的是 jsp 模式开发，玩的 jsp 的朋友都知道，jsp 被称为服务端脚本语言，是和服务端一起部署的，我们来看看简单的架构图</p><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/old_develop_pattern.png" alt="前后端未分离构图"></p><p>从图中可以看到客户端就是浏览器，发起一个请求，然后后台查询数据库，并把 html 组装好「一般使用模版引擎」一次返回给客户端，以 jsp 为例就是发起请求以后，后台的 jsp 请求本地的服务器「jsp 和 后台在一块捆绑着」，然后拿到数据，渲染在 jsp 中，最后一次性给浏览器展示出来</p><h4 id="2、前后端未分离问题"><a href="#2、前后端未分离问题" class="headerlink" title="2、前后端未分离问题"></a>2、前后端未分离问题</h4><ul><li>耦合性强，把模版界面和后台接口服务耦合在一起，不符合单一职责</li><li>不便于测试</li><li>难以维护</li></ul><p>随着以 srping boot 和 spring clound 的微服务的迅速发展，服务端的应该保持单一职责，并且尽量的小并且随着以 React Vue 为代表的 UI 库出现，前后端分离也是水到渠成的事，哪前后端分离是什么样呢？下面来看</p><h3 id="三、前后端分离"><a href="#三、前后端分离" class="headerlink" title="三、前后端分离"></a>三、前后端分离</h3><h4 id="1、前后端分离架构图"><a href="#1、前后端分离架构图" class="headerlink" title="1、前后端分离架构图"></a>1、前后端分离架构图</h4><p>前后疫分离的思想也是借助于未分离之前的一些服务端模版引擎的一些思考过度过来，关于前后端分离我们来看一下简单的架构图</p><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/front_back_end_oper.png" alt="前后端分离基本架构图"></p><p>可以看到前后端分离以后后台只是提供 api 接口，所有的 html css js 等都放在前端「放在一个静态服务器上」，然后通过接口取数据然后前端渲染「有时也需要服务端渲染」，这样说可能还比较抽象，我们来简化一下这幅图</p><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/front_back_end_oper_simple.png" alt="前后端分离简图"></p><p>也就是是 html、css、js 这些静态资源部署在静态服务器上，然后服务端部署在自己需要的服务器「前后端部署在同一个局域网内」</p><p>这样前端向后台发起数据请求就像在本地一样「局域网中速度刚刚的」，然后前端拿到数据去渲染界面</p><p><strong>ps:</strong>以上所有的架构图都是一个概要图基本思想就是这样，但是会在这个基础上发生好多变种，比如静态资源放在 cdh 上等等</p><h4 id="2、前后端分离的优缺点"><a href="#2、前后端分离的优缺点" class="headerlink" title="2、前后端分离的优缺点"></a>2、前后端分离的优缺点</h4><blockquote><p>优点</p></blockquote><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/front_back_end_oper_good.png" alt="前后端分离的优缺点"></p><p>我这里总结了四点</p><ul><li>单一职责：前后端各自干部各自的事</li><li>并行开发：前提是文档先行，把接口提前制定出来，然后前端开前端，后端开发后端，测试也可以编写同时进行没毛病</li><li>便于测试：这里是说前后端各自方便测试，当然集成测试会有些复杂</li><li>易用维护：由于单一职责，各自维护各自的相当容易</li></ul><p>下面我们以并行开发为例说明一下，看图</p><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/the_same_develop.png" alt="并行开发"></p><p>并行开发前提规约大于配置首先要有一个约定就是接口文档，服务端把接口文档输出以后「以输入参数，返回参数等」，这样前端直接使用 mock 服务来模拟线上开发环境「哪怕此时服务端只写了一个接口，还没有实现」，当服务端开发完成后直接把 mock 切到真实的地址再联调一下就 o 了，这样大大的提升了开发效率，客户端不用等服务端接口</p><blockquote><p>优点</p></blockquote><p>前端后分离也有些不足，看图</p><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/front_back_end_oper_notgood.png" alt="前后端分离不足"></p><p>我这里总结了三点</p><ul><li>前端工作量增加：一整套的 html、css、js 都要前端去做，后台只是提供接口，后台把精力放在性能和分布式等地方</li><li>增加成本：原来可能一个 jsp 写到 server 服务，现在分开以后可能要有专门的前端开发人员去写</li><li>seo 效果不太友好</li></ul><p>其实第一点也不是什么坏事，原来被后端人员鄙视的前端现在工作也非常有挑战「再不是什么切图仔」，并且前端工作岗位越来越多「待遇又好」</p><p>这节我们就到这里了，这里对前后端分离起了一个抛砖引玉，前端还会涉及 spa 和多页应用、还会有前商路由和后端路由、前端渲染和后端渲染有兴趣可以细细看一下</p><p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p><p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> bui 开发玩 Android app </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 移动端 </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> bui </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>05、完成微信 tab 凸起效果</title>
       <link href="/2019/08/28/bui-wanandroid-weixin-tab-hump/"/>
       <url>/2019/08/28/bui-wanandroid-weixin-tab-hump/</url>
