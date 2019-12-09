@@ -4,12 +4,20 @@
     .container {
         width: 95%;
     }
+
+    iframe {
+        height: 185px;
+    }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 90%;
+    }
+
+    iframe {
+        height: 350px;
     }
 }
 
@@ -30,6 +38,11 @@
         width: 90%;
         margin: 0 auto;
         max-width: 1250px;
+    }
+
+    
+    iframe {
+        height: 600px;
     }
 }
 
