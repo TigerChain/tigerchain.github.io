@@ -4,12 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="07、请求 api 跨域问题, tigerchain">
+    <meta name="keywords" content="11、点击事件三种实现方式, tigerchain">
     <meta name="description" content="视频 
 
 
-一、课程简介本节主要使用 wandroid 真实的 api 用在项目中，并且解决跨域引起问题
-二、请求首页 banner1、找到 banner 的 api打开 wanandroid 网站找到 api 然后找到 首页banner ">
+一、本节简介上节我们把知识体系列表获取下来了，这节我们来看看知识体系点击条目进入详情功能，点击效果大概可以以下三种方式实现
+
+html 中添加 onclick 方法
+使用 bui 数据驱动的　b-click
+使用 bui 的事件">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>07、请求 api 跨域问题 | tigerchain</title>
+    <title>11、点击事件三种实现方式 | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,7 +294,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        07、请求 api 跨域问题
+                        11、点击事件三种实现方式
                     </div>
                 </div>
             </div>
@@ -442,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-03
+                    2019-09-30
                 </div>
                 
 
@@ -451,14 +454,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    724
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 				
@@ -474,84 +477,181 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=114357649&page=8" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
+                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=115373346&page=12" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
 </iframe>
 
-<h3 id="一、课程简介"><a href="#一、课程简介" class="headerlink" title="一、课程简介"></a>一、课程简介</h3><p>本节主要使用 wandroid 真实的 api 用在项目中，并且解决跨域引起问题</p>
-<h3 id="二、请求首页-banner"><a href="#二、请求首页-banner" class="headerlink" title="二、请求首页 banner"></a>二、请求首页 banner</h3><h4 id="1、找到-banner-的-api"><a href="#1、找到-banner-的-api" class="headerlink" title="1、找到 banner 的 api"></a>1、找到 banner 的 api</h4><p>打开 <a href="https://wanandroid.com" target="_blank" rel="noopener">wanandroid</a> 网站找到 api 然后找到 首页banner 这个 api 长如下样子</p>
-<pre class=" language-bash"><code class="language-bash">https://www.wanandroid.com/banner/json</code></pre>
-<p>点进去看看它返回的 json 结构</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token punctuation">{</span>
-            <span class="token property">"desc"</span><span class="token operator">:</span> <span class="token string">"华为工程师推荐的一份学习资料"</span><span class="token punctuation">,</span>
-            <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">27</span><span class="token punctuation">,</span>
-            <span class="token property">"imagePath"</span><span class="token operator">:</span> <span class="token string">"https://wanandroid.com/blogimgs/81286041-eefe-4f9a-a11d-6876c1866d1e.jpeg"</span><span class="token punctuation">,</span>
-            <span class="token property">"isVisible"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"order"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"华为工程师推荐的一份学习资料"</span><span class="token punctuation">,</span>
-            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-            <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://mp.weixin.qq.com/s/KwpOzDygmH5af6t_QW7riw"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-            <span class="token property">"desc"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
-            <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
-            <span class="token property">"imagePath"</span><span class="token operator">:</span> <span class="token string">"https://www.wanandroid.com/blogimgs/62c1bd68-b5f3-4a3c-a649-7ca8c7dfabe6.png"</span><span class="token punctuation">,</span>
-            <span class="token property">"isVisible"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"order"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"我们新增了一个常用导航Tab~"</span><span class="token punctuation">,</span>
-            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"http://www.wanandroid.com/navi"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        ... 这里显示两条来说明一下问题
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"errorCode"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-    <span class="token property">"errorMsg"</span><span class="token operator">:</span> <span class="token string">""</span>
+<h3 id="一、本节简介"><a href="#一、本节简介" class="headerlink" title="一、本节简介"></a>一、本节简介</h3><p>上节我们把知识体系列表获取下来了，这节我们来看看知识体系点击条目进入详情功能，点击效果大概可以以下三种方式实现</p>
+<ul>
+<li>html 中添加 onclick 方法</li>
+<li>使用 bui 数据驱动的　b-click</li>
+<li>使用 bui 的事件委托</li>
+</ul>
+<p>跳转的话就是 bui 的路由机制就可以了，我们逐一来看看</p>
+<h3 id="二、点击事件"><a href="#二、点击事件" class="headerlink" title="二、点击事件"></a>二、点击事件</h3><h4 id="1、html-标签中添加-onclick-方法"><a href="#1、html-标签中添加-onclick-方法" class="headerlink" title="1、html 标签中添加 onclick 方法"></a>1、html 标签中添加 onclick 方法</h4><p>直接在 knowledte.js 的知识体系列表中的模版字符串中「二级分类标签整个条目」添加一个 onclick 方法并把当前的索引传递过去，在路由中要使用</p>
+<pre class=" language-html"><code class="language-html">  &lt;li onclick="showDetail(${index})"style="display: flex;justify-content: space-between;align-items: center;padding:10px;">
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span><span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+           ${el.children.map((child,childIndex)=>
+               `${childIndex &lt; 6? `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">5</span>px</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">5</span>px<span class="token punctuation">;</span><span class="token property">border</span><span class="token punctuation">:</span><span class="token number">1</span>px solid red<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span><span class="token hexcode">#eee</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>${child.name}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>`:""}`
+
+       ).join('')}
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon-listright<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>`</code></pre>
+<p>而后在 builist 的组件外定义一个 showDetail 方法，方便测试我简单的打一个 log,输出当前条目的索引</p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token keyword">function</span> <span class="token function">showDetail</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+ <span class="token punctuation">}</span></code></pre>
+<p>运行起来点击条目看效果，在 chrome 的 console 中查看</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/methods_isnot_define.png" alt="方法未定义"></p>
+<p>很不幸报错了，说方法未定义，我们明明定义了一个 showDetail 方法，为何提示未定义「WTF」?为什么呢？其实这就涉及到 js 作用域的问题「此处是方法的作用域」</p>
+<p>简单来说就是 onclick 只能调用自身代码块中的方法或是全局方法，这块涉及到方法声明和方法表达式之间的关系，具体可以<a href="https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/" target="_blank" rel="noopener">查看这里</a>，这么说还有点抽象那直接上个代码来说明一下问题</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
+
+    <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+        <span class="token keyword">var</span> test2 <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test2'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test2()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>click<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre>
+<p>这样直接调用 test2 是调用不了的，因为　test2 是公共方法 test 内部的，只有 test 能调用，别的调用不了会提示方法未定义，我们的情况和这个类似，如何解决呢？</p>
+<p>我们直接写在 <script></script>标签中，或是直接把 showDetail 挂到 window 对象上把它变成全局方法即可</p>
+<p><code>方式一：在 script 标签中写方法</code></p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token keyword">function</span> <span class="token function">showDetail</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>\<span class="token operator">/</span>script<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>li onclick<span class="token operator">=</span><span class="token string">"showDetail(${index})"</span>style<span class="token operator">=</span><span class="token string">"display: flex;justify-content: space-between;align-items: center;padding:10px;"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>ul style<span class="token operator">=</span><span class="token string">"display:flex;flex-wrap: wrap;"</span><span class="token operator">></span>
+           $<span class="token punctuation">{</span>el<span class="token punctuation">.</span>children<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span>childIndex<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>
+               <span class="token template-string"><span class="token string">`${childIndex &lt; 6? `</span></span><span class="token operator">&lt;</span>li style<span class="token operator">=</span><span class="token string">"padding:5px"</span><span class="token operator">></span>
+               <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token string">"padding:5px;border:1px solid red;background:#eee;"</span><span class="token operator">></span>
+                   <span class="token operator">&lt;</span>span<span class="token operator">></span>$<span class="token punctuation">{</span>child<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+               <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+           <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span><span class="token template-string"><span class="token string">`:""}`</span></span>
+
+       <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+       <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+    <span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"icon-listright"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>`</code></pre>
+<p><code>方式二：定义全局方法</code></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 把 showDetail 变成全局方法</span>
+window<span class="token punctuation">.</span>showDetail <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
-<h4 id="2、在项目中请求-banner-api"><a href="#2、在项目中请求-banner-api" class="headerlink" title="2、在项目中请求 banner api"></a>2、在项目中请求 banner api</h4><p>直接在 home.js 中使用 bui-ajax 快捷创建出 ajax 请求代码块</p>
-<pre class=" language-javascript"><code class="language-javascript"> bui<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    url<span class="token punctuation">:</span> <span class="token string">"https://wanandroid.com/banner/json"</span><span class="token punctuation">,</span>
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//接口请求的参数</span>
-    <span class="token comment" spellcheck="true">// 可选参数</span>
-    method<span class="token punctuation">:</span> <span class="token string">"GET"</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 成功</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 失败 </span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>顺便把 url 改成 banner 接口地址，并在 success 中打个 log 查看一下，接下来把项目运行起来，直接看 console 很不幸出问题了</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_access_to_xml.png" alt="跨域问题"></p>
-<p>这是一个典型的跨域问题，针对跨域名问题有两种处理方式，在客户端处理和在服务端处理「也可以设置浏览器去处理」，我们使用的三方的 api 不可能在服务端处理，那就在客户端处理吧，其实 bui 为了我们内置了代理，直接使用即可</p>
-<h3 id="三、解决跨域问题"><a href="#三、解决跨域问题" class="headerlink" title="三、解决跨域问题"></a>三、解决跨域问题</h3><p>在 bui 官网文档档调试这一小节中介绍了如何接口跨域<br>使用的是 <a href="https://www.npmjs.com/package/http-proxy-middleware" target="_blank" rel="noopener">http-proxy-middleware</a> 通过代理来处理跨域问题，在我们项目中 app.json 中去修改</p>
-<p>直接修改 app.json 找到 proxy 字段来修改成下面即可</p>
-<pre class=" language-json"><code class="language-json"><span class="token property">"proxy"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"/api"</span><span class="token operator">:</span> <span class="token punctuation">{</span> // 使用 /api 代替源地址
-    <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"https://www.wanandroid.com"</span><span class="token punctuation">,</span>// 源地址
-    <span class="token property">"changeOrigin"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>// 改变源
-    <span class="token property">"pathRewrite"</span><span class="token operator">:</span><span class="token punctuation">{</span>
-    <span class="token property">"^/api"</span><span class="token operator">:</span> <span class="token string">"https://www.wanandroid.com"</span> // 路径重写
-      <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+<p>这样就解决了方法未定义的问题，其实上面两种方法最终都是把方法挂到 window 上面形成全局方法了</p>
+<p>这种做好不太好，为啥呢？动不动把一个方法搞成全局的失去灵活性，下面我们来看看 bui 事件驱动中如何做</p>
+<h4 id="2、bui-事件驱动点击事件"><a href="#2、bui-事件驱动点击事件" class="headerlink" title="2、bui 事件驱动点击事件"></a>2、bui 事件驱动点击事件</h4><p>完过 vue 的朋友玩 bui 的事件驱动那就是菜两者 api 几乎一样，我们直接来使，使用 bui-store 来快速创建事件驱动的代码片断</p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token comment" spellcheck="true">// 初始化数据行为存储</span>
+<span class="token keyword">var</span> bs <span class="token operator">=</span> bui<span class="token punctuation">.</span><span class="token function">store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    scope<span class="token punctuation">:</span> <span class="token string">"page"</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 声明数据</span>
+        datas<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        showDetail<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 这里处理跳转逻辑</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    watch<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    computed<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    templates<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    mounted<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 数据解析后执行</span>
+        <span class="token comment" spellcheck="true">// 列表控件 js 初始化: </span>
+        <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span> <span class="token punctuation">;</span>
+        <span class="token keyword">var</span> uiList <span class="token operator">=</span> bui<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span> <span class="token string">"#knowledge-list"</span><span class="token punctuation">,</span>
+            url<span class="token punctuation">:</span> baseUrl <span class="token operator">+</span> <span class="token string">"/tree/json"</span><span class="token punctuation">,</span>
+            pageSize<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+            data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment" spellcheck="true">//如果分页的字段名不一样,通过field重新定义</span>
+            field<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                page<span class="token punctuation">:</span> <span class="token string">"page"</span><span class="token punctuation">,</span>
+                size<span class="token punctuation">:</span> <span class="token string">"pageSize"</span><span class="token punctuation">,</span>
+                data<span class="token punctuation">:</span> <span class="token string">"data"</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            callback<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            template<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                that<span class="token punctuation">.</span>datas <span class="token operator">=</span> data<span class="token punctuation">;</span>
+                <span class="token keyword">var</span> html <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+                data<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// console.log(el.name)</span>
+                    html <span class="token operator">+</span><span class="token operator">=</span> <span class="token template-string"><span class="token string">`
+            &lt;li class="bui-btn-title">
+                </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>el<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+            &lt;/li>
+
+
+
+            &lt;li b-click="page.showDetail(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)"  style="display: flex;justify-content: space-between;align-items: center;padding:10px;">
+                &lt;ul style="display:flex;flex-wrap: wrap;">
+                       ${el.children.map((child,childIndex)=>
+                           `</span></span>$<span class="token punctuation">{</span>childIndex <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token operator">?</span> <span class="token template-string"><span class="token string">`&lt;li style="padding:5px">
+                           &lt;div style="padding:5px;border:1px solid red;background:#eee;">
+                               &lt;span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>child<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/span>
+                           &lt;/div>
+                       &lt;/li>`</span></span><span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">}</span><span class="token template-string"><span class="token string">`
+
+                   ).join('')}
+                   &lt;/ul>
+                &lt;i class="icon-listright">
+                &lt;/i>
+            &lt;/li>`</span></span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> html<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            autoScroll<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 滚动到底部不自动加载</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>核心就是把数据定义出来「由于我们返回的是一个数组，扬所以定义为 datas:[]」，然后使用 b-click 来调用 methods 中创建的方法完成条目单击事件，运行起来看效果</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/b-click-method.png" alt="使用 b-click 完成点击事件"></p>
+<p>我们看到 log 是打印出来了，可是点击一下方法都调用了两桨，事件冒泡了，我们直接在 methods 方法中修改即可</p>
+<pre class=" language-javascript"><code class="language-javascript"> methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    showDetail<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 阻止事件冒泡</span>
+        <span class="token comment" spellcheck="true">// e.stopPropagation();</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span> <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<p>我们定义了一个 api 来代理真实的 <a href="https://www.wanandroid.com" target="_blank" rel="noopener">https://www.wanandroid.com</a> 地址，所以接口中就使用 /api 下面我们修改 home.js 把 <a href="https://www.wanandroid.com" target="_blank" rel="noopener">https://www.wanandroid.com</a> 换成 /api</p>
-<pre class=" language-javascript"><code class="language-javascript">bui<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    url<span class="token punctuation">:</span> <span class="token string">"/api/banner/json"</span><span class="token punctuation">,</span>
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//接口请求的参数</span>
-    <span class="token comment" spellcheck="true">// 可选参数</span>
-    method<span class="token punctuation">:</span> <span class="token string">"GET"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 成功</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 失败 </span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>然后再看 chrome 的 console</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_data.png" alt="显示请求数据"></p>
-<p>数据请求成功了，我们就解决了跨域问题，这里我们修改一下成功回调中的 console.log 为 <code>console.log(result.data)</code> 来看看数据</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_result_data.png" alt="显示请求 data 数据"></p>
-<p>这就是我们需要解析到轮播图中的数据</p>
-<p>这节就到这里，主要说了一上跨域的问题，下节我们把取到的数据动态渲染到轮播组件中去</p>
+<p>使用 e.stopPropagation() 或是 return false 都可以解决这个问题</p>
+<p>这下我们就正确的处理了列表条目点击事件</p>
+<h4 id="3、使用事件委托解决点击事件"><a href="#3、使用事件委托解决点击事件" class="headerlink" title="3、使用事件委托解决点击事件"></a>3、使用事件委托解决点击事件</h4><p>试想一下如果渲染列表有 100 项会声明 100 个 onclick ，1w 项那简直是噩梦，会严重影响性能，所以我们使用事件委托机制来解决这个问题</p>
+<p>事件委托机制内部采用的是事件冒泡机制，来看代码</p>
+<p>先给我们的标签 li 给一个 id <code>knowledge-li</code> ，然后我们这个 li 其实是对应 knowledge 的 class 为 bui-list 的 ul 下，我们就可以把事件委托给 ul </p>
+<pre class=" language-javascript"><code class="language-javascript"> router<span class="token punctuation">.</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"ul"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token string">"#knowledge-li"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// 阻止事件冒泡  </span>
+    e<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// return false ; 阻止后续事件和阻止事件冒泡效果相同</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>   </code></pre>
+<p>这就搞定了代码单独编写也没有问题，这里 bui-store 外面 ，就这么简单。来看一下效果</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/event-proxy-reslut.png" alt="事件委托 log"></p>
+<p>我们看到打出来的 log 是一组奇数，为什么呢？因为我们的 ul 下面还有一个标题呢，所以们点击标签条目的时候就会从 1 3 5 … 开始，这不行，我们拿到 data 才取索引值会有问题了，我们处理一下,将索引值 <code>var index = $(this).index();</code> 换成下面的方法即可</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span></code></pre>
+<p>这样我就就正确打出来了索引值，就可以取出条目中的数据然后传递到下一页去了</p>
+<p>本节到此为止，这节我们就把在 bui 中点击事件方式大概说了一下，下节我们完成知识体系条目点击进二级导航</p>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
 
@@ -579,7 +679,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tigerchain.github.io/2019/09/03/bui-wanandroid-corss-domain/">http://tigerchain.github.io/2019/09/03/bui-wanandroid-corss-domain/</a>
+                    <a href="http://tigerchain.github.io/2019/09/30/bui-wanandroid-click-impl/">http://tigerchain.github.io/2019/09/30/bui-wanandroid-click-impl/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -797,7 +897,7 @@
         repo: 'tigerchain.github.io',
         owner: 'TigerChain',
         admin: "TigerChain",
-        id: '2019-09-03T20-10-43',
+        id: '2019-09-30T22-33-43',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -818,28 +918,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/03/bui-wanandroid-home-banner/">
+                <a href="/2019/09/30/bui-wanandroid-click-impl/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="08、完成首页轮播效果">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="11、点击事件三种实现方式">
                         
-                        <span class="card-title">08、完成首页轮播效果</span>
+                        <span class="card-title">11、点击事件三种实现方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本节课我们来完成玩 android 首页的轮播图效果，使用 bui 自带组件完成
+                            本节我们来介绍一下在 bui 使用点击事件的几种方式，顺带介绍一下 js 作用域问题
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -852,6 +953,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -878,23 +980,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/29/bui-wanandroid-front-back-end-rep/">
+                <a href="/2019/09/27/bui-wanandroid-knowledge-list/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="06、前后端分离介绍">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="10、完成知识体系列表">
                         
-                        <span class="card-title">06、前后端分离介绍</span>
+                        <span class="card-title">10、完成知识体系列表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在前后端分离开发模式大行其道的今天，你还在玩 JSP ? 好不客气的说 you out 了
+                            本节课我们来完成玩 android 知识体系列表，采用分组和云标签的方式实现
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-27
                             </span>
                         <span class="publish-author">
                             
