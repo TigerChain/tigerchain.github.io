@@ -4,19 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="01、环境搭建, tigerchain">
+    <meta name="keywords" content="想象力可能正在毁掉你, tigerchain">
     <meta name="description" content="
-
-
-版权声明：本文为博主原创文章，未经博主允许不得转载
-
- PS：转载请注明出处作者: TigerChain本文出自 TigerChain  手把手教Vue
-
-教程简介
-
-
-1、阅读对象本篇教程适合新手阅读，老手直接略过
-2、教程难度初级">
+本文作为自己的警钟文章，时刻提醒自己–Do it now is perfect，故作为记录
+想象力比知识更重要“外星人”爱因斯坦说过–想象力比知识更重要，的确对于爱因斯坦来说确实是这样的，爱因斯坦的相像力简直大的都没边了，人有一个大脑就是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>01、环境搭建 | tigerchain</title>
+    <title>想象力可能正在毁掉你 | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -292,13 +283,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/vue_logo.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/chat.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        01、环境搭建
+                        想象力可能正在毁掉你
                     </div>
                 </div>
             </div>
@@ -416,12 +407,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/前端/">
-                                <span class="chip bg-color">前端</span>
-                            </a>
-                        
-                            <a href="/tags/vue/">
-                                <span class="chip bg-color">vue</span>
+                            <a href="/tags/侃大山/">
+                                <span class="chip bg-color">侃大山</span>
                             </a>
                         
                     </div>
@@ -432,8 +419,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/手把手教Vue/" class="post-category">
-                                手把手教Vue
+                            <a href="/categories/侃大山/" class="post-category">
+                                侃大山
                             </a>
                         
                     </div>
@@ -445,7 +432,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-13
+                    2019-10-22
                 </div>
                 
 
@@ -454,14 +441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 				
@@ -477,171 +464,27 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <img src="/2019/07/13/vue/vueenv/env_logo.png" title="本节大纲">
-
-<blockquote>
-<p>版权声明：本文为博主原创文章，未经博主允许不得转载</p>
-</blockquote>
-<p> <strong>PS</strong>：转载请注明出处<br>作者: <a href="http://tigerchain.github.io">TigerChain</a><br>本文出自 <a href="http://tigerchain.github.io/categories/手把手教Vue/">TigerChain  手把手教Vue</a></p>
-<blockquote>
-<p>教程简介</p>
-</blockquote>
-<ul>
-<li>1、阅读对象<br>本篇教程适合新手阅读，老手直接略过</li>
-<li>2、教程难度<br>初级，本人水平有限，文章内容难免会出现问题，如果有问题欢迎指出，谢谢</li>
-</ul>
-<blockquote>
-<p>正文</p>
-</blockquote>
-<h3 id="一、什么是-Vue"><a href="#一、什么是-Vue" class="headerlink" title="一、什么是 Vue"></a>一、什么是 Vue</h3><p>Vue 是一个用于构建用户界面的渐进式框架「注意读音类似于 View，作者的初衷也是让其起 View 的功能」，Vue 只注重视图层，这点和 React 的是一毛一样的</p>
-<blockquote>
-<p>vue 的特点</p>
-</blockquote>
-<ul>
-<li>简单、易用</li>
-<li>灵活</li>
-<li>高效</li>
-</ul>
-<h3 id="二、Vue-环境搭建"><a href="#二、Vue-环境搭建" class="headerlink" title="二、Vue 环境搭建"></a>二、Vue 环境搭建</h3><h4 id="1、Vue-的使用方式"><a href="#1、Vue-的使用方式" class="headerlink" title="1、Vue 的使用方式"></a>1、Vue 的使用方式</h4><blockquote>
-<p>1、下载 vue.js 引入到项目中</p>
-</blockquote>
-<p>我们直接下载 vue.js 然后引入 <script></script> 标签中即可，Vue 分为开发版本和生产版本</p>
-<ul>
-<li>1、开发版本：<a href="https://vuejs.org/js/vue.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.js</a></li>
-<li>2、生产版本：<a href="https://vuejs.org/js/vue.min.js" target="_blank" rel="noopener">https://vuejs.org/js/vue.min.js</a></li>
-</ul>
-<p><strong>PS：</strong> 开发版本有完整的调试和警告，而生产版本则是一个精简版本，删除了警告，如果我们在开发的时候建议选择开发版本方便调试</p>
-<p>使用方式</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-     <span class="token comment" spellcheck="true">&lt;!-- 引入 vue.js 所在的目录--></span>
-     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
-<blockquote>
-<p>2、使用 CDN 引用</p>
-</blockquote>
-<p>官方推荐使用 <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a></p>
-<blockquote>
-<p>3、使用 nmp/yarn 安装</p>
-</blockquote>
-<ul>
-<li>1、安装 node </li>
-</ul>
-<p>使用 npm 和 yarn 首先要安装 node，可以去官网下载：<a href="https://nodejs.org/en/download/current/" target="_blank" rel="noopener">https://nodejs.org/en/download/current/</a></p>
-<img src="/2019/07/13/vue/vueenv/node_dowonload.png" title="下载 node">
-
-<p>下载对应 win 系统还是 mac 系统的版本，然后安装即可</p>
-<p>在我的 mac 电脑上我直接使用 <a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a> 安装的</p>
-<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> node </code></pre>
-<p>安装完 node 会自带 npm「node 的包管理器」,安装完成以后在命令行中输入</p>
-<pre class=" language-bash"><code class="language-bash">node -v</code></pre>
-<p>看到以下 node 的版本信息则表示安装成功了</p>
-<img src="/2019/07/13/vue/vueenv/node-v.png" title="查看 node 的版本">
-
-<ul>
-<li>2、使用 npm 安装 vue</li>
-</ul>
-<p>在命令行输入以下命令即完成安装</p>
-<pre class=" language-bash"><code class="language-bash">// 全局安装
-<span class="token function">npm</span> <span class="token function">install</span> -g vue</code></pre>
-<p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
-<img src="/2019/07/13/vue/vueenv/vue-v.png" title="npm 安装 vue">
-
-<ul>
-<li>3、使用 yar「替代 npm 的包管理器」 安装</li>
-</ul>
-<p><strong>a)、</strong> 要使用 yarn 先需要安装 yarn , 在这里我们使用 npm 安装 yarn </p>
-<pre class=" language-bash"><code class="language-bash">// 全局安装
-<span class="token function">npm</span> <span class="token function">install</span> yarn -g </code></pre>
-<p><strong>b)、</strong> 使用 yarn 安装 vue</p>
-<pre class=" language-bash"><code class="language-bash">yarn global add vue </code></pre>
-<p>以上命令在 win 系统上安装完成以后，在命令行中使用 vue 可能会出现 Command not found 命令，那么我们需要配置一下环境变量。把 yarn 的 bin 目录配置到环境变量即可「配置到 path 路径下」，使用以下命令直接查看 yarn 的 bin 目录「把此命令显示出的路径直接配置到 path 后面即可」</p>
-<pre class=" language-bash"><code class="language-bash">yarn global bin </code></pre>
-<p>由于我这里是 mac 电脑，所以就不演示了，如果碰到这个问题，就配置一下环境变量即可</p>
-<p>使用 vue-V 查看是否安装成功，如果显示出版本号则表示安装成功</p>
-<img src="/2019/07/13/vue/vueenv/vue-v.png" title="yarn 安装 vue">
-
-<h4 id="2、使用-cli-「命令行工具」"><a href="#2、使用-cli-「命令行工具」" class="headerlink" title="2、使用 cli 「命令行工具」"></a>2、使用 cli 「命令行工具」</h4><p>我们除了上面的引用或安装 vue 外，还可以使用 vue-cli「脚手架工具」</p>
-<p>vue-cli 是一个脚手架工具「就是一个工具集合，可以快速的创建一个 vue 项目」</p>
-<p>同样使用 yarn/npm 来安装 vue-cli，我们全局安装</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --global vue-cli 
-或者使用
-yarn global add vue-cli</code></pre>
-<p>安装完以后，我们输入 vue -V 查看是否安装成功，或使用 vue-list 查看</p>
-<img src="/2019/07/13/vue/vueenv/vue-list.png" title="vue-list">
-
-<p>看到上面内容则证明我们的 vue-cli 脚手架工具安装成功了</p>
-<h4 id="3、使用-vue-cli-来创建一个项目"><a href="#3、使用-vue-cli-来创建一个项目" class="headerlink" title="3、使用 vue-cli 来创建一个项目"></a>3、使用 vue-cli 来创建一个项目</h4><ul>
-<li>1、新建一个目录，我这里放在桌面「我以 mac 电脑演示，win 同理」</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash"> <span class="token function">cd</span> Desktop
- <span class="token function">mkdir</span> myvuedemo
- <span class="token function">cd</span> myvuedemo</code></pre>
-<ul>
-<li>2、使用 vue-cli 创建项目</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">vue init webpack myfirstvuedemo</code></pre>
-<p>这里的 vue 项目是基于 webpack 的，使用上述命令我就可以创建一个名为 myfirstvuedemo 的 vue 项目</p>
-<p>当我们输入上述命令以后就会开始下载模版，然后会提示输入项目名「自己写一个即可」，完了一路回车，出现 yes 就直接回车「目前先这样搞，别管为什么，但是如果看过我的 react 教程就会了解，最后提示使用 npm 还是 yarn 来管理包，我选择的是 yarn」</p>
-{% asset_img vue-init-project.png  vue init project %}
-
-<p>安装完依赖以后，就会出现下面的命令</p>
-{% asset_img finish-vue-project.png  项目创建成功提示 %}
-
-<p>如图所示，我们成功创建出了项目，如果大家使用 npm 或是 yarn 出现安装不了的情况，那么切换一下源即可「tabao 的源就非常不错」，我们根据上面的提示，进入到项目中，然后运行一下项目看看结果</p>
-<ul>
-<li>3、运行项目</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> myfirstvuedemo
-然后运行
-yarn run dev</code></pre>
-<p>我们就会看到使用 webpack 启动服务，然后编译，完成以后提示项目运行的地址：默认是–<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
-<img src="/2019/07/13/vue/vueenv/run-vue-project.png" title="启动项目">
-
-<p>我们在浏览器中输入 <code>http://localhost:8080</code> 回车，看结果</p>
-<img src="/2019/07/13/vue/vueenv/vue-cli-show-result.png" title="vue-cli 项目结果显示">
-
-<p>怎么样，我们使用 vue-cli 就成功创建出一个 vue 项目，只不过他默认的主页是 Vue 的一些介绍，要搞成自己项目修改即可「后面说到 vue-cli 创建项目会说到的」，怎么样？脚手架创建项目简单吧「建议初学者不要直接使用 vue-cli 来创建项目，而是引入 vue.js 来使用，后面熟练了再使用 vue-cli」</p>
-<h3 id="三、Vue-开发工具"><a href="#三、Vue-开发工具" class="headerlink" title="三、Vue 开发工具"></a>三、Vue 开发工具</h3><ul>
-<li>1、webstorm </li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/webstrom.png" title="webstorm">
-
-<ul>
-<li>2、sublime</li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/sublime.png" title="sublime">
-
-<ul>
-<li>3、atom</li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/atom.png" title="atom">
-
-<ul>
-<li>4、Visual Studio Code[即 vscode]</li>
-</ul>
-<img src="/2019/07/13/vue/vueenv/vscode.png" title="vscode">
-
-<p>对于开发工具来说，没有最好，只有最合适，完全看个人习惯，有的就习惯使用 vim 开发「你咬我呀」,我个人习惯于使用 atom 和 webstrom </p>
-<h4 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h4><p><strong>Vue 的特点：</strong></p>
-<ul>
-<li>简单、易用、灵活高效</li>
-</ul>
-<p><strong>Vue 的使用方式：</strong></p>
-<ul>
-<li>1、直接引入 script</li>
-<li>2、使用 CDN</li>
-<li>3、使用 yarn/npm</li>
-<li>4、使用 vue-cli 脚手架</li>
-</ul>
-<p>到此为之，我们简单介绍了一下 vue，并创建了第一个小 demo ，感受一下吧，下节我们看看 vue 的些指令完成一些交互 </p>
-<p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
-<p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/手把手教Vue/">手把手教Vue</a></p>
-<p>我将源码发布到了 <a href="https://github.com/TigerChain/vue-lesson" target="_blank" rel="noopener">手把手教 Vue</a> 方便大家查看，欢迎大家 fork，喜欢的话给个 star </p>
-<p><a href="https://mp.weixin.qq.com/s/cVrii2EYl5Xg0frLLR0mTA" target="_blank" rel="noopener">阅读原文</a></p>
+                <p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/chat/xxl.png" alt="想像力？"></p>
+<p>本文作为自己的警钟文章，时刻提醒自己–Do it now is perfect，故作为记录</p>
+<h3 id="想象力比知识更重要"><a href="#想象力比知识更重要" class="headerlink" title="想象力比知识更重要"></a>想象力比知识更重要</h3><p>“外星人”爱因斯坦说过–想象力比知识更重要，的确对于爱因斯坦来说确实是这样的，爱因斯坦的相像力简直大的都没边了，人有一个大脑就是用来思考的，如果只是机械的运作那和机器人有什么区别？</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/chat/ayst.png" alt="爱因斯坦"></p>
+<p>人类能有现在如此大的进度的确和想象力是分不开的，卫星上天，航天旅游不是梦这些都是在前人的想象加上切实可行的技术实现的。大思想家，文学家胡适先生说过”大胆假设，小心求证”，也是让我们脑洞大开，发散思维</p>
+<p>如果一个苹果落在牛顿的头上，牛顿没有脑洞大开去想象苹果为什么会向上落，而不向上，估计万有引力会推迟若干年才被发现「牛顿定律就易名了」</p>
+<p>乍一看，想象力真特么重要，一个人没有思考，没有想象力就成了 “Walking Dead” ，人为什么会有想象力，一定是通过不段学习和知识的积累才有的一种特殊能力，所以爱因斯坦说”想象力比知识更重要”指的是我们不能死学知识，而应该学以致用，一个有想象力的人本身就具有你没有接触或是没有关心的知识「如果你本身没有什么知识的话，想个毛？只会做梦吧」</p>
+<h3 id="没有执行的想象力都是耍流氓"><a href="#没有执行的想象力都是耍流氓" class="headerlink" title="没有执行的想象力都是耍流氓"></a>没有执行的想象力都是耍流氓</h3><p>爱因期坦、牛顿提倡想象力很重要，并且非常的重要，这无可厚非，这些伟人不仅想了，最重要的是做了，以想象力驱动实战做出惊人的贡献，把想象力发挥到了极致</p>
+<p>现实中，好多排骨鸡汤类文章都在提倡想象力「并且从孩子抓起」，让人们有天马行空的想象力，极力锻炼人们的想象力，熟不知想象力的目的是要知行合一「也就是理论+实践」，否则空有想象力和赵括纸上谈兵有什么区别，让人们永远停留在想上「甚至是空想，假想」</p>
+<p>我个人发现好多企业中的员工没事就喜欢做个 PPT 然后交付给老板，老板看了以后惊叹不已–xxx 真是一个有想法的人，然后再没过几天再弄一个 PPT ，老板喜欢的不得不得了的，周而复始，屡试不爽。其结果是事情永远停留在 PPT 上，一年下来没有实际的效果，最后把工作变成了和老板的一种博弈「刷存在感」，没事就在老板跟前”表现表现”，在老板跟前表现这本身没有什么不好「但是最起码要出结果」</p>
+<p>又或者是每个人在定年计划的时候，那说的天花乱坠，年终总结的时候一件也没有落实，有什么意义，没有半毛钱的意义，没有执行的想象力都是<br>耍流氓，空想一百年，真特么不值一分钱</p>
+<h3 id="没有计划的执行是正走在耍流氓的路上"><a href="#没有计划的执行是正走在耍流氓的路上" class="headerlink" title="没有计划的执行是正走在耍流氓的路上"></a>没有计划的执行是正走在耍流氓的路上</h3><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/chat/mang.png" alt="忙？"></p>
+<p>有没有这种感觉，就是一天到晚都感觉到很忙，搞的自己晕头转向，累的人不说还让人感觉很空虚，最后一想，今天这一天够忙的了，可是没有什么收获，就这样一天，一个月，一年就过去了</p>
+<p>忙和没时间成了万能词，在什么场景和场合好像都能使用，进而就变成了人们的口头禅，忙是一种现象，本身没有什么问题，但是把它当成是一种万能的武器这就有问题了</p>
+<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/chat/plan.png" alt="计划"></p>
+<p>有人会说，你看我一天多么忙，加班到凌晨 2 点「还不忘发个朋友圈」，把加班当成炫耀的资本「天天如此，那你真的是太忙了」,为什么会这么忙呢—是因为没有计划的忙，刷个什么抖音一会儿两个小时就没有了，刷个微信又半个小时没有了，再看头条又一个小时没有了，然后是就说各种忙，我很忙说的多了就会麻痹自己「我一天真的很忙的–反面就是说我很充实没有浪费一点时间，真的是这样吗？」</p>
+<p>忙应该是有计划的忙，有结果的忙，有效率的忙，没有计划的忙就是瞎忙，乱忙，对一天的工作我们一定要分出轻、重、缓、急，并且制定计划，只要我们精准的按计划去行事那么我的忙的就是有意义的「最怕的就是把不重要的事情当成忙的资本」，对于的自己时间一定要进行管控，如果说没有执行的想像都是耍流氓，那么没有计划的执行「忙」就是走在耍流氓的中路上</p>
+<h3 id="想像力-目标-计划-行动-超出预料"><a href="#想像力-目标-计划-行动-超出预料" class="headerlink" title="想像力+目标+计划+行动=超出预料"></a>想像力+目标+计划+行动=超出预料</h3><p>想像力是建立在执行的基础上的，没有执行的想像是没有任何意义的，而想要执行的达到或超预期一定要有一个清晰的计划，每一步都按照计划执行，对时间进行管控制，那么结果往往不是坏的，对于目标来说建议定的比想要达到的稍微高一点即可，为什么要高一点，这里拿高考来说，定目标，定高则居中「定一本，可以有考个二本」，定中则居下「定二本，则考个三本」，定下则考不上「定三本，则可能考不上」，如果我们定的目标比预期稍微高一点则意味着我们要付出更多的努力和代价「结果往往是不一样的，但是不乏有人目标非常明确，执行非常到位，定的目标和结果一致，所以对于大数人来说建议把目标定的比预期稍微高一点即可，目标一定要切合自己的实际」</p>
+<p>当我们想像力+目标+计划+行动都做了好以后，剩下的就交给时间吧「坚持往往是最难的，只要你能持之以恒的坚持下来你就能干掉 80% 的人」，看到过一句话：大概意义是–不是我优秀，而是这个世界上不优秀的人太多了，我稍微努力一点你们就觉得我优秀了和大家共勉</p>
+<p>仅以此人文时刻警醒自己</p>
+<p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容<br>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/侃大山/">侃大山</a></p>
 
             </div>
             <hr/>
@@ -667,7 +510,7 @@ yarn run dev</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tigerchain.github.io/2019/07/13/vue/vueenv/">http://tigerchain.github.io/2019/07/13/vue/vueenv/</a>
+                    <a href="http://tigerchain.github.io/2019/10/22/execution/">http://tigerchain.github.io/2019/10/22/execution/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -705,12 +548,8 @@ yarn run dev</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/前端/">
-                                    <span class="chip bg-color">前端</span>
-                                </a>
-                            
-                                <a href="/tags/vue/">
-                                    <span class="chip bg-color">vue</span>
+                                <a href="/tags/侃大山/">
+                                    <span class="chip bg-color">侃大山</span>
                                 </a>
                             
                         </div>
@@ -881,7 +720,7 @@ yarn run dev</code></pre>
         repo: 'tigerchain.github.io',
         owner: 'TigerChain',
         admin: "TigerChain",
-        id: '2019-07-13T14-28-19',
+        id: '2019-10-22T23-49-44',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -902,49 +741,47 @@ yarn run dev</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/07/14/vue/vueinstruction/">
+                <a href="/2019/10/22/execution/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/vue_logo.jpg" class="responsive-img" alt="02、Vue 常见指令">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/chat.jpg" class="responsive-img" alt="想象力可能正在毁掉你">
                         
-                        <span class="card-title">02、Vue 常见指令</span>
+                        <span class="card-title">想象力可能正在毁掉你</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Vue 指令作用是当表达式的值发生变化时会对 DOM 产生影响
+                            本文作为自己的警钟文章，时刻提醒自己--Do it now is perfect
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/手把手教Vue/" class="post-category">
-                                    手把手教Vue
+                            <a href="/categories/侃大山/" class="post-category">
+                                    侃大山
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/前端/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/vue/">
-                        <span class="chip bg-color">vue</span>
+                    <a href="/tags/侃大山/">
+                        <span class="chip bg-color">侃大山</span>
                     </a>
                     
                 </div>
@@ -958,30 +795,30 @@ yarn run dev</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/10/decorator/">
+                <a href="/2019/09/30/bui-wanandroid-click-impl/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/design_patterns_common_logo.png" class="responsive-img" alt="09、装饰模式">
+                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="11、点击事件三种实现方式">
                         
-                        <span class="card-title">09、装饰模式</span>
+                        <span class="card-title">11、点击事件三种实现方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在不改变原有对象的基础之下给原有对象扩展功能，是对继承关系的一种替换方案
+                            本节我们来介绍一下在 bui 使用点击事件的几种方式，顺带介绍一下 js 作用域问题
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/人人都会设计模式/" class="post-category">
-                                    人人都会设计模式
+                            <a href="/categories/bui-开发玩-Android-app/" class="post-category">
+                                    bui 开发玩 Android app
                                 </a>
                             
                             
@@ -991,12 +828,16 @@ yarn run dev</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/设计模式/">
-                        <span class="chip bg-color">设计模式</span>
+                    <a href="/tags/移动端/">
+                        <span class="chip bg-color">移动端</span>
                     </a>
                     
-                    <a href="/tags/Android/">
-                        <span class="chip bg-color">Android</span>
+                    <a href="/tags/前端/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/bui/">
+                        <span class="chip bg-color">bui</span>
                     </a>
                     
                 </div>
