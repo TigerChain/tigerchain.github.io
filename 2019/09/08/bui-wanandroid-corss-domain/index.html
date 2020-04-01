@@ -285,7 +285,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -521,7 +521,7 @@
     <span class="token comment" spellcheck="true">// 失败 </span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>顺便把 url 改成 banner 接口地址，并在 success 中打个 log 查看一下，接下来把项目运行起来，直接看 console 很不幸出问题了</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_access_to_xml.png" alt="跨域问题"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/show_access_to_xml.png" alt="跨域问题"></p>
 <p>这是一个典型的跨域问题，针对跨域名问题有两种处理方式，在客户端处理和在服务端处理「也可以设置浏览器去处理」，我们使用的三方的 api 不可能在服务端处理，那就在客户端处理吧，其实 bui 为了我们内置了代理，直接使用即可</p>
 <h3 id="三、解决跨域问题"><a href="#三、解决跨域问题" class="headerlink" title="三、解决跨域问题"></a>三、解决跨域问题</h3><p>在 bui 官网文档档调试这一小节中介绍了如何接口跨域<br>使用的是 <a href="https://www.npmjs.com/package/http-proxy-middleware" target="_blank" rel="noopener">http-proxy-middleware</a> 通过代理来处理跨域问题，在我们项目中 app.json 中去修改</p>
 <p>直接修改 app.json 找到 proxy 字段来修改成下面即可</p>
@@ -547,9 +547,9 @@
         <span class="token comment" spellcheck="true">// 失败 </span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>然后再看 chrome 的 console</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_data.png" alt="显示请求数据"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/show_data.png" alt="显示请求数据"></p>
 <p>数据请求成功了，我们就解决了跨域问题，这里我们修改一下成功回调中的 console.log 为 <code>console.log(result.data)</code> 来看看数据</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_result_data.png" alt="显示请求 data 数据"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/show_result_data.png" alt="显示请求 data 数据"></p>
 <p>这就是我们需要解析到轮播图中的数据</p>
 <p>这节就到这里，主要说了一上跨域的问题，下节我们把取到的数据动态渲染到轮播组件中去</p>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
@@ -825,7 +825,7 @@
                 <a href="/2019/09/15/bui-wanandroid-home-banner/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="08、完成首页轮播效果">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="08、完成首页轮播效果">
                         
                         <span class="card-title">08、完成首页轮播效果</span>
                     </div>
@@ -881,7 +881,7 @@
                 <a href="/2019/08/29/bui-wanandroid-front-back-end-rep/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="06、前后端分离介绍">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="06、前后端分离介绍">
                         
                         <span class="card-title">06、前后端分离介绍</span>
                     </div>

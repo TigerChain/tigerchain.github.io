@@ -288,7 +288,7 @@ html 中添加 onclick 方法
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -507,7 +507,7 @@ html 中添加 onclick 方法
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
  <span class="token punctuation">}</span></code></pre>
 <p>运行起来点击条目看效果，在 chrome 的 console 中查看</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/methods_isnot_define.png" alt="方法未定义"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/methods_isnot_define.png" alt="方法未定义"></p>
 <p>很不幸报错了，说方法未定义，我们明明定义了一个 showDetail 方法，为何提示未定义「WTF」?为什么呢？其实这就涉及到 js 作用域的问题「此处是方法的作用域」</p>
 <p>简单来说就是 onclick 只能调用自身代码块中的方法或是全局方法，这块涉及到方法声明和方法表达式之间的关系，具体可以<a href="https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/" target="_blank" rel="noopener">查看这里</a>，这么说还有点抽象那直接上个代码来说明一下问题</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
@@ -621,7 +621,7 @@ window<span class="token punctuation">.</span>showDetail <span class="token oper
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p>核心就是把数据定义出来「由于我们返回的是一个数组，扬所以定义为 datas:[]」，然后使用 b-click 来调用 methods 中创建的方法完成条目单击事件，运行起来看效果</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/b-click-method.png" alt="使用 b-click 完成点击事件"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/b-click-method.png" alt="使用 b-click 完成点击事件"></p>
 <p>我们看到 log 是打印出来了，可是点击一下方法都调用了两桨，事件冒泡了，我们直接在 methods 方法中修改即可</p>
 <pre class=" language-javascript"><code class="language-javascript"> methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     showDetail<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -647,7 +647,7 @@ window<span class="token punctuation">.</span>showDetail <span class="token oper
     <span class="token comment" spellcheck="true">// return false ; 阻止后续事件和阻止事件冒泡效果相同</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>   </code></pre>
 <p>这就搞定了代码单独编写也没有问题，这里 bui-store 外面 ，就这么简单。来看一下效果</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/event-proxy-reslut.png" alt="事件委托 log"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/event-proxy-reslut.png" alt="事件委托 log"></p>
 <p>我们看到打出来的 log 是一组奇数，为什么呢？因为我们的 ul 下面还有一个标题呢，所以们点击标签条目的时候就会从 1 3 5 … 开始，这不行，我们拿到 data 才取索引值会有问题了，我们处理一下,将索引值 <code>var index = $(this).index();</code> 换成下面的方法即可</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span></code></pre>
 <p>这样我就就正确打出来了索引值，就可以取出条目中的数据然后传递到下一页去了</p>
@@ -973,7 +973,7 @@ window<span class="token punctuation">.</span>showDetail <span class="token oper
                 <a href="/2019/09/27/bui-wanandroid-knowledge-list/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="10、完成知识体系列表">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="10、完成知识体系列表">
                         
                         <span class="card-title">10、完成知识体系列表</span>
                     </div>

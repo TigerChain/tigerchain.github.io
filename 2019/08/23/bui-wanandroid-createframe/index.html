@@ -287,7 +287,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -481,7 +481,7 @@
 
 
 <h3 id="一、本节内容"><a href="#一、本节内容" class="headerlink" title="一、本节内容"></a>一、本节内容</h3><p>上一节我们介绍了使用 bui 开发玩 Android webapp 的简介，这节我们就正式开始我们的代码阶段，本节完成我们玩 Android 的一个基本框架就好，如下</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/finish_result.png" alt="完成效果"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/finish_result.png" alt="完成效果"></p>
 <p>先就是完成我们下面四大 TAB 切换和共公的 titleBar 即图中标红的部分，中间的内容我们拿文字先替代</p>
 <h3 id="二、代码编写"><a href="#二、代码编写" class="headerlink" title="二、代码编写"></a>二、代码编写</h3><p>看到这个效果，我们肯定不会从头去写 tab 的一个效果，而是使用 bui 为我们内置的模版去快速创建一个 webapp「不熟悉 bui 模版的可以看我的基础视频」</p>
 <h4 id="1、快速初始化项目"><a href="#1、快速初始化项目" class="headerlink" title="1、快速初始化项目"></a>1、快速初始化项目</h4><p>由于本套教程是进阶教程，所以关于 buijs 脚手架的安装都不再做介绍，创建项目之前我们先看看 bui 为我们内置了哪些模版，打开终端使用 <code>buijs list-template</code> 命令</p>
@@ -518,13 +518,13 @@ buijs create -t main-tab // 第2步</code></pre>
 <pre class=" language-bash"><code class="language-bash">yarn intall // 第1步 安装三方依赖 首次会有点慢，耐心等待
 yarn run dev // 第2步 运行起我们的项目</code></pre>
 <p>我们来看看我们使用 main-tab 为我们创建的模版应用长什么样子</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui-mai-tab.png" alt="bui-main-tab 创建的模版工程"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui-mai-tab.png" alt="bui-main-tab 创建的模版工程"></p>
 <p>怎么样基本上带 tab 的模版工程就为我们创建出来了，无非就是我们稍微修改一下 tab 对应的图片和顶部的 titlebar 即可</p>
 <h4 id="3、修改默认的-main-tab-模版工程"><a href="#3、修改默认的-main-tab-模版工程" class="headerlink" title="3、修改默认的 main-tab 模版工程"></a>3、修改默认的 main-tab 模版工程</h4><p><code>(1)、划分目录并创建对应的 html 和 js</code></p>
 <p>我们使用 sublime 打开我们的项目看一下目录结构「你也可以使用其它 IDE-vscode/atom 等配置 bui-fast 插件即可」</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/main-tab-toc.png" alt="main-tab 默认的目录"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/main-tab-toc.png" alt="main-tab 默认的目录"></p>
 <p>我们看到所有的文件都放在 main 中，这种目录划分不合理， 们根据底部的 tab 来重新划分一个目录结构，我们看我们的效果图有五个 tab </p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/tab-create-foloder.png" alt="合理划分目录结构"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/tab-create-foloder.png" alt="合理划分目录结构"></p>
 <p>那么在 pages 目录分别创建如下目录 </p>
 <ul>
 <li>首页 home </li>
@@ -534,7 +534,7 @@ yarn run dev // 第2步 运行起我们的项目</code></pre>
 <li>项目 project</li>
 </ul>
 <p>然后在每个目录中创建出对应的 html 和 js ，比如在 home 目录中创建 home.html 和 home.js</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/create_maintab_html_js.png" alt="创建目录对应的 html 和 js"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/create_maintab_html_js.png" alt="创建目录对应的 html 和 js"></p>
 <p>html 和 js 的前缀要一样，这是 bui 的规范，当然名字可以不和目录的名字一样「随便你定义」，然后我们在每个 html 界面中使用 &lt;ui-page 然后按 tab 键快速为我们生成一个界面的基本框架「前提要安装 bui-fast 插件」，以 home.html 为例</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -634,13 +634,13 @@ yarn run dev // 第2步 运行起我们的项目</code></pre>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span></code></pre>
 <p>我们使用 yarn run dev 运行起来项目，并调整到手机模式下，查看效果</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/modify_main_tab_result.gif" alt="修改 main-tab 显示效果"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/modify_main_tab_result.gif" alt="修改 main-tab 显示效果"></p>
 <p>基本上我们点击底下的 tab 就导航到我们定义的 html 页面中了,我们刚才说了底部的 tab 数量必须和上面 tab 内容对应的 li 的数量一致，为什么呢，我们查看 chrome 的 Elements 查看 dom 结构</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/html_insert_li.png" alt="tab 内容 dom 结构"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/html_insert_li.png" alt="tab 内容 dom 结构"></p>
 <p>看到了没我们定义的 5 个 tab 对应的 html 就分别插入到 li 中的「也就是底部 tab href 导致的界面」，如果数量不一致，那点击 tab 就无法切换过去或是界面错乱</p>
 <p><code>(3)、在 main.html 添加公共 Header</code></p>
 <p>我们看我们前面给出的效果图知道我们的 Header 不变的永远都是这样的</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/common_header.png" alt="公共的 Header"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/common_header.png" alt="公共的 Header"></p>
 <p>年有我没有必要在每个子页面中去写 header ，而应该把这个公共的 header 写在 main.html 中，下面我们把每个子页面中的 Header 去掉，并且添加公共 header 到 main.html 中「每个界面中的 Header main 和 footer 是一个界面的标准格式但是不是必须全都有」，查看 main.html 修改</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-bar-left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -657,7 +657,7 @@ yarn run dev // 第2步 运行起我们的项目</code></pre>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span></code></pre>
 <p>将以上代码插入到 main.html 的 main 标签之上，我修改了默认返回按钮为 icon-menu 菜单按钮，并且给右边添加了一个搜索按钮，查看效果</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/modify_common_header.png" alt="给 main.html 添加公共 header"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/modify_common_header.png" alt="给 main.html 添加公共 header"></p>
 <p>我们在把微信标签对应的小红点去掉这样就达到了我们的效果，这节课也就到这里了，我们实现的效果和最上面的效果图还差下面 tab 的图片「自定义字体图片」和微信有一个凸起的效果，我们下节课再实现 </p>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
@@ -932,7 +932,7 @@ yarn run dev // 第2步 运行起我们的项目</code></pre>
                 <a href="/2019/08/27/bui-wanandroid-pushcodegithub/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="03、使用 github 管理代码">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="03、使用 github 管理代码">
                         
                         <span class="card-title">03、使用 github 管理代码</span>
                     </div>
@@ -988,7 +988,7 @@ yarn run dev // 第2步 运行起我们的项目</code></pre>
                 <a href="/2019/08/23/bui-wanandroid-lessonintroduction/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="01、课程简介">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="01、课程简介">
                         
                         <span class="card-title">01、课程简介</span>
                     </div>

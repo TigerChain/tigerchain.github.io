@@ -289,7 +289,7 @@ let baseUrl = &#34;/api&#34; ;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -482,7 +482,7 @@ let baseUrl = &#34;/api&#34; ;
 </iframe>
 
 <h3 id="一、课程简介"><a href="#一、课程简介" class="headerlink" title="一、课程简介"></a>一、课程简介</h3><p>本节要实现的效果</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/homelist_result.gif" alt="要实现的效果"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/homelist_result.gif" alt="要实现的效果"></p>
 <h3 id="二、api-根地抽取"><a href="#二、api-根地抽取" class="headerlink" title="二、api 根地抽取"></a>二、api 根地抽取</h3><p>在完成本节效果之前，我们先把 api 的根地址抽取出来到时候替换方便</p>
 <p>打开 index.js 在最开头添加以下代码</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> baseUrl <span class="token operator">=</span> <span class="token string">"/api"</span> <span class="token punctuation">;</span>
@@ -504,7 +504,7 @@ let baseUrl = &#34;/api&#34; ;
 <p>bui 中列表分类</p>
 </blockquote>
 <p>在 bui 中列表有以下几类</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_list_category.png" alt="bui 中的列表"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_list_category.png" alt="bui 中的列表"></p>
 <p>统一来说就分为横向列表和竖向列表，具体来说常用的就三类</p>
 <ul>
 <li>bui-list</li>
@@ -646,7 +646,7 @@ let baseUrl = &#34;/api&#34; ;
 <span class="token punctuation">}</span>
 </code></pre>
 <p>我们把项目运行起来看看后台 log </p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/home_list_log.png" alt="请求列表 log "></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/home_list_log.png" alt="请求列表 log "></p>
 <p>没问题数据已经回来了，我们把渲染 html 界面 </p>
 <blockquote>
 <p>渲染界面</p>
@@ -678,7 +678,7 @@ uiScroll<span class="token punctuation">.</span><span class="token function">upd
 <span class="token comment" spellcheck="true">// 刷新的时候返回位置</span>
 uiScroll<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>这样基本上界面就出来了，并且分页自动调用，当然这里的 pagesize 设置大小不起作用，wanandroi 给我们返回的默认是 20 条数据，这里不用去管就好</p>
-<h4 id="5、运行看效果"><a href="#5、运行看效果" class="headerlink" title="5、运行看效果"></a>5、运行看效果</h4><p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/homelist_half_result.gif" alt="查看效果"></p>
+<h4 id="5、运行看效果"><a href="#5、运行看效果" class="headerlink" title="5、运行看效果"></a>5、运行看效果</h4><p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/homelist_half_result.gif" alt="查看效果"></p>
 <p>基本上没有什么问题，但是细心的会发现我们的下拉刷新在轮播的下面我们要实现的效果图不一样「目标是整体下拉」，我们再处理一下，其实很好处理把轮播当作 scroll 的孩子就可以了，直接修改 home.html </p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>home_uiScroll<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-scroll<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-scroll-head<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -966,7 +966,7 @@ uiScroll<span class="token punctuation">.</span><span class="token function">rev
                 <a href="/2019/09/27/bui-wanandroid-knowledge-list/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="10、完成知识体系列表">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="10、完成知识体系列表">
                         
                         <span class="card-title">10、完成知识体系列表</span>
                     </div>
@@ -1022,7 +1022,7 @@ uiScroll<span class="token punctuation">.</span><span class="token function">rev
                 <a href="/2019/09/15/bui-wanandroid-home-banner/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="08、完成首页轮播效果">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="08、完成首页轮播效果">
                         
                         <span class="card-title">08、完成首页轮播效果</span>
                     </div>

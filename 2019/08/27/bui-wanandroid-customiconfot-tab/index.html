@@ -284,7 +284,7 @@ ps: 注意视频中打 tag 的方式有误，应该在保证某个分支开发�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -481,34 +481,34 @@ ps: 注意视频中打 tag 的方式有误，应该在保证某个分支开发�
 <p>然后再使用以下命令把本地 tag 推到 github 远程 tag 上</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> push origin 04、使用自定义字体图片完成首页tab </code></pre>
 <h3 id="一、课程简介"><a href="#一、课程简介" class="headerlink" title="一、课程简介"></a>一、课程简介</h3><p>本节我们使用自定义字体图片来替换我们的首页 tab 所对应的图片，目前我们的 tab 是这个样子</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/old_tab.png" alt="老 tab"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/old_tab.png" alt="老 tab"></p>
 <p>我们要实现的一个效果</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/source_tab.png" alt="目标 tab"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/source_tab.png" alt="目标 tab"></p>
 <h3 id="二、制作自定义字体图片"><a href="#二、制作自定义字体图片" class="headerlink" title="二、制作自定义字体图片"></a>二、制作自定义字体图片</h3><p>这里我们使用阿里的 <a href="https://www.iconfont.cn" target="_blank" rel="noopener">iconfont</a> 来制作字体图片，没有账号的先注册一个账号</p>
 <h4 id="1、准备图片"><a href="#1、准备图片" class="headerlink" title="1、准备图片"></a>1、准备图片</h4><p>在真实的场景中，肯定是我们的 UI 设计出来的图片，这里我们直接在阿里的 <a href="https://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a> 上面找图片，字体图片的制作也在这个网站上去完成，在 iconfont 的首页搜索首页然后出来</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/download_tab_svg.png" alt="首页 svg 下载"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/download_tab_svg.png" alt="首页 svg 下载"></p>
 <p>这里我们下载 svg 格式的图片「后面制作字体图片要用这种格式」，依次把我们需要的 tab 的图片 svg 全部下载下来「这里就不一一下载了，大家自行尝试去下，不一定非要和我的图片一样，方法学会即可」</p>
 <h4 id="2、上传到-iconfont-网站上"><a href="#2、上传到-iconfont-网站上" class="headerlink" title="2、上传到 iconfont 网站上"></a>2、上传到 iconfont 网站上</h4><p>准备好 5 大 tab 的 svg 图片以后，我们在 iconfont 的首页中依次找到图标管理我的项目</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/icon_mamager_myproject.png" alt="我的项目"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/icon_mamager_myproject.png" alt="我的项目"></p>
 <p>然后点击右边的紫色按钮新建一个目录来存放我们的 svg 图片</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/create_new_project.png" alt="创建项目按钮"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/create_new_project.png" alt="创建项目按钮"></p>
 <p>然后弹出创建对话框</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/alert_create_project.png" alt="弹出项目对话框"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/alert_create_project.png" alt="弹出项目对话框"></p>
 <p>我们写入相应的名称等内容即可，接下来我们进入到刚才新建的项目中去上传我们准备的 svg 图片，有一上传至图片按钮</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/upload_pic_toproject.png" alt="上传svg图片至项目"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/upload_pic_toproject.png" alt="上传svg图片至项目"></p>
 <p>到此会到上传界面</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/upload_svg.png" alt="上传svg界面"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/upload_svg.png" alt="上传svg界面"></p>
 <p>看到了吧，这里需要 svg 所以我们开始准备的就是 svg 图片，上传就可以了,上传完以后就会看到我们的图片</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/show_upload_svg.png" alt="上传svg成功显示"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/show_upload_svg.png" alt="上传svg成功显示"></p>
 <h4 id="3、下载制作好的-iconfont"><a href="#3、下载制作好的-iconfont" class="headerlink" title="3、下载制作好的 iconfont"></a>3、下载制作好的 iconfont</h4><p>经过上面的步骤我们就把自定义字体图片制作好了，下面下载下来看看「点击面图中的下载至地按钮」，我们来看看文本夹中有啥</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/download_custom_iconfont.png" alt="查看自定义 iconfont 目录"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/download_custom_iconfont.png" alt="查看自定义 iconfont 目录"></p>
 <p>其中字体图片已经为我们生成了,下面我们看看如何使用</p>
 <h3 id="三、使用自定义图片"><a href="#三、使用自定义图片" class="headerlink" title="三、使用自定义图片"></a>三、使用自定义图片</h3><p>我们切换到 master 分支上开发，不能直接在 tag 的基础上打 tag ，我们在 master 开发完以后在 master 的基础上打 tag </p>
 <h4 id="1、查看-html-文件"><a href="#1、查看-html-文件" class="headerlink" title="1、查看 .html 文件"></a>1、查看 .html 文件</h4><p>把文件下载下来以后，我们直接点击 .html 文件就可以看到如何定义字体图片和使用它</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/custom_iconfont_html.png" alt="查看字体图片 html 文件"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/custom_iconfont_html.png" alt="查看字体图片 html 文件"></p>
 <p>可以看到有三种使用方式「红框标出来」，我们直接使用第一种方式即可「各种方式里面都有使用说明」</p>
 <h4 id="2、在我们的项目中新建-custom-iconfont-css-文件"><a href="#2、在我们的项目中新建-custom-iconfont-css-文件" class="headerlink" title="2、在我们的项目中新建 custom_iconfont.css 文件"></a>2、在我们的项目中新建 custom_iconfont.css 文件</h4><p>我们在项目中新建一个 <code>custom_iconfont.css</code> 文件，然后将相应的字体图片放入到项目的 font 目录下「也可以定义一个目录去存放」，这里注意一下由于 bui 内置了字体图片所以不能以 iconfont 或是 icon 来命名，我们把我们的字体图片名字全部加一个前缀 custom_ </p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/put_customiconfont_tofont.png" alt="字体图片放入 font 目录中"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/put_customiconfont_tofont.png" alt="字体图片放入 font 目录中"></p>
 <p>我们在 bui.css 中查看一下他是如何使用字体图片的</p>
 <pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
     <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"icon"</span><span class="token punctuation">;</span>
@@ -558,7 +558,7 @@ ps: 注意视频中打 tag 的方式有误，应该在保证某个分支开发�
 <h4 id="3、将-custom-iconfont-css-引入到-index-html中"><a href="#3、将-custom-iconfont-css-引入到-index-html中" class="headerlink" title="3、将 custom_iconfont.css 引入到 index.html中"></a>3、将 custom_iconfont.css 引入到 index.html中</h4><pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/custom_iconfont.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p>接下来就可以愉快的使用了，在我们生成的字体图片的 .html 文件中第三步就是使用字体图片</p>
 <pre><code>&lt;span class=&quot;iconfont&quot;&gt;&amp;#x33;&lt;/span&gt;</code></pre><p>当然这里的 class 要换成我们的 custom_icon,后面的值哪来的同样在字体文件的 .html 开头中就有了</p>
-<p><img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/unicode_icon_font.png" alt="字体图片码"></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/unicode_icon_font.png" alt="字体图片码"></p>
 <p>找到这些字体图片，我们直接替换我们项目中 main.html 中的 tab 图标即可,以首页为例，其它的同理</p>
 <pre class=" language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-btn bui-box-vertical active<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pages/home/home.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token comment" spellcheck="true">&lt;!-- class="icon_home" 将其替换成我们的  custom_icon 并输入 &amp;#xe61c; 即可--></span>
@@ -844,7 +844,7 @@ ps: 注意视频中打 tag 的方式有误，应该在保证某个分支开发�
                 <a href="/2019/08/27/bui-wanandroid-customiconfont-modify/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="04、处理使用自定义字体图片完成 tab 的几处问题(2)">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="04、处理使用自定义字体图片完成 tab 的几处问题(2)">
                         
                         <span class="card-title">04、处理使用自定义字体图片完成 tab 的几处问题(2)</span>
                     </div>
@@ -900,7 +900,7 @@ ps: 注意视频中打 tag 的方式有误，应该在保证某个分支开发�
                 <a href="/2019/08/27/bui-wanandroid-pushcodegithub/">
                     <div class="card-image">
                         
-                        <img src="https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="03、使用 github 管理代码">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="03、使用 github 管理代码">
                         
                         <span class="card-title">03、使用 github 管理代码</span>
                     </div>
