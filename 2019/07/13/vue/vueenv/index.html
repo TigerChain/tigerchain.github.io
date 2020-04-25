@@ -5,18 +5,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="01、环境搭建, tigerchain">
-    <meta name="description" content="
-
-
-版权声明：本文为博主原创文章，未经博主允许不得转载
-
- PS：转载请注明出处作者: TigerChain本文出自 TigerChain  手把手教Vue
-
-教程简介
-
-
-1、阅读对象本篇教程适合新手阅读，老手直接略过
-2、教程难度初级">
+    <meta name="description" content="你所浪费的今天，是昨天死去的人奢望的明天，你所厌恶的现在，是未来的你回不去的曾经。时间残忍，干就完了。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,6 +13,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
     <title>01、环境搭建 | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -34,16 +26,16 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
+
     <script src="/libs/jquery/jquery.min.js"></script>
-    
+
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper head-container">
+        <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
@@ -130,6 +122,7 @@
   </li>
 </ul>
 
+
 <div id="mobile-nav" class="side-nav sidenav">
 
     <div class="mobile-head bg-color">
@@ -209,7 +202,7 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -224,6 +217,7 @@
         
     </ul>
 </div>
+
 
         </div>
 
@@ -297,9 +291,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <div class="description center-align post-title">
-                        01、环境搭建
-                    </div>
+                    <h1 class="description center-align post-title">01、环境搭建</h1>
                 </div>
             </div>
         </div>
@@ -376,14 +368,14 @@
     #toc-content .toc-link::before {
         background-color: transparent;
         max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
     }
 
     #toc-content .is-active-link {
         color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
     }
 
     #floating-toc-btn {
@@ -464,7 +456,7 @@
                     6 分
                 </div>
                 
-				
+
                 
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
                         <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
@@ -472,7 +464,6 @@
                     </div>
 				
             </div>
-            
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
@@ -657,7 +648,7 @@ yarn run dev</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tigerchain.github.io" rel="external nofollow noreferrer">TigerChain</a>
+                    <a href="/about" rel="external nofollow noreferrer">TigerChain</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -680,7 +671,7 @@ yarn run dev</code></pre>
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://tigerchain.github.io" target="_blank">TigerChain</a>
+                    <a href="/about" target="_blank">TigerChain</a>
                     !
                 </span>
             </div>
@@ -718,9 +709,8 @@ yarn run dev</code></pre>
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
                     <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
 <div id="article-share">
-    
+
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
@@ -857,6 +847,7 @@ yarn run dev</code></pre>
         $('.tabs').tabs();
     });
 </script>
+
             
         </div>
     </div>
@@ -866,7 +857,7 @@ yarn run dev</code></pre>
 <link rel="stylesheet" href="/css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
@@ -887,6 +878,9 @@ yarn run dev</code></pre>
 
     gitalk.render('gitalk-container');
 </script>
+
+    
+
     
 
     
@@ -1018,7 +1012,7 @@ yarn run dev</code></pre>
 
 <script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
-    
+
 <!-- 代码块复制 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
@@ -1034,6 +1028,7 @@ yarn run dev</code></pre>
 <style type="text/css">
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -1135,8 +1130,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
+
     <footer class="page-footer bg-color">
-    <div class="container row center-align">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             
             本站是 
@@ -1213,9 +1210,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
 });
 </script>
+
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -1230,9 +1228,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
 
     <!-- Baidu Analytics -->
 
@@ -1276,7 +1271,7 @@ $(function () {
     
 
     
-    
+
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     

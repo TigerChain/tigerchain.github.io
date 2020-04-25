@@ -5,7 +5,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="tigerchain">
-    <meta name="description" content="tigerchain">
+    <meta name="description" content="你所浪费的今天，是昨天死去的人奢望的明天，你所厌恶的现在，是未来的你回不去的曾经。时间残忍，干就完了。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,6 +13,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
     <title>tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -23,16 +26,16 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
+
     <script src="/libs/jquery/jquery.min.js"></script>
-    
+
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper head-container">
+        <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
@@ -119,6 +122,7 @@
   </li>
 </ul>
 
+
 <div id="mobile-nav" class="side-nav sidenav">
 
     <div class="mobile-head bg-color">
@@ -198,7 +202,7 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -213,6 +217,7 @@
         
     </ul>
 </div>
+
 
         </div>
 
@@ -310,7 +315,7 @@
     }
 
     .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .4);
     }
 
     .carousel-control i {
@@ -337,7 +342,7 @@
 
             <div class="description center-align">
                 
-                你所浪费的今天，是昨天死去的人奢望的明天，你所厌恶的现在，是未来的你回不去的曾经。时间残忍，干就完了。
+                    你所浪费的今天，是昨天死去的人奢望的明天，你所厌恶的现在，是未来的你回不去的曾经。时间残忍，干就完了。
                 
             </div>
         </div>
@@ -347,7 +352,8 @@
 <!-- 注释掉，由于此切换图太大，影响性能-->
 <!-- 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
 </script>
  -->
 
@@ -396,16 +402,37 @@
 <script>
     $(function () {
         let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
         coverSlider.carousel({
             duration: Number('120'),
             fullWidth: true,
-            indicators: 'true' === 'true'
-        });
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
 
         let carouselIntervalId;
         
         // Loop to call the next cover article picture.
-        let autoCarousel = function() {
+        let autoCarousel = function () {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
             }, 5000);
@@ -413,7 +440,7 @@
         autoCarousel();
         
 
-        let restartPlay = function () {
+        function restartPlay() {
             
             clearInterval(carouselIntervalId);
             autoCarousel();
@@ -456,12 +483,10 @@
         </div>
     </div>
 </div>
-                    
 
                     
-
                     
-
+                    
                     
                     <div id="recommend-sections" class="recommend">
                         
@@ -474,8 +499,6 @@
             </div>
         </div>
     </div>
-    
-
     
 
     
@@ -494,7 +517,6 @@
                             <span class="card-title">00、课程大纲</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -517,7 +539,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -544,7 +565,6 @@
                             <span class="card-title">想象力可能正在毁掉你</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -567,7 +587,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -590,7 +609,6 @@
                             <span class="card-title">11、点击事件三种实现方式</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -613,7 +631,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -644,7 +661,6 @@
                             <span class="card-title">10、完成知识体系列表</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -667,7 +683,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -698,7 +713,6 @@
                             <span class="card-title">09、完成首页列表</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -721,7 +735,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -752,7 +765,6 @@
                             <span class="card-title">08、完成首页轮播效果</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -775,7 +787,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -806,7 +817,6 @@
                             <span class="card-title">07、请求 api 跨域问题</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -829,7 +839,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -860,7 +869,6 @@
                             <span class="card-title">06、前后端分离介绍</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -883,7 +891,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -914,7 +921,6 @@
                             <span class="card-title">05、完成微信 tab 凸起效果</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -937,7 +943,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -968,7 +973,6 @@
                             <span class="card-title">04、处理使用自定义字体图片完成 tab 的几处问题(2)</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -991,7 +995,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -1022,7 +1025,6 @@
                             <span class="card-title">04、使用自定义字体图片完成首页 tab</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -1045,7 +1047,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -1076,7 +1077,6 @@
                             <span class="card-title">03、使用 github 管理代码</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -1099,7 +1099,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                     <div class="card-action article-tags">
                         
@@ -1151,9 +1150,9 @@
 
 
 
-
     <footer class="page-footer bg-color">
-    <div class="container row center-align">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             
             本站是 
@@ -1230,9 +1229,10 @@
 <script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
 });
 </script>
+
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -1247,9 +1247,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
 
     <!-- Baidu Analytics -->
 
@@ -1293,7 +1290,7 @@ $(function () {
     
 
     
-    
+
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
