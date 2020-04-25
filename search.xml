@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>01、js 简介</title>
+      <link href="/2020/04/25/js-intro/"/>
+      <url>/2020/04/25/js-intro/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>教程简介</p></blockquote><ul><li>1、阅读对象<br>只要对 js 基础掌握不牢的都适合</li><li>2、教程难度<br>初级「但是你不一定知道」，本人水平有限，文章内容难免会出现问题，如果有问题欢迎指出，谢谢</li></ul><blockquote><p>正文</p></blockquote><h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=285148350&bvid=BV1Cc411h7Cf&cid=175286480&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> </iframe><h3 id="一、JavaScript-简史"><a href="#一、JavaScript-简史" class="headerlink" title="一、JavaScript 简史"></a>一、JavaScript 简史</h3><p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-history.svg" alt="js简史"></p><h4 id="1、基石"><a href="#1、基石" class="headerlink" title="1、基石"></a>1、基石</h4><p>1992 年左右，Nombas 公司开发了一个叫 C–(C-minus-minus 即 Cmm)的嵌入式脚本语言，后改名为 ScriptEase，它可以嵌入到网页中去，这为以后 JavaScript 的诞生提供了一块基石</p><h4 id="2、JavaScript-的诞生"><a href="#2、JavaScript-的诞生" class="headerlink" title="2、JavaScript 的诞生"></a>2、JavaScript 的诞生</h4><p>JavaScript 诞生于 1995 年「由 NetScape 和 Sun 公司联盟推出」，它起初的目的就为了验证表单的输入，在没有 JavaScript 之前表单的验证工作都要放在服务器端「以当今来说可能觉得没有什么问题」，在拨号上网的年代几十k的速度，一个表单验证在服务端验证都会转好长时间的圈圈，这简直是恶梦，所以 Netscape 通过 JavaScript 来解决这个问题「这在当时对开发界来说绝对称得上震撼」</p><p>随着 JavaScript 的越来越成熟 JavaScript 从简单的验证变成一门非常强大的语言，特别是在 Node js 兴起之后 JavaScript 从前端玩到了后台，JavaScript 发展更为迅猛，当然这是后话了</p><h4 id="3、微软进军浏览器"><a href="#3、微软进军浏览器" class="headerlink" title="3、微软进军浏览器"></a>3、微软进军浏览器</h4><p>在 JavaScript 1.0 获得具大成功以后，微软也进军浏览器，发布 IE3 并且克隆一个 JavaScript 称为 JScript「为了避免与 Netscape 许可纠纷」并且也提供了自己的 VBScript</p><p>至此有三种不同的 JavaScript 的版本即：JavaScript、ScriptEase 和 JScript，随着时间推移这这三种 JavaScript 版本由于没有统一标准显现出越来越多的问题「各自玩各自的肯定不行」，所以 JavaScript 标准制定势在必行</p><h4 id="4、ECMA-标准"><a href="#4、ECMA-标准" class="headerlink" title="4、ECMA 标准"></a>4、ECMA 标准</h4><p>1997 年，JavaScript 作为一个草案提交给欧洲计算机制造商协会(ECMA),ECMA 协会指定 39 号技术委员会(TC39-Technical Committee #39) 负责 “标准化一种通用、跨平台、中立于供应商的脚本语言的语法和主义”，TC39 由来自 Netscape、Sun、微软、Borland 及其它对脚本语言感兴趣公司的程序员组成，经过数月完成了 ECMA-262「一种名字 ECMAScript 新的脚本语言标准」</p><h4 id="5、激进的-Netscape"><a href="#5、激进的-Netscape" class="headerlink" title="5、激进的 Netscape"></a>5、激进的 Netscape</h4><p>JavaScript 虽然是由 Netscape 开发的并首先提交给 ECMA,但由于当时 Netscape 决定重新设计 NetScape 代码导致推出基于 ECMA 标准实现的 JavaScript 晚于微软发布的”完全基于 ECMA 标准”的 JavaScript「变成了 JScript 成为 JavaScript 的事实标准」， 这也是导致 Netscape 没落的直接原因</p><h4 id="6、ECMA-标准发展"><a href="#6、ECMA-标准发展" class="headerlink" title="6、ECMA 标准发展"></a>6、ECMA 标准发展</h4><p>第二年 ISO/IEC「国际标准化组织/国际电工委员会」也采用了 ECMAScript 标准，至此以后，浏览器开发商就致力于将 ECMAScript 作为各自 JavaScript 实现的标准，在一定程序上取得的成功</p><h4 id="7、火狐和-Google-的出现"><a href="#7、火狐和-Google-的出现" class="headerlink" title="7、火狐和 Google 的出现"></a>7、火狐和 Google 的出现</h4><p>IE 随着 Windows 系统的捆绑几乎占据了全部市场份额，1998 年 Netscape 没落，但瘦死的骆驼比马大同年开发了火狐浏览器「Firefox」 在支持 JavaScript 无可比性，逐渐餐食 IE 市场成为第二大浏览器</p><p>随后 Google 也推出了 Chrome 浏览器以极简，快速浏览成为第三大浏览器「当然现在是老大了，IE 浏览器极速下滑」</p><p>当然苹果也有自己的 Safari 浏览器就是自家产品自带的，随着苹果产品的大卖 Safair 也深入人心</p><h4 id="8、国内一些浏览器"><a href="#8、国内一些浏览器" class="headerlink" title="8、国内一些浏览器"></a>8、国内一些浏览器</h4><p>后面国内也有一些浏览器现，比如 UC、360、搜狗、qq浏览器等等，基本上是基于 Chorme 等内核开发的</p><h3 id="二、什么是-JavaScript"><a href="#二、什么是-JavaScript" class="headerlink" title="二、什么是 JavaScript"></a>二、什么是 JavaScript</h3><p>JavaScript 是一种具有面向对象能力的”动态”脚本语言，所谓动态就是指在运行时做数据类型的检查，它是基于事件驱动的，不需要依赖特殊的语言环境，在浏览器中就可以运行。JavaScript 和 Java 没有半毛钱关系，只是 JavaScript 为了跟着炙手可热的 Java 的顺风车才改的名字「以前叫 LiveScript」</p><h3 id="三、JavaScript-的用途"><a href="#三、JavaScript-的用途" class="headerlink" title="三、JavaScript 的用途"></a>三、JavaScript 的用途</h3><p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-used.svg" alt="js 用途"></p><h3 id="四、JavaScript-特点"><a href="#四、JavaScript-特点" class="headerlink" title="四、JavaScript 特点"></a>四、JavaScript 特点</h3><ul><li>继承：基于原型的当然 ES6 中直接可以像使用 Java 一样使用 JavaScript</li><li>封装：模块化的小技巧</li><li>多态：由于 JavsScript 是动态语言，所以多态是天生的</li></ul><h3 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h3><p>本节我们主要说了以下三个部分</p><ul><li>JavaScript 的简史</li><li>什么是 JavaScript </li><li>JavaScript 的用途以及特点</li></ul><p>相信大家对 JavaScript 有一个认知。本节我们就到这里，我们下节课再见</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 5分钟编程-JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>00、课程大纲</title>
       <link href="/2020/04/18/js-course-des/"/>
       <url>/2020/04/18/js-course-des/</url>
