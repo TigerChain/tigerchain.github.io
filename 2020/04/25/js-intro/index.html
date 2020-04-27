@@ -478,7 +478,7 @@
 <blockquote>
 <p>正文</p>
 </blockquote>
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=327865756&bvid=BV1kA411b7Mi&cid=181463115&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=327865756&amp;bvid=BV1kA411b7Mi&amp;cid=181463115&amp;page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
 </iframe>
 
 
@@ -509,7 +509,25 @@
 <li>JavaScript 的用途以及特点</li>
 </ul>
 <p>相信大家对 JavaScript 有一个认知。本节我们就到这里，我们下节课再见</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1008,29 +1026,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/25/js-intro/">
+                <a href="/2020/04/27/js-part/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-logo.png" class="responsive-img" alt="01、js 简介">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-logo.png" class="responsive-img" alt="02、js 组成部分">
                         
-                        <span class="card-title">01、js 简介</span>
+                        <span class="card-title">02、js 组成部分</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            js 也不是天生的，是在特定的条件下产生的，js 功能强大、使用广泛，一次学习、到处使用
+                            有些人傻傻的把 ECMAScript 和 JavaScript 分不清楚，BOM/DOM 也常常搞错，这节我们来看看
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1043,7 +1060,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1255,7 +1271,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

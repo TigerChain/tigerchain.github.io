@@ -446,14 +446,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
 
@@ -486,10 +486,10 @@
 <p>正文</p>
 </blockquote>
 <h3 id="一、什么是适配器模式"><a href="#一、什么是适配器模式" class="headerlink" title="一、什么是适配器模式"></a>一、什么是适配器模式</h3><h4 id="1、生活中的适配器"><a href="#1、生活中的适配器" class="headerlink" title="1、生活中的适配器"></a>1、生活中的适配器</h4><p>比如电脑转接器「这里主要是指连接电脑和投影仪的」，以我的 MAC 电脑为例子，我们公司的投影支持 VGA 和 HDMI ，但是我的 MAC 电脑只有一个 MINI DP 接口，如何把 MINI DP 转成 VGA 或 HDMI ，那么我就卖了这个玩意「全称 MINI DP 转 VGA &amp; HDMI 适配器」，这东西就是一个适配器</p>
-<img src="/2019/07/04/adapter/converter.jpg" title="MINI DP 转 VGA & HDMI 适配器">
+<img src="/2019/07/04/adapter/converter.jpg" title="MINI DP 转 VGA &amp; HDMI 适配器">
 
 <p>这个适配器就可以把 MAC 和有 VGA 或 HDMI 的设备连接起来了，如下：</p>
-<img src="/2019/07/04/adapter/converter2.jpg" title="MINI DP 转 VGA & HDMI 适配器">
+<img src="/2019/07/04/adapter/converter2.jpg" title="MINI DP 转 VGA &amp; HDMI 适配器">
 
 
 <p>类似的还有电脑电源适配器，变压器「也是一种适配器」，其实净水器也可以看作是一种适配器「把杂水变成纯净水」，等等</p>
@@ -973,7 +973,25 @@
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/人人都会设计模式/">人人都会设计模式</a></p>
 <p>我将源码发布到了 <a href="https://github.com/TigerChain/DesignPattern" target="_blank" rel="noopener">人人都会设计模式</a> 方便大家查看</p>
 <p><a href="https://mp.weixin.qq.com/s/zEDfH6faQfkWDeoRcaRKRA" target="_blank" rel="noopener">阅读原文</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1717,7 +1735,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

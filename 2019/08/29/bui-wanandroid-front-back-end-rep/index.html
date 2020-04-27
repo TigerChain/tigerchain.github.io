@@ -450,7 +450,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.4k
                 </div>
                 
 
@@ -472,7 +472,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=114112159&page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
+                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&amp;cid=114112159&amp;page=7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
 </iframe>
 
 <h3 id="一、为什么要前后端分离"><a href="#一、为什么要前后端分离" class="headerlink" title="一、为什么要前后端分离"></a>一、为什么要前后端分离</h3><p>前后分离是软件开发逐渐成熟的一种演变出来的开发模式，特别是在微服务大行其道的今天「微前端都在普遍使用了」，前后端开发不是趋势而是已经在大量使用的一种模式了，如果现今开发模式还没有分离要么是历史遗留的项目，要是就是你已经 out 了，我们先来看看前后端未分离之前的开发模式</p>
@@ -521,7 +521,25 @@
 <p>这节我们就到这里了，这里对前后端分离起了一个抛砖引玉，前端还会涉及 spa 和多页应用、还会有前商路由和后端路由、前端渲染和后端渲染有兴趣可以细细看一下</p>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1277,7 +1295,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

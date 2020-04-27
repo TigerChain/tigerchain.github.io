@@ -450,14 +450,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    725
+                    777
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -472,7 +472,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=113439528&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
+                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&amp;cid=113439528&amp;page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
 </iframe>
 
 <h3 id="一、创建-git-仓库"><a href="#一、创建-git-仓库" class="headerlink" title="一、创建 git 仓库"></a>一、创建 git 仓库</h3><h4 id="1、在-github-中创建-bui-wanandroid-仓库"><a href="#1、在-github-中创建-bui-wanandroid-仓库" class="headerlink" title="1、在 github 中创建 bui-wanandroid 仓库"></a>1、在 github 中创建 bui-wanandroid 仓库</h4><p>如果没有 github 账户的首先得注册一个，我们直接新建一个 bui-wanandroid 远程仓库，如下所示：</p>
@@ -502,7 +502,25 @@
 <p>这节课到此结束了，我们讲了一下把本地的 wanandroid 项目提交到 github 上面去，并且使用 tag 的形式来管理我们每小节的代码，下节我们讲使用自定义字体图片完成首页五个 tab </p>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1258,7 +1276,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

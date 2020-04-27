@@ -453,7 +453,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    13 分
                 </div>
                 
 
@@ -784,7 +784,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <p>我们可以使用 $event 显示的把原生事件传递过去，查看一下输出结果</p>
 <pre><code>Vue$3 {_uid: 0, _isVue: true, $options: {…}, _renderProxy: Proxy, _self: Vue$3, …} 
 
-Arguments(2) [&quot;msg&quot;, MouseEvent, callee: ƒ, Symbol(Symbol.iterator): ƒ]</code></pre><p>怎么样,Arguments 参数中第一个是方法参数，第二个就是传递过来的事件，在 data 方法是同理</p>
+Arguments(2) ["msg", MouseEvent, callee: ƒ, Symbol(Symbol.iterator): ƒ]</code></pre><p>怎么样,Arguments 参数中第一个是方法参数，第二个就是传递过来的事件，在 data 方法是同理</p>
 <p>到此为止，我们把 vue props 就说完了，请大家动手写写感受一下</p>
 <h3 id="五、回顾一下"><a href="#五、回顾一下" class="headerlink" title="五、回顾一下"></a>五、回顾一下</h3><ul>
 <li><p>v-bind 是用来绑定属性的和 props 传递对象或值使用的「props 默认传递的是字符串，如果想要传值、对象，那么就要使用 v-bind」</p>
@@ -806,7 +806,25 @@ Arguments(2) [&quot;msg&quot;, MouseEvent, callee: ƒ, Symbol(Symbol.iterator): 
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/手把手教Vue/">手把手教Vue</a></p>
 <p>我将源码发布到了 <a href="https://github.com/TigerChain/vue-lesson" target="_blank" rel="noopener">手把手教 Vue</a> 方便大家查看，欢迎大家 fork，喜欢的话给个 star </p>
 <p><a href="https://mp.weixin.qq.com/s/B_0x849XtTiKJGokX2YLlg" target="_blank" rel="noopener">阅读原文</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1558,7 +1576,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

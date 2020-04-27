@@ -446,7 +446,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.7k
                 </div>
                 
 
@@ -633,7 +633,25 @@ yarn run dev</code></pre>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/手把手教Vue/">手把手教Vue</a></p>
 <p>我将源码发布到了 <a href="https://github.com/TigerChain/vue-lesson" target="_blank" rel="noopener">手把手教 Vue</a> 方便大家查看，欢迎大家 fork，喜欢的话给个 star </p>
 <p><a href="https://mp.weixin.qq.com/s/cVrii2EYl5Xg0frLLR0mTA" target="_blank" rel="noopener">阅读原文</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1377,7 +1395,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

@@ -450,14 +450,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -472,7 +472,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&cid=113439611&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
+                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&amp;cid=113439611&amp;page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
 </iframe>
 
 <p><strong>ps:</strong> 注意视频中打 tag 的方式有误，应该在保证某个分支开发完成再打 tag ，不能在 tag 的基础上打 tag ,视频中的内容我们就在 master 分支上开发，开发完成后提交到 github 上，然后在 master 的基础上打出 tag</p>
@@ -556,7 +556,7 @@
 <p><strong>PS:由于 icon bui 使用了，所以我们这里使用 custom_icon 来作为 class</strong></p>
 <h4 id="3、将-custom-iconfont-css-引入到-index-html中"><a href="#3、将-custom-iconfont-css-引入到-index-html中" class="headerlink" title="3、将 custom_iconfont.css 引入到 index.html中"></a>3、将 custom_iconfont.css 引入到 index.html中</h4><pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/custom_iconfont.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p>接下来就可以愉快的使用了，在我们生成的字体图片的 .html 文件中第三步就是使用字体图片</p>
-<pre><code>&lt;span class=&quot;iconfont&quot;&gt;&amp;#x33;&lt;/span&gt;</code></pre><p>当然这里的 class 要换成我们的 custom_icon,后面的值哪来的同样在字体文件的 .html 开头中就有了</p>
+<pre><code>&lt;span class="iconfont"&gt;&amp;#x33;&lt;/span&gt;</code></pre><p>当然这里的 class 要换成我们的 custom_icon,后面的值哪来的同样在字体文件的 .html 开头中就有了</p>
 <p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/unicode_icon_font.png" alt="字体图片码"></p>
 <p>找到这些字体图片，我们直接替换我们项目中 main.html 中的 tab 图标即可,以首页为例，其它的同理</p>
 <pre class=" language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bui-btn bui-box-vertical active<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pages/home/home.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -572,7 +572,25 @@
 <h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>这节课我们学习了如何使用自定义图标并且在自己的项目中使用它，动手试试吧</p>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1328,7 +1346,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

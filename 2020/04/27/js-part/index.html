@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="07、请求 api 跨域问题, tigerchain">
+    <meta name="keywords" content="02、js 组成部分, tigerchain">
     <meta name="description" content="你所浪费的今天，是昨天死去的人奢望的明天，你所厌恶的现在，是未来的你回不去的曾经。时间残忍，干就完了。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>07、请求 api 跨域问题 | tigerchain</title>
+    <title>02、js 组成部分 | tigerchain</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-logo.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">07、请求 api 跨域问题</h1>
+                    <h1 class="description center-align post-title">02、js 组成部分</h1>
                 </div>
             </div>
         </div>
@@ -408,16 +408,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/移动端/">
-                                <span class="chip bg-color">移动端</span>
-                            </a>
-                        
                             <a href="/tags/前端/">
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/bui/">
-                                <span class="chip bg-color">bui</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -428,8 +424,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/bui-开发玩-Android-app/" class="post-category">
-                                bui 开发玩 Android app
+                            <a href="/categories/5分钟编程-JavaScript基础/" class="post-category">
+                                5分钟编程-JavaScript基础
                             </a>
                         
                     </div>
@@ -441,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-08
+                    2020-04-27
                 </div>
                 
 
@@ -450,14 +446,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    776
+                    748
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -472,86 +468,59 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><iframe src="//player.bilibili.com/player.html?aid=65041899&amp;cid=114357649&amp;page=8" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> 
-</iframe>
-
-<h3 id="一、课程简介"><a href="#一、课程简介" class="headerlink" title="一、课程简介"></a>一、课程简介</h3><p>本节主要使用 wandroid 真实的 api 用在项目中，并且解决跨域引起问题</p>
-<h3 id="二、请求首页-banner"><a href="#二、请求首页-banner" class="headerlink" title="二、请求首页 banner"></a>二、请求首页 banner</h3><h4 id="1、找到-banner-的-api"><a href="#1、找到-banner-的-api" class="headerlink" title="1、找到 banner 的 api"></a>1、找到 banner 的 api</h4><p>打开 <a href="https://wanandroid.com" target="_blank" rel="noopener">wanandroid</a> 网站找到 api 然后找到 首页banner 这个 api 长如下样子</p>
-<pre class=" language-bash"><code class="language-bash">https://www.wanandroid.com/banner/json</code></pre>
-<p>点进去看看它返回的 json 结构</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token punctuation">{</span>
-            <span class="token property">"desc"</span><span class="token operator">:</span> <span class="token string">"华为工程师推荐的一份学习资料"</span><span class="token punctuation">,</span>
-            <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">27</span><span class="token punctuation">,</span>
-            <span class="token property">"imagePath"</span><span class="token operator">:</span> <span class="token string">"https://wanandroid.com/blogimgs/81286041-eefe-4f9a-a11d-6876c1866d1e.jpeg"</span><span class="token punctuation">,</span>
-            <span class="token property">"isVisible"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"order"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"华为工程师推荐的一份学习资料"</span><span class="token punctuation">,</span>
-            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-            <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://mp.weixin.qq.com/s/KwpOzDygmH5af6t_QW7riw"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-            <span class="token property">"desc"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
-            <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
-            <span class="token property">"imagePath"</span><span class="token operator">:</span> <span class="token string">"https://www.wanandroid.com/blogimgs/62c1bd68-b5f3-4a3c-a649-7ca8c7dfabe6.png"</span><span class="token punctuation">,</span>
-            <span class="token property">"isVisible"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"order"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"我们新增了一个常用导航Tab~"</span><span class="token punctuation">,</span>
-            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"http://www.wanandroid.com/navi"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        ... 这里显示两条来说明一下问题
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"errorCode"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-    <span class="token property">"errorMsg"</span><span class="token operator">:</span> <span class="token string">""</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="2、在项目中请求-banner-api"><a href="#2、在项目中请求-banner-api" class="headerlink" title="2、在项目中请求 banner api"></a>2、在项目中请求 banner api</h4><p>直接在 home.js 中使用 bui-ajax 快捷创建出 ajax 请求代码块</p>
-<pre class=" language-javascript"><code class="language-javascript"> bui<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    url<span class="token punctuation">:</span> <span class="token string">"https://wanandroid.com/banner/json"</span><span class="token punctuation">,</span>
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//接口请求的参数</span>
-    <span class="token comment" spellcheck="true">// 可选参数</span>
-    method<span class="token punctuation">:</span> <span class="token string">"GET"</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 成功</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 失败 </span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>顺便把 url 改成 banner 接口地址，并在 success 中打个 log 查看一下，接下来把项目运行起来，直接看 console 很不幸出问题了</p>
-<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/show_access_to_xml.png" alt="跨域问题"></p>
-<p>这是一个典型的跨域问题，针对跨域名问题有两种处理方式，在客户端处理和在服务端处理「也可以设置浏览器去处理」，我们使用的三方的 api 不可能在服务端处理，那就在客户端处理吧，其实 bui 为了我们内置了代理，直接使用即可</p>
-<h3 id="三、解决跨域问题"><a href="#三、解决跨域问题" class="headerlink" title="三、解决跨域问题"></a>三、解决跨域问题</h3><p>在 bui 官网文档档调试这一小节中介绍了如何接口跨域<br>使用的是 <a href="https://www.npmjs.com/package/http-proxy-middleware" target="_blank" rel="noopener">http-proxy-middleware</a> 通过代理来处理跨域问题，在我们项目中 app.json 中去修改</p>
-<p>直接修改 app.json 找到 proxy 字段来修改成下面即可</p>
-<pre class=" language-json"><code class="language-json"><span class="token property">"proxy"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"/api"</span><span class="token operator">:</span> <span class="token punctuation">{</span> // 使用 /api 代替源地址
-    <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"https://www.wanandroid.com"</span><span class="token punctuation">,</span>// 源地址
-    <span class="token property">"changeOrigin"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>// 改变源
-    <span class="token property">"pathRewrite"</span><span class="token operator">:</span><span class="token punctuation">{</span>
-    <span class="token property">"^/api"</span><span class="token operator">:</span> <span class="token string">"https://www.wanandroid.com"</span> // 路径重写
-      <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<p>我们定义了一个 api 来代理真实的 <a href="https://www.wanandroid.com" target="_blank" rel="noopener">https://www.wanandroid.com</a> 地址，所以接口中就使用 /api 下面我们修改 home.js 把 <a href="https://www.wanandroid.com" target="_blank" rel="noopener">https://www.wanandroid.com</a> 换成 /api</p>
-<pre class=" language-javascript"><code class="language-javascript">bui<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    url<span class="token punctuation">:</span> <span class="token string">"/api/banner/json"</span><span class="token punctuation">,</span>
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//接口请求的参数</span>
-    <span class="token comment" spellcheck="true">// 可选参数</span>
-    method<span class="token punctuation">:</span> <span class="token string">"GET"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 成功</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 失败 </span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>然后再看 chrome 的 console</p>
-<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/show_data.png" alt="显示请求数据"></p>
-<p>数据请求成功了，我们就解决了跨域问题，这里我们修改一下成功回调中的 console.log 为 <code>console.log(result.data)</code> 来看看数据</p>
-<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/show_result_data.png" alt="显示请求 data 数据"></p>
-<p>这就是我们需要解析到轮播图中的数据</p>
-<p>这节就到这里，主要说了一上跨域的问题，下节我们把取到的数据动态渲染到轮播组件中去</p>
-<p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 公号同名，订阅查看更多内容</p>
-<p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/bui-开发玩-Android-app/">使用 bui 开发玩 Android app</a></p>
+                <blockquote>
+<p>教程简介</p>
+</blockquote>
+<ul>
+<li>1、阅读对象<br>只要对 js 基础掌握不牢的都适合</li>
+<li>2、教程难度<br>初级「但是你不一定知道」，本人水平有限，文章内容难免会出现问题，如果有问题欢迎指出，谢谢</li>
+</ul>
+<blockquote>
+<p>正文</p>
+</blockquote>
+<p>人们常常会把 JavaScript 和 ECMAScript 混在一起，JavaScript 的含义却比 ECMA-262 中规定的要多的多，JavaScript 由三部分组成</p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-form-part.jpg" alt="JS组成部分"></p>
+<ul>
+<li>ECMAScript</li>
+<li>DOM「文档对象模型」</li>
+<li>BOM「浏览器对象模型」</li>
+</ul>
+<h3 id="一、ECMAScript"><a href="#一、ECMAScript" class="headerlink" title="一、ECMAScript"></a>一、ECMAScript</h3><p>ECMAScript 是一个标准就是对实现该标准各个方面做了一些规定，比如规定语法、类型、对象、操作符、关建字等等，JavaScript 实现了 ECMAScript 标准</p>
+<p>没有统一的标准各自玩各自的 “js”，不利于 js 的发展，标准的重要性就体现出来了</p>
+<h3 id="二、DOM「文档对象模型」"><a href="#二、DOM「文档对象模型」" class="headerlink" title="二、DOM「文档对象模型」"></a>二、DOM「文档对象模型」</h3><p>DOM「Document Object Model」是对 XML 扩展用于 HTML 的应用程序的接口，DOM 把整个 HTML 页面映射为一个多层节点结构「也称为<br>树型结构」，它也是一个标准</p>
+<p>我们来个简单的例子形象的说一下，写一个 HTML 页面并对应其 DOM 的表现形式</p>
+<blockquote>
+<p>html 页面</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>我是标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>我是内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>上面是一个标准的 html 页面，我们来看 DOM 如何来表示这个页面</p>
+<blockquote>
+<p>DMO 结构 </p>
+</blockquote>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/dom-html.png" alt="DOM 映射 HTML"></p>
+<p>这样 DOM 形象的把一个 html 结构映射成了一个树结构，每个子元素通过结点的形式表现</p>
+<p><strong>DOM 表现的好处</strong></p>
+<p>通过 DOM 表现出 html 以后，我们就可以借助 DOM 给我们暴漏出来的 API 可以动态的增、删、改、查 html 的任何元素「间接的操作 DOM 就如同操作 html 一样」</p>
+<h3 id="三、BOM「浏览器对象模型」"><a href="#三、BOM「浏览器对象模型」" class="headerlink" title="三、BOM「浏览器对象模型」"></a>三、BOM「浏览器对象模型」</h3><p>BOM「Browser Object Model」浏览器对象模型，就是可以操作浏览器容器的对象模型，BOM 只处理和浏览器容器相关的东西即-window，但是人们通常也把针对浏览器的 JavaScript 扩展看作是 BOM 的一部分，BOM 中最核心的也就是 window，比如下列扩展</p>
+<ul>
+<li>frames：即HTML自框架</li>
+<li>history：页面的历史记录</li>
+<li>location：当前页面的地址</li>
+<li>navigator：包含浏览器相关信息</li>
+<li>screen：显示屏幕相关信息</li>
+<li>open：打开一个新的窗口</li>
+<li>…</li>
+</ul>
+<p>还有移动缩放关闭浏览器对 cookies 支持等等</p>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>本节主要说了一下 JavaScript 的组成部分，包括 ECMAScript、DOM 和 BOM，我们对其有了简单的了解 DOM/BOM 本质上都是给 js 暴漏的接口，我们可以操作元素和浏览器，而 ECMAscript 是一个标准，JavaScript 实现了此标准</p>
+<p>本节到此为止，我们下节课见</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -595,7 +564,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tigerchain.github.io/2019/09/08/bui-wanandroid-corss-domain/">http://tigerchain.github.io/2019/09/08/bui-wanandroid-corss-domain/</a>
+                    <a href="http://tigerchain.github.io/2020/04/27/js-part/">http://tigerchain.github.io/2020/04/27/js-part/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -633,16 +602,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/移动端/">
-                                    <span class="chip bg-color">移动端</span>
-                                </a>
-                            
                                 <a href="/tags/前端/">
                                     <span class="chip bg-color">前端</span>
                                 </a>
                             
-                                <a href="/tags/bui/">
-                                    <span class="chip bg-color">bui</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -1073,53 +1038,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/15/bui-wanandroid-home-banner/">
+                <a href="/2020/04/27/js-part/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="08、完成首页轮播效果">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-logo.png" class="responsive-img" alt="02、js 组成部分">
                         
-                        <span class="card-title">08、完成首页轮播效果</span>
+                        <span class="card-title">02、js 组成部分</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本节课我们来完成玩 android 首页的轮播图效果，使用 bui 自带组件完成
+                            有些人傻傻的把 ECMAScript 和 JavaScript 分不清楚，BOM/DOM 也常常搞错，这节我们来看看
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/bui-开发玩-Android-app/" class="post-category">
-                                    bui 开发玩 Android app
+                            <a href="/categories/5分钟编程-JavaScript基础/" class="post-category">
+                                    5分钟编程-JavaScript基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/移动端/">
-                        <span class="chip bg-color">移动端</span>
-                    </a>
                     
                     <a href="/tags/前端/">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
-                    <a href="/tags/bui/">
-                        <span class="chip bg-color">bui</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -1133,30 +1096,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/29/bui-wanandroid-front-back-end-rep/">
+                <a href="/2020/04/25/js-intro/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/bui-wanandroid/imgs/bui_wandroid_blog_logo.png" class="responsive-img" alt="06、前后端分离介绍">
+                        <img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-logo.png" class="responsive-img" alt="01、js 简介">
                         
-                        <span class="card-title">06、前后端分离介绍</span>
+                        <span class="card-title">01、js 简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在前后端分离开发模式大行其道的今天，你还在玩 JSP ? 好不客气的说 you out 了
+                            js 也不是天生的，是在特定的条件下产生的，js 功能强大、使用广泛，一次学习、到处使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/bui-开发玩-Android-app/" class="post-category">
-                                    bui 开发玩 Android app
+                            <a href="/categories/5分钟编程-JavaScript基础/" class="post-category">
+                                    5分钟编程-JavaScript基础
                                 </a>
                             
                             
@@ -1166,16 +1129,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/移动端/">
-                        <span class="chip bg-color">移动端</span>
-                    </a>
-                    
                     <a href="/tags/前端/">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
-                    <a href="/tags/bui/">
-                        <span class="chip bg-color">bui</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>

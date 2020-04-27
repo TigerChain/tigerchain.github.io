@@ -549,7 +549,7 @@
 </blockquote>
 <p>打开命令行，在根目录下输入 </p>
 <pre><code>vue-study/vue-lesson/01、基本指令 // 在当前目录
-▶ browser-sync start --server --files &quot;**/*.css, **/*.html&quot;</code></pre><img src="/2019/07/14/vue/vueinstruction/browser_sync_start.png" title="查看结果">
+▶ browser-sync start --server --files "**/*.css, **/*.html"</code></pre><img src="/2019/07/14/vue/vueinstruction/browser_sync_start.png" title="查看结果">
 
 <p>就会自动打开默认浏览器，然后界面就出来了，往后你修改的内容，不用 F5 不用刷新，内容自动就同步了「真 TM 帅」</p>
 <img src="/2019/07/14/vue/vueinstruction/result_helloword.gif" title="运行查看结果">
@@ -559,7 +559,7 @@
 <p>1、v-on 是用来监管 DOM 事件的，并执行一些 js 代码，比如点击事件，提交事件等</p>
 </blockquote>
 <p><code>用法</code></p>
-<pre><code>v-on:click=&quot;表达式&quot;</code></pre><p>废话不多说直接上例子吧</p>
+<pre><code>v-on:click="表达式"</code></pre><p>废话不多说直接上例子吧</p>
 <ul>
 <li>1、在 instructions 下新建 v-on.html，然后在 index.html 中引入</li>
 </ul>
@@ -601,10 +601,10 @@
 
 <p><strong>PS:</strong> v-on 的缩写</p>
 <pre><code>&lt;!-- 完整语法 --&gt;
-&lt;a v-on:click=&quot;doSomething&quot;&gt;...&lt;/a&gt;
+&lt;a v-on:click="doSomething"&gt;...&lt;/a&gt;
 
 &lt;!-- 缩写 --&gt;
-&lt;a @click=&quot;doSomething&quot;&gt;...&lt;/a&gt;</code></pre><blockquote>
+&lt;a @click="doSomething"&gt;...&lt;/a&gt;</code></pre><blockquote>
 <p>2、v-if 和 v-for 指令</p>
 </blockquote>
 <p>v-if 是条件判断，v-for 是用来循环数据的，从名字就可以看出来</p>
@@ -634,7 +634,7 @@
   <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span></code></pre>
 <p>如果想要使用 v-for 来遍历带索引使用</p>
-<pre><code>v-for=&quot;(item,index) in items&quot;</code></pre><p>其中 index 就是索引，如果想使用索引的话就可以使用此种方式</p>
+<pre><code>v-for="(item,index) in items"</code></pre><p>其中 index 就是索引，如果想使用索引的话就可以使用此种方式</p>
 <p>这里的标签指的需要循环的标签，好了不多说了，直接看例子吧，下面我们实现一个下面的例子</p>
 {% asset_img v-if_v-for.gif  v-if 和 v-for 指令 %}
 
@@ -733,7 +733,7 @@
 </blockquote>
 <p><code>v-show</code></p>
 <p>在前面我们使用了 v-if 指令，v-show 的指令和 v-if 类似，基本模版是：</p>
-<pre><code>&lt;标签 v-show=&quot;条件&quot;&gt;如果达到条件要显示的内容&lt;/标签&gt;</code></pre><p>比如：我们有一个按钮点击显示或隐藏 div 如下效果</p>
+<pre><code>&lt;标签 v-show="条件"&gt;如果达到条件要显示的内容&lt;/标签&gt;</code></pre><p>比如：我们有一个按钮点击显示或隐藏 div 如下效果</p>
 {% asset_img v-show.gif  v-show 效果 %}
 
 <p><code>核心代码:</code></p>
@@ -925,7 +925,25 @@
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/手把手教Vue/">手把手教Vue</a></p>
 <p>我将源码发布到了 <a href="https://github.com/TigerChain/vue-lesson" target="_blank" rel="noopener">手把手教 Vue</a> 方便大家查看，欢迎大家 fork，喜欢的话给个 star </p>
 <p><a href="https://mp.weixin.qq.com/s/AS2TZ5gcQqG6B4kmrI_93A" target="_blank" rel="noopener">阅读原文</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1669,7 +1687,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

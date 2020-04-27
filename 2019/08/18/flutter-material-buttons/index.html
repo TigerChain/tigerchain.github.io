@@ -485,7 +485,7 @@
 </blockquote>
 <h3 id="一、无所不在的-Button"><a href="#一、无所不在的-Button" class="headerlink" title="一、无所不在的 Button"></a>一、无所不在的 Button</h3><p>####（1）、一些 Button 举例</p>
 <p>Button 在一个项目是必不可少的，前端好多 UI 库都把 button 专门封装成一个小组件要么是直接是 css 样式库调用即可,比如 bootstrap、ElementUi、buttons,拿 buttons「随便举个例子说一下」来说，其中的部分图片</p>
-<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/flutter/imgs/buttons_show.png" alt></p>
+<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/flutter/imgs/buttons_show.png" alt=""></p>
 <h4 id="2-、Button-的实现方式"><a href="#2-、Button-的实现方式" class="headerlink" title="(2)、Button 的实现方式"></a>(2)、Button 的实现方式</h4><p>一般情况下，做一个 Button 都是抽象成一个组件，然后给其设置对应的样式即可，比如 buttons 或是 bootstrap 的 button 都是给设置不同的 css 样式 来显示不同的效果，在 Android 中通过自定义 View 来通过属性设置显示不同的按钮样式，基本上实现方式原理都是一毛一样的</p>
 <h3 id="二、Flutter-中的-Buttons"><a href="#二、Flutter-中的-Buttons" class="headerlink" title="二、Flutter 中的 Buttons"></a>二、Flutter 中的 Buttons</h3><p>在 Flutter 中一切万物皆组件， Buttons「Flutter 中并没有这个组件，这里为了说 Flutter 的 Button 组件多用了一个集合表示一下」 也不例外，也是一个组件，Flutter 中的 Buttons 基本上分为两类</p>
 <p><strong>1、 MaterialButton 类 Button</strong></p>
@@ -895,7 +895,25 @@
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 订阅查看更多内容</p>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/从头整-Flutter/">从头开始整 Flutter</a></p>
 <p><a href="https://mp.weixin.qq.com/s/ahUHqnc8_L6gSgLNtoWMzQ" target="_blank" rel="noopener">阅读原文</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1647,7 +1665,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             

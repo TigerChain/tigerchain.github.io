@@ -498,7 +498,7 @@
 <p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/flutter/imgs/flutter_download.jpg" alt="flutter mac 版本下载"></p>
 <p>点击下载即可</p>
 <h5 id="2、解压安装包并且配置环境变量"><a href="#2、解压安装包并且配置环境变量" class="headerlink" title="2、解压安装包并且配置环境变量"></a>2、解压安装包并且配置环境变量</h5><p>把下载下来的 .zip 安装包解压到指定目录比如 installSoftWare<br>配置环境变量在 .bash_profile 或 .zshrc 中添加</p>
-<pre><code>export PATH=&quot;$PATH:/`pwd`/installSoftWare/flutter/bin&quot;</code></pre><p>其中 pwd 就是你在命令行默认界面 pwd 中出来的命令，一般是 /User/XXX，然后保存文件，基本上 flutter 就可以使用了，我们可以在命令行中试一下 flutter 命令</p>
+<pre><code>export PATH="$PATH:/`pwd`/installSoftWare/flutter/bin"</code></pre><p>其中 pwd 就是你在命令行默认界面 pwd 中出来的命令，一般是 /User/XXX，然后保存文件，基本上 flutter 就可以使用了，我们可以在命令行中试一下 flutter 命令</p>
 <h5 id="3、安装-flutter-依赖"><a href="#3、安装-flutter-依赖" class="headerlink" title="3、安装 flutter 依赖"></a>3、安装 flutter 依赖</h5><p>经过上面两步 flutter 安装完成了，但是还需要安装一些依赖，我们配置完以后运行 flutter doctor 来检查一下缺少的依赖</p>
 <p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/flutter/imgs/flutter_doctor.jpg" alt="flutter_doctor 检查依赖"></p>
 <p>如图所示，我这里是把所需要的依赖安装完了，不是最初的状态，你直接运行会报好多 x 可以选择根据自己需要的安装，比如拿 AndroidStudio 开发那就安装 AndroidStudio 的依赖「在 AS 的 Plugins 中安装 flutter 即可」，在 Vs Code 中开发安装 flutter 插件即可，根据自己需要安装即可只要前第一个没有问题你配置个 Android/IOS 环境再加一个开发 IDE 依赖就可以了，这没什么好说的，如果有 x 号会提示你如何解决的</p>
@@ -516,7 +516,7 @@ flutter run</code></pre><p><img src="https://gitee.com/tigerchain/blog_logo/raw/
 <p>很不幸，没有运行起来，大概意思就是我们没有启动模拟器或真机，没事跟着提示走，运行 flutter emulators 查看有那些模拟器</p>
 <pre><code>flutter emulators</code></pre><p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/flutter/imgs/flutter_emulators.jpg" alt="flutter 查看本机的模拟器"></p>
 <p>可以看到我本地有一个 Android 模拟器和 一个 IOS 模拟器，那么接下来我们就可以启动模拟器了，当然前提是你必须有模拟器，如果没有先创建可以根据命令提示创建也可以在 AndroidStudio/Xcode 中创建效果一样，当然你也可以直接使用真机测试</p>
-<p>使用 flutter emulators –launch <emulator id> 启动模拟器，在我本机我启动了我的 Android 模拟器</emulator></p>
+<p>使用 flutter emulators –launch <emulator id=""> 启动模拟器，在我本机我启动了我的 Android 模拟器</emulator></p>
 <pre><code>flutter emulators --launch Nexus_5_API_25</code></pre><p>你可以对应自己的模拟器去开启</p>
 <p>再次运行 flutter run </p>
 <pre><code>flutter run </code></pre><p>没什么问题就会运行起来，在 Android 模拟器上我们创建的 Demo 张这个样子</p>
@@ -557,7 +557,25 @@ flutter run</code></pre><p><img src="https://gitee.com/tigerchain/blog_logo/raw/
 <hr>
 <p>作者: <a href="http://tigerchain.github.io">TigerChain</a> 订阅查看更多内容</p>
 <p>本文出自 <a href="http://tigerchain.github.io">TigerChain</a>  <a href="http://tigerchain.github.io/categories/从头整-Flutter/">从头开始整 Flutter</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1314,7 +1332,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.8k</span>&nbsp;字
+                class="white-color">84.3k</span>&nbsp;字
             
             
             
