@@ -1,1 +1,1 @@
-http://tigerchain.github.io/2020/04/27/js-part/
+http://tigerchain.github.io/2020/05/06/js-dev-tools/

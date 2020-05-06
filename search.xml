@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>02、web 前端开发工具</title>
+      <link href="/2020/05/06/js-dev-tools/"/>
+      <url>/2020/05/06/js-dev-tools/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、前端开发工具"><a href="#一、前端开发工具" class="headerlink" title="一、前端开发工具"></a>一、前端开发工具</h3><p>工欲善其事，必先利其器，在开发前端项目的时候使用工具可以让我们事半功倍</p><p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/develop-tools.png" alt="常用的前端开发工具"></p><h4 id="记事本类开发工具"><a href="#记事本类开发工具" class="headerlink" title="记事本类开发工具"></a>记事本类开发工具</h4><ul><li>SubLime：运行快速、界面整洁、插件丰富</li><li>EditPlus：记事本扩展工具，代码高亮</li><li>Vim：内置插件、也可以安装插件，极客玩的是无鼠标化操作效率极高</li><li>Atom：github 开源，类似于 sublime 打开比较慢</li></ul><h4 id="IDE-类开发具「针对大型项目」"><a href="#IDE-类开发具「针对大型项目」" class="headerlink" title="IDE 类开发具「针对大型项目」"></a>IDE 类开发具「针对大型项目」</h4><ul><li>WebStorm：JetBrans 开发的一款老牌的前端 IDE 开发工具</li><li>Hbuilder：国内 Dcloud 公司开发一款高效的开发工具，使用快捷键能快速生成代码片断，异常高效</li><li>VsCode：微软开发的，后来者居上，内置丰富的插件，并且安装三方插件非常方便，打开非常迅速</li><li>其它的一些开发工具</li></ul><h3 id="二、工具的选择「个人」"><a href="#二、工具的选择「个人」" class="headerlink" title="二、工具的选择「个人」"></a>二、工具的选择「个人」</h3><p>对于开发工具而言，没有最好，只有最合适，这完全看个人习惯，以上工具我都使用过，个人现在习惯于使用 sublime 和 vscode </p><p>选择一个自己熟悉并且熟练的工具极大的提高我们的开发效率，至此前端开发工具我们就介绍完了，我们下节再见</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 5分钟编程-JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>02、js 组成部分</title>
       <link href="/2020/04/27/js-part/"/>
       <url>/2020/04/27/js-part/</url>
