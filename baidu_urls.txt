@@ -1,1 +1,1 @@
-http://tigerchain.github.io/2020/05/06/js-dev-tools/
+http://tigerchain.github.io/2020/05/09/js-use-inline/

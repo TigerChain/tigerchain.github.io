@@ -4,7 +4,34 @@
   
     
     <entry>
-      <title>02、web 前端开发工具</title>
+      <title>04、js 使用方式「内联式」</title>
+      <link href="/2020/05/09/js-use-inline/"/>
+      <url>/2020/05/09/js-use-inline/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/JavaScript-inline.png" alt="本节看内联式"></p><h3 id="一、HTML-中使用-JavaScript"><a href="#一、HTML-中使用-JavaScript" class="headerlink" title="一、HTML 中使用 JavaScript"></a>一、HTML 中使用 JavaScript</h3><h4 id="1、使用-script-标签"><a href="#1、使用-script-标签" class="headerlink" title="1、使用 script 标签"></a>1、使用 script 标签</h4><p>在 HTML 中使用 JavaScript 最简单的方式就是使用 script 标签把 JavaScript 的方法和属性包裹起来，如下</p><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>使用 script 元素<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>    <span class="token comment" spellcheck="true">&lt;!--这里是 html 的内容--></span>    <span class="token comment" spellcheck="true">&lt;!-- 以下使用 script 元素 --></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">        <span class="token comment" spellcheck="true">// 其中是属性和或方法</span>        <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span> <span class="token punctuation">;</span>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">;</span>    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre><p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/console-log-a.png" alt="执行结果"></p><h4 id="2、JavaScript-的执行顺序"><a href="#2、JavaScript-的执行顺序" class="headerlink" title="2、JavaScript 的执行顺序"></a>2、JavaScript 的执行顺序</h4><p>包含在 <code>&lt;script&gt;</code> 标签中的代码是从上到下依次执行，并且在 script 标签中的代码执行过程中，浏览器会停止渲染和显示，直到 script 需标签中的代码执行完毕，再执行标签下面的内容</p><p><img src="https://gitee.com/tigerchain/blog_logo/raw/master/js/imgs/js-run-order.jpg" alt="JavaScript 执行顺序"></p><h3 id="二、script-标签解析"><a href="#二、script-标签解析" class="headerlink" title="二、script 标签解析"></a>二、script 标签解析</h3><p>在 html 页面中使用 <code>&lt;script&gt;...&lt;/script&gt;</code> 是最简单的使用 JavaScript 的方法，script 标签也有几个属性我们来了解一下</p><pre class=" language-html"><code class="language-html">&lt;script        charset="UTF-8"        src="xxx.js"        language = "JavaScript"        type = "text/javascript"        defer="defer"        async = "async"><span class="token script language-javascript">    xxx</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre><p>从上述代码可以看到 script 有 6 个属性，我们来看看</p><ul><li>charset：<strong>可选</strong>，用来指定 src 「外部连接 js 的字符集」</li><li>src：<strong>可选</strong>，用来加载外部 js </li><li>language：废弃了，原指用来写脚本的语言如：JavaScript、VBScript，已经废弃不使用了</li><li>type：<strong>可选</strong>，写脚本使用语言内容类型「MIME类型」，可以看作是 language 的替代品，默认就是 text/javascript 所以可以不用写</li><li>defer：<strong>可选</strong>，延迟脚本只适用于外部链接也就是 src 有值时，指的是脚本的执行会在整个整个页面都解析完成以后，相当于给浏览器一个指令-脚本立刻下载，但是延迟执行，并且是顺序执行</li><li>async：<strong>可选</strong>，异步执行同样只适用于外部链接也就是 src 有值时，也指的是脚本的执行会在整个整个页面都解析完成以后，但是执行顺序是无序的「异步的」</li></ul><p>所以我们一般写一个 script 标签的时候一般如下写法就可以</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">    xxx</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre><p>如果是外部引入 js 则添加 src 属性即可</p><h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>本节对 JavaScript 的使用方式简单的介绍了一下「主要说了一下内联式」，并且简单的介绍了一下 js 的执行顺序和 script 属性</p><p>本节到此为止，我们下节见</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 5分钟编程-JavaScript基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>03、web 前端开发工具</title>
       <link href="/2020/05/06/js-dev-tools/"/>
       <url>/2020/05/06/js-dev-tools/</url>
       
@@ -31,7 +58,7 @@
     
     
     <entry>
-      <title>02、js 组成部分</title>
+      <title>03、js 组成部分</title>
       <link href="/2020/04/27/js-part/"/>
       <url>/2020/04/27/js-part/</url>
       
