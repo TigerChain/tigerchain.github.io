@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tigerchain.github.io/2020/05/09/js-use-inline/</loc>
+    
+    <lastmod>2020-05-12T14:05:08.242Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tigerchain.github.io/2020/05/06/js-dev-tools/</loc>
+    
+    <lastmod>2020-05-12T14:04:23.142Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tigerchain.github.io/2020/05/12/js-use-src/</loc>
     
     <lastmod>2020-05-12T12:35:10.457Z</lastmod>
@@ -12,20 +26,6 @@
     <loc>http://tigerchain.github.io/2020/04/27/js-part/</loc>
     
     <lastmod>2020-05-12T12:21:40.585Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tigerchain.github.io/2020/05/09/js-use-inline/</loc>
-    
-    <lastmod>2020-05-09T12:19:27.053Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tigerchain.github.io/2020/05/06/js-dev-tools/</loc>
-    
-    <lastmod>2020-05-09T12:04:21.860Z</lastmod>
     
   </url>
   
