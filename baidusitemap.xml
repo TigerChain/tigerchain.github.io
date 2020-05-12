@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tigerchain.github.io/2020/05/12/js-use-src/</loc>
+    <lastmod>2020-05-12</lastmod>
+  </url>  <url>
     <loc>http://tigerchain.github.io/2020/04/27/js-part/</loc>
-    <lastmod>2020-05-09</lastmod>
+    <lastmod>2020-05-12</lastmod>
   </url>  <url>
     <loc>http://tigerchain.github.io/2020/05/09/js-use-inline/</loc>
     <lastmod>2020-05-09</lastmod>
