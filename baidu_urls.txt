@@ -1,1 +1,1 @@
-http://tigerchain.github.io/2020/05/12/js-use-src/
+http://tigerchain.github.io/2020/05/26/js-lazy-load/
