@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>01、捣鼓源码-Retrofit2.x</title>
+      <link href="/2020/08/24/retrofit/"/>
+      <url>/2020/08/24/retrofit/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android 源码解析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 源码解析 </tag>
+            
+            <tag> Android </tag>
+            
+            <tag> 三方框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>半天搞定 Dart</title>
       <link href="/2020/06/05/dart-lesson/"/>
       <url>/2020/06/05/dart-lesson/</url>
@@ -864,9 +893,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -916,9 +945,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -943,9 +972,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -970,9 +999,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -997,9 +1026,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -1024,9 +1053,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -1051,9 +1080,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -1078,9 +1107,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -1105,9 +1134,9 @@
       
         <tags>
             
-            <tag> 设计模式 </tag>
-            
             <tag> Android </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
